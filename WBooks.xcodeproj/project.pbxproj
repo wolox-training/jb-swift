@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,12 +11,11 @@
 		798EDDF6BDC09C977529BC2A /* Pods_WBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE228D20F550D4EDE004167 /* Pods_WBooks.framework */; };
 		964F5778261DD75A004638D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F5777261DD75A004638D9 /* AppDelegate.swift */; };
 		964F577A261DD75A004638D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F5779261DD75A004638D9 /* SceneDelegate.swift */; };
-		964F577C261DD75A004638D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F577B261DD75A004638D9 /* ViewController.swift */; };
-		964F577F261DD75A004638D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964F577D261DD75A004638D9 /* Main.storyboard */; };
 		964F5781261DD75B004638D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964F5780261DD75B004638D9 /* Assets.xcassets */; };
-		964F5784261DD75B004638D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964F5782261DD75B004638D9 /* LaunchScreen.storyboard */; };
 		964F578F261DD75B004638D9 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F578E261DD75B004638D9 /* WBooksTests.swift */; };
 		964F579A261DD75B004638D9 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F5799261DD75B004638D9 /* WBooksUITests.swift */; };
+		967315D2261E2BF7009383C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967315D0261E2BF7009383C0 /* MainViewController.swift */; };
+		967315D3261E2BF7009383C0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967315D1261E2BF7009383C0 /* MainViewController.xib */; };
 		CE7E2D32B5D4E2A692F0F3AC /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A527EFEA5F3E9706231F4BC /* Pods_WBooks_WBooksUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,13 +45,12 @@
 		7A527EFEA5F3E9706231F4BC /* Pods_WBooks_WBooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks_WBooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE228D20F550D4EDE004167 /* Pods_WBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926E3C8C1FE931055B9D83C8 /* Pods-WBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooksTests.debug.xcconfig"; path = "Target Support Files/Pods-WBooksTests/Pods-WBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96389B0A261DDDDB0050B7AA /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		96389B14261DDE040050B7AA /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		964F5774261DD75A004638D9 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F5777261DD75A004638D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		964F5779261DD75A004638D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		964F577B261DD75A004638D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		964F577E261DD75A004638D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		964F5780261DD75B004638D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		964F5783261DD75B004638D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964F5785261DD75B004638D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		964F578A261DD75B004638D9 /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F578E261DD75B004638D9 /* WBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksTests.swift; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		964F5795261DD75B004638D9 /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F5799261DD75B004638D9 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		964F579B261DD75B004638D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967315D0261E2BF7009383C0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		967315D1261E2BF7009383C0 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		E129BE927B2EF733A1F300A2 /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,6 @@
 				926E3C8C1FE931055B9D83C8 /* Pods-WBooksTests.debug.xcconfig */,
 				10599BF83152BF8A9A323B52 /* Pods-WBooksTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -115,9 +114,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		96389B03261DDCD40050B7AA /* Configuration Files */ = {
+			isa = PBXGroup;
+			children = (
+				96389B14261DDE040050B7AA /* release.xcconfig */,
+				96389B0A261DDDDB0050B7AA /* debug.xcconfig */,
+			);
+			path = "Configuration Files";
+			sourceTree = "<group>";
+		};
 		964F576B261DD75A004638D9 = {
 			isa = PBXGroup;
 			children = (
+				96389B03261DDCD40050B7AA /* Configuration Files */,
 				964F5776261DD75A004638D9 /* WBooks */,
 				964F578D261DD75B004638D9 /* WBooksTests */,
 				964F5798261DD75B004638D9 /* WBooksUITests */,
@@ -142,11 +151,10 @@
 			children = (
 				964F5777261DD75A004638D9 /* AppDelegate.swift */,
 				964F5779261DD75A004638D9 /* SceneDelegate.swift */,
-				964F577B261DD75A004638D9 /* ViewController.swift */,
-				964F577D261DD75A004638D9 /* Main.storyboard */,
 				964F5780261DD75B004638D9 /* Assets.xcassets */,
-				964F5782261DD75B004638D9 /* LaunchScreen.storyboard */,
 				964F5785261DD75B004638D9 /* Info.plist */,
+				967315D0261E2BF7009383C0 /* MainViewController.swift */,
+				967315D1261E2BF7009383C0 /* MainViewController.xib */,
 			);
 			path = WBooks;
 			sourceTree = "<group>";
@@ -277,9 +285,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964F5784261DD75B004638D9 /* LaunchScreen.storyboard in Resources */,
 				964F5781261DD75B004638D9 /* Assets.xcassets in Resources */,
-				964F577F261DD75A004638D9 /* Main.storyboard in Resources */,
+				967315D3261E2BF7009383C0 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				964F577C261DD75A004638D9 /* ViewController.swift in Sources */,
+				967315D2261E2BF7009383C0 /* MainViewController.swift in Sources */,
 				964F5778261DD75A004638D9 /* AppDelegate.swift in Sources */,
 				964F577A261DD75A004638D9 /* SceneDelegate.swift in Sources */,
 			);
@@ -444,28 +451,10 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		964F577D261DD75A004638D9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				964F577E261DD75A004638D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		964F5782261DD75B004638D9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				964F5783261DD75B004638D9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		964F579C261DD75B004638D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96389B0A261DDDDB0050B7AA /* debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -527,6 +516,7 @@
 		};
 		964F579D261DD75B004638D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96389B14261DDE040050B7AA /* release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

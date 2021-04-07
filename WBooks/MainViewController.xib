@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bc_inicio" translatesAutoresizingMaskIntoConstraints="NO" id="tsC-sc-erU">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="e3J-Ni-Pjc">
+                    <rect key="frame" x="92.5" y="197.5" width="229" height="122"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="e3J-Ni-Pjc" secondAttribute="height" multiplier="328:175" id="ydf-5n-Cfo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQA-Qi-UrK">
+                    <rect key="frame" x="42.5" y="851.5" width="329.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7QP-LB-fFC">
+                    <rect key="frame" x="10" y="373.5" width="394" height="149"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Em9-vc-hyw">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RxG-O8-SPW">
+                            <rect key="frame" x="0.0" y="54" width="394" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5n-5M-MnJ">
+                            <rect key="frame" x="0.0" y="108" width="394" height="41"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="LOG IN"/>
+                            <connections>
+                                <action selector="onButtonPressed:" destination="-1" eventType="touchUpInside" id="QXG-ES-xt8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Em9-vc-hyw" firstAttribute="leading" secondItem="7QP-LB-fFC" secondAttribute="leading" id="6bs-Wz-wuM"/>
+                        <constraint firstItem="N5n-5M-MnJ" firstAttribute="leading" secondItem="7QP-LB-fFC" secondAttribute="leading" id="K76-2J-aDY"/>
+                        <constraint firstItem="RxG-O8-SPW" firstAttribute="leading" secondItem="7QP-LB-fFC" secondAttribute="leading" id="Md9-8a-3Xz"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="AccentColor"/>
+            <constraints>
+                <constraint firstItem="7QP-LB-fFC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="A4j-ym-OZ2"/>
+                <constraint firstItem="WQA-Qi-UrK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z2s-Ui-WfX"/>
+                <constraint firstItem="WQA-Qi-UrK" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="10" id="c4T-WC-ekb"/>
+                <constraint firstItem="e3J-Ni-Pjc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ebY-aT-0AB"/>
+                <constraint firstItem="7QP-LB-fFC" firstAttribute="top" secondItem="e3J-Ni-Pjc" secondAttribute="bottom" constant="54" id="p7F-VE-YE8"/>
+                <constraint firstItem="7QP-LB-fFC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rwi-0i-T55"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7QP-LB-fFC" secondAttribute="trailing" constant="10" id="v26-PS-cZ9"/>
+            </constraints>
+            <point key="canvasLocation" x="-614.49275362318849" y="105.80357142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Group" width="161" height="122"/>
+        <image name="bc_inicio" width="375" height="667"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
