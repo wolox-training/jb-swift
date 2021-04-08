@@ -49,7 +49,7 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="LOG IN"/>
                             <connections>
-                                <action selector="onButtonPressed:" destination="-1" eventType="touchUpInside" id="HYu-Ok-vV2"/>
+                                <action selector="onPressed:" destination="-1" eventType="touchUpInside" id="XfQ-SM-4ys"/>
                             </connections>
                         </button>
                     </subviews>

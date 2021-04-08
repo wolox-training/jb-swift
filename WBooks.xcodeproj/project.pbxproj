@@ -18,6 +18,11 @@
 		96A837F6261F629E00C2D3D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837F5261F629E00C2D3D1 /* LoginView.swift */; };
 		96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */; };
 		96A8381C261F7C6E00C2D3D1 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A8381B261F7C6E00C2D3D1 /* LoginView.xib */; };
+		96D6E887261F84AE00C8A00E /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D6E886261F84AE00C8A00E /* MainMenuView.xib */; };
+		96D6E894261F84D200C8A00E /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E893261F84D200C8A00E /* MainMenuView.swift */; };
+		96D6E89C261F85C900C8A00E /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E89B261F85C900C8A00E /* MainMenuViewController.swift */; };
+		96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E8A1261F87A700C8A00E /* BookCellView.swift */; };
+		96D6E8AA261F87BA00C8A00E /* BookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D6E8A9261F87BA00C8A00E /* BookCellView.xib */; };
 		CE7E2D32B5D4E2A692F0F3AC /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A527EFEA5F3E9706231F4BC /* Pods_WBooks_WBooksUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +69,11 @@
 		96A837F5261F629E00C2D3D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96A8381B261F7C6E00C2D3D1 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		96D6E886261F84AE00C8A00E /* MainMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
+		96D6E893261F84D200C8A00E /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		96D6E89B261F85C900C8A00E /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		96D6E8A1261F87A700C8A00E /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
+		96D6E8A9261F87BA00C8A00E /* BookCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCellView.xib; sourceTree = "<group>"; };
 		E129BE927B2EF733A1F300A2 /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +163,7 @@
 		964F5776261DD75A004638D9 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				96D6E87D261F845C00C8A00E /* MainMenu */,
 				96A837EA261F624600C2D3D1 /* Login */,
 				964F5777261DD75A004638D9 /* AppDelegate.swift */,
 				964F5779261DD75A004638D9 /* SceneDelegate.swift */,
@@ -189,6 +200,26 @@
 				96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		96D6E87D261F845C00C8A00E /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				96D6E8A0261F872C00C8A00E /* BookCell */,
+				96D6E886261F84AE00C8A00E /* MainMenuView.xib */,
+				96D6E893261F84D200C8A00E /* MainMenuView.swift */,
+				96D6E89B261F85C900C8A00E /* MainMenuViewController.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		96D6E8A0261F872C00C8A00E /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				96D6E8A1261F87A700C8A00E /* BookCellView.swift */,
+				96D6E8A9261F87BA00C8A00E /* BookCellView.xib */,
+			);
+			path = BookCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +330,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D6E887261F84AE00C8A00E /* MainMenuView.xib in Resources */,
 				96A8381C261F7C6E00C2D3D1 /* LoginView.xib in Resources */,
 				964F5781261DD75B004638D9 /* Assets.xcassets in Resources */,
+				96D6E8AA261F87BA00C8A00E /* BookCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,9 +461,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D6E894261F84D200C8A00E /* MainMenuView.swift in Sources */,
 				96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */,
 				96A837EC261F625800C2D3D1 /* NibView.swift in Sources */,
+				96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */,
 				964F5778261DD75A004638D9 /* AppDelegate.swift in Sources */,
+				96D6E89C261F85C900C8A00E /* MainMenuViewController.swift in Sources */,
 				96A837F6261F629E00C2D3D1 /* LoginView.swift in Sources */,
 				964F577A261DD75A004638D9 /* SceneDelegate.swift in Sources */,
 			);
