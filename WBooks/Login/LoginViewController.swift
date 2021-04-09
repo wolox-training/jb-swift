@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewDelegate {
     func onLoginPressed() {
-        print("Do something when the user taps the button")
+        let mainMenuViewController = MainMenuViewController()
+        present(mainMenuViewController, animated: true, completion: nil)
     }
 }

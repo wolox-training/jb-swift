@@ -10,13 +10,13 @@ import UIKit
 class MainMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let mainMenuView = MainMenuView()
     
-    
     var booksArray : Array = [["title": "book 1", "author": "author 1", "image": "img_book1"], ["title": "book 2", "author": "author 2", "image": "img_book2"], ["title": "book 3", "author": "author 3", "image": "img_book3"]]
     
     override func loadView() {
         super.loadView()
         self.view = mainMenuView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainMenuView.tblBooks.delegate = self
