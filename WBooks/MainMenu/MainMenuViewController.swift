@@ -25,6 +25,7 @@ class MainMenuViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.mainMenuView.tblBooks.delegate = self
         self.mainMenuView.tblBooks.dataSource = self
         let nib = UINib.init(nibName: "BookCellView", bundle: nil)

@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuView" customModule="WBooks" customModuleProvider="target">
             <connections>
-                <outlet property="tblBooks" destination="YrE-ZJ-f7p" id="kUm-x8-RJB"/>
+                <outlet property="tblBooks" destination="YrE-ZJ-f7p" id="yru-9j-6Ay"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Abd-kv-OG0"/>
             </connections>
         </placeholder>

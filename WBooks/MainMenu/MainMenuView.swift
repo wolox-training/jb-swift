@@ -10,5 +10,4 @@ import UIKit
 class MainMenuView: NibView {
     @IBOutlet var view: UIView!
     @IBOutlet var tblBooks: UITableView!
-    
 }
