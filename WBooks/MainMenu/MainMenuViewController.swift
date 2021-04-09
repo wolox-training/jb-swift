@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let mainMenuView = MainMenuView()
+final class MainMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    private let mainMenuView = MainMenuView()
     
-    var booksArray : Array = [
+    private let booksArray : Array = [
         ["title": "A little bird told me", "author": "Timothy Cross", "image": "img_book1"],
         ["title": "When the Doveeeeeeeeeees Disappeared", "author": "Sofi Oksanen", "image": "img_book2"],
         ["title": "The Best Book in the World", "author": "Peter Sjernstrom", "image": "img_book3"],
