@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class NibView: UIView {
     private var view: UIView?
     // MARK: - Initializers

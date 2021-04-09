@@ -8,8 +8,6 @@
 import UIKit
 
 class LoginView: NibView {
-    
-    
 
     @IBAction func onButtonPressed(_ sender: Any) {
         print("Hello Wolox!")
