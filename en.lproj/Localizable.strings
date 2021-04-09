@@ -7,3 +7,9 @@
 */
 
 "LIBRARY_LABEL" = "LIBRARY";
+
+"LIBRARY_TABBAR" = "Library";
+"WISHLIST_TABBAR" = "Wishlist";
+"ADDNEW_TABBAR" = "Add new";
+"MYRENTALS_TABBAR" = "Rentals";
+"SETTINGS_TABBAR" = "Settings";

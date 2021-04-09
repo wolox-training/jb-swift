@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor(red: CGFloat(18/255.0), green: CGFloat(171/255.0), blue: CGFloat(238/255.0), alpha: CGFloat(1.0))
         UINavigationBar.appearance().shadowImage = UIImage() // Remove 1px bottom border
 
-        
         return true
     
     }
