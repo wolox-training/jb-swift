@@ -12,6 +12,11 @@ class BookCellView: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!
     @IBOutlet weak var imgBook: UIImageView!
+    @IBOutlet weak var mainContainer: UIView! {
+        didSet {
+            mainContainer.layer.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1).cgColor
+        }
+    }
     @IBOutlet weak var whiteContainer: UIView! {
         didSet {
             whiteContainer.layer.cornerRadius = 5.0
@@ -21,6 +26,7 @@ class BookCellView: UITableViewCell {
             whiteContainer.layer.shadowRadius = 1
         }
     }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

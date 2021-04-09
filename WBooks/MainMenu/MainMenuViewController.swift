@@ -10,7 +10,13 @@ import UIKit
 class MainMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let mainMenuView = MainMenuView()
     
-    var booksArray : Array = [["title": "book 1", "author": "author 1", "image": "img_book1"], ["title": "book 2", "author": "author 2", "image": "img_book2"], ["title": "book 3", "author": "author 3", "image": "img_book3"]]
+    var booksArray : Array = [
+        ["title": "A little bird told me", "author": "Timothy Cross", "image": "img_book1"],
+        ["title": "When the Doveeeeeeeeeees Disappeared", "author": "Sofi Oksanen", "image": "img_book2"],
+        ["title": "The Best Book in the World", "author": "Peter Sjernstrom", "image": "img_book3"],
+        ["title": "Be Creative", "author": "Tony Alcazar", "image": "img_book4"],
+        ["title": "Redesign the Web", "author": "Liliana Castilla", "image": "img_book5"],
+    ]
     
     override func loadView() {
         super.loadView()
@@ -23,6 +29,11 @@ class MainMenuViewController: UIViewController, UITableViewDelegate, UITableView
         self.mainMenuView.tblBooks.dataSource = self
         let nib = UINib.init(nibName: "BookCellView", bundle: nil)
         self.mainMenuView.tblBooks.register(nib, forCellReuseIdentifier: "BookCellView")
+        
+        // Navbar configuration
+        navigationItem.leftBarButtonItem = createNotificationButton()
+        navigationItem.rightBarButtonItem = createSearchButton()
+        navigationItem.titleView = createNavBarTitle()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,5 +50,42 @@ class MainMenuViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         return cell
+    }
+    
+    private func createNotificationButton() -> UIBarButtonItem {
+        let notificationImageView = UIImageView(image: UIImage(named: "ic_notifications"))
+
+        let widthConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        let heightConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        
+        notificationImageView.addConstraints([widthConstraint, heightConstraint])
+        
+        return UIBarButtonItem(customView: notificationImageView)
+    }
+    
+    private func createSearchButton() -> UIBarButtonItem {
+        let notificationImageView = UIImageView(image: UIImage(named: "ic_search"))
+        
+        let widthConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        let heightConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        
+        notificationImageView.addConstraints([widthConstraint, heightConstraint])
+        
+        return UIBarButtonItem(customView: notificationImageView)
+    }
+    
+    private func createNavBarTitle() -> UILabel {
+        let navBarTitle = UILabel()
+        navBarTitle.frame = CGRect(x: 156, y: 42, width: 64, height: 20)
+        navBarTitle.lineBreakMode = .byWordWrapping
+        navBarTitle.numberOfLines = 0
+        navBarTitle.textColor = .white
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 1.1764705882352942
+        paragraphStyle.alignment = .center
+        navBarTitle.text = NSLocalizedString("LIBRARY_LABEL", comment: "")
+        navBarTitle.sizeToFit()
+        
+        return navBarTitle
     }
 }

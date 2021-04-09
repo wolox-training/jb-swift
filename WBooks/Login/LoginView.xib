@@ -25,7 +25,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed, developed and used by woloxers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQA-Qi-UrK">
-                    <rect key="frame" x="42.5" y="851.5" width="329.5" height="20.5"/>
+                    <rect key="frame" x="42.5" y="860.5" width="329.5" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
             <constraints>
                 <constraint firstItem="7QP-LB-fFC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="A4j-ym-OZ2"/>
                 <constraint firstItem="WQA-Qi-UrK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Z2s-Ui-WfX"/>
-                <constraint firstItem="WQA-Qi-UrK" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="10" id="c4T-WC-ekb"/>
+                <constraint firstAttribute="bottom" secondItem="WQA-Qi-UrK" secondAttribute="bottom" constant="15" id="dRS-VD-3XX"/>
                 <constraint firstItem="e3J-Ni-Pjc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ebY-aT-0AB"/>
                 <constraint firstItem="7QP-LB-fFC" firstAttribute="top" secondItem="e3J-Ni-Pjc" secondAttribute="bottom" constant="54" id="p7F-VE-YE8"/>
                 <constraint firstItem="7QP-LB-fFC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="rwi-0i-T55"/>

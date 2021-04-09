@@ -13,8 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Navigation bar configuration
+        UINavigationBar.appearance().barTintColor = UIColor(red: CGFloat(18/255.0), green: CGFloat(171/255.0), blue: CGFloat(238/255.0), alpha: CGFloat(1.0))
+        UINavigationBar.appearance().shadowImage = UIImage() // Remove 1px bottom border
+
+        
         return true
+    
     }
 
     // MARK: UISceneSession Lifecycle

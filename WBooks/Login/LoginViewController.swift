@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewDelegate {
     func onLoginPressed() {
-        let mainMenuViewController = MainMenuViewController()
+        let mainMenuViewController = UINavigationController(rootViewController: MainMenuViewController())
+        mainMenuViewController.modalPresentationStyle = .fullScreen
         present(mainMenuViewController, animated: true, completion: nil)
     }
 }
