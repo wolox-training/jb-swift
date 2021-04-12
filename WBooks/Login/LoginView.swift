@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: NibView {
+final class LoginView: NibView {
 
     @IBAction func onButtonPressed(_ sender: Any) {
         print("Hello Wolox!")
