@@ -13,7 +13,7 @@ final class LoginViewController: UIViewController {
         loginView.delegate = self
         return loginView
     }()
-    
+
     override func loadView() {
         super.loadView()
         self.view = loginView

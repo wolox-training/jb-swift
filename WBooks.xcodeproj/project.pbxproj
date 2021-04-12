@@ -163,7 +163,7 @@
 		964F5776261DD75A004638D9 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
-				96D6E87D261F845C00C8A00E /* MainMenu */,
+				96D6E87D261F845C00C8A00E /* Library */,
 				96A837EA261F624600C2D3D1 /* Login */,
 				964F5777261DD75A004638D9 /* AppDelegate.swift */,
 				964F5779261DD75A004638D9 /* SceneDelegate.swift */,
@@ -202,7 +202,7 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		96D6E87D261F845C00C8A00E /* MainMenu */ = {
+		96D6E87D261F845C00C8A00E /* Library */ = {
 			isa = PBXGroup;
 			children = (
 				96D6E8A0261F872C00C8A00E /* BookCell */,
@@ -210,7 +210,7 @@
 				96D6E893261F84D200C8A00E /* LibraryView.swift */,
 				96D6E89B261F85C900C8A00E /* LibraryViewController.swift */,
 			);
-			path = MainMenu;
+			path = Library;
 			sourceTree = "<group>";
 		};
 		96D6E8A0261F872C00C8A00E /* BookCell */ = {
