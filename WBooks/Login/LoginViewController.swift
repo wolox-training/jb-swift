@@ -13,18 +13,17 @@ final class LoginViewController: UIViewController {
         loginView.delegate = self
         return loginView
     }()
-    
+
     override func loadView() {
         super.loadView()
         self.view = loginView
-        
     }
 }
 
 extension LoginViewController: LoginViewDelegate {
-    func onLoginPressed() {
-        let mainMenuViewController = UINavigationController(rootViewController: MainMenuViewController())
-        mainMenuViewController.modalPresentationStyle = .fullScreen
-        present(mainMenuViewController, animated: true, completion: nil)
+    func onLoginPressed() {        
+        let libraryViewController = UINavigationController(rootViewController: LibraryViewController())
+        libraryViewController.modalPresentationStyle = .fullScreen
+        present(libraryViewController, animated: true)
     }
 }

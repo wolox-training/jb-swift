@@ -11,7 +11,9 @@ protocol LoginViewDelegate: AnyObject {
     func onLoginPressed()
 }
 
-class LoginView: NibView {
+final class LoginView: NibView {
+    weak var delegate: LoginViewDelegate?
+    
     @IBOutlet weak var buttonLogin: UIButton! {
         didSet {
             buttonLogin.setTitle("LOGIN_BUTTON".localized(), for: .normal)
@@ -27,8 +29,6 @@ class LoginView: NibView {
             textfieldPassword.placeholder = "PASSWORD_PLACEHOLDER".localized()
         }
     }
-    
-    weak var delegate: LoginViewDelegate?
     
     @IBAction func onPressed(_ sender: Any) {
         delegate?.onLoginPressed()
