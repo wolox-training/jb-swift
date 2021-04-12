@@ -5,7 +5,7 @@
 //  Created by joaquin bozzalla on 12/04/2021.
 //
 
-final class MainMenuViewModel {
+final class LibraryViewModel {
     private let _books: [Book];
     
     var numberOfBooks: Int {

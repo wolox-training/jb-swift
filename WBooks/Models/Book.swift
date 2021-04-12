@@ -15,5 +15,4 @@ final class Book {
         self.author = author
         self.imageName = imageName
     }
-    
 }
