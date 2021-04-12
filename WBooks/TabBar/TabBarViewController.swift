@@ -18,7 +18,7 @@ final class TabBarViewController: UITabBarController {
         navigationItem.titleView = createNavBarTitle()
         
         // TabBar configuration
-        let home = MainMenuViewController()
+        let home = LibraryViewController()
         home.tabBarItem = UITabBarItem()
         home.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0);
         home.tabBarItem.title = NSLocalizedString("LIBRARY_TABBAR", comment: "")

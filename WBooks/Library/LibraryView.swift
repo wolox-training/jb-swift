@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainMenuView: NibView {
+final class LibraryView: NibView {
     @IBOutlet var view: UIView!
     @IBOutlet var tblBooks: UITableView!
 }

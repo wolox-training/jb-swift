@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class MainMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    private let mainMenuView = MainMenuView()
+final class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    private let mainMenuView = LibraryView()
     
     private let booksArray : Array = [
         ["title": "A little bird told me", "author": "Timothy Cross", "image": "img_book1"],
