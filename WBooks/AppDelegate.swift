@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().shadowImage = UIImage() // Remove 1px bottom borde
         
         return true
-    
     }
 
     // MARK: UISceneSession Lifecycle
