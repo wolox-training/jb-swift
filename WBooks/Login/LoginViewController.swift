@@ -17,7 +17,6 @@ final class LoginViewController: UIViewController {
     override func loadView() {
         super.loadView()
         self.view = loginView
-        
     }
 }
 
@@ -25,6 +24,6 @@ extension LoginViewController: LoginViewDelegate {
     func onLoginPressed() {
         let libraryViewController = LibraryViewController()
         libraryViewController.modalPresentationStyle = .fullScreen
-        present(libraryViewController, animated: true, completion: nil)
+        present(libraryViewController, animated: true)
     }
 }

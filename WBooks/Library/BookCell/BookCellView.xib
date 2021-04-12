@@ -72,9 +72,9 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="imgBook" destination="BnO-De-vIN" id="OGY-nV-f8a"/>
-                <outlet property="lblAuthor" destination="TbZ-MD-tNI" id="9Ut-hT-sD6"/>
-                <outlet property="lblTitle" destination="zSD-Jl-mNk" id="3ab-CX-7bL"/>
+                <outlet property="imageBook" destination="BnO-De-vIN" id="TtW-Gy-p32"/>
+                <outlet property="labelAuthor" destination="TbZ-MD-tNI" id="lRh-Uf-g27"/>
+                <outlet property="labelTitle" destination="zSD-Jl-mNk" id="qHv-Yb-ERF"/>
                 <outlet property="whiteContainer" destination="8rh-Dd-Omq" id="Td7-jH-Fk3"/>
             </connections>
             <point key="canvasLocation" x="-84.057971014492765" y="-169.41964285714286"/>

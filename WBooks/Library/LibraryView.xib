@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryView">
             <connections>
-                <outlet property="tblBooks" destination="YrE-ZJ-f7p" id="kUm-x8-RJB"/>
+                <outlet property="tableBooks" destination="YrE-ZJ-f7p" id="qkc-3Q-BmT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Abd-kv-OG0"/>
             </connections>
         </placeholder>

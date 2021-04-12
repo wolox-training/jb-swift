@@ -8,9 +8,9 @@
 import UIKit
 
 final class BookCellView: UITableViewCell {
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblAuthor: UILabel!
-    @IBOutlet weak var imgBook: UIImageView!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelAuthor: UILabel!
+    @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var whiteContainer: UIView! {
         didSet {
             whiteContainer.layer.cornerRadius = 5.0
@@ -19,6 +19,10 @@ final class BookCellView: UITableViewCell {
             whiteContainer.layer.shadowOffset = .zero
             whiteContainer.layer.shadowRadius = 1
         }
+    }
+    
+    static var identifier: String {
+        return String(describing: BookCellView.self)
     }
     
     override func layoutSubviews() {

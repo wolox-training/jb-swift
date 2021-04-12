@@ -8,7 +8,7 @@
 import UIKit
 
 final class LibraryViewController: UIViewController {
-    let libraryView = LibraryView()
+    private let libraryView = LibraryView()
     
     private let booksArray : Array = [
         ["title": "book 1", "author": "author 1", "image": "img_book1"],
@@ -23,10 +23,10 @@ final class LibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.libraryView.tblBooks.delegate = self
-        self.libraryView.tblBooks.dataSource = self
-        let nib = UINib.init(nibName: "BookCellView", bundle: nil)
-        self.libraryView.tblBooks.register(nib, forCellReuseIdentifier: "BookCellView")
+        self.libraryView.tableBooks.delegate = self
+        self.libraryView.tableBooks.dataSource = self
+        let nib = UINib.init(nibName: BookCellView.identifier, bundle: nil)
+        self.libraryView.tableBooks.register(nib, forCellReuseIdentifier: BookCellView.identifier)
     }
 }
 
@@ -37,15 +37,14 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCellView", for: indexPath) as! BookCellView
+        let cell = tableView.dequeueReusableCell(withIdentifier: BookCellView.identifier, for: indexPath) as! BookCellView
         let dict = booksArray[indexPath.row]
-        cell.lblTitle.text = dict["title"]
-        cell.lblAuthor.text = dict["author"]
+        cell.labelTitle.text = dict["title"]
+        cell.labelAuthor.text = dict["author"]
         if let image = dict["image"] {
-            cell.imgBook.image = UIImage(named: image)
+            cell.imageBook.image = UIImage(named: image)
         }
         
         return cell
     }
-    
 }
