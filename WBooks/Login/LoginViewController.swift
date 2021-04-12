@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     private lazy var loginView: LoginView = {
         let loginView = LoginView()
         loginView.delegate = self
@@ -19,16 +19,12 @@ class LoginViewController: UIViewController {
         self.view = loginView
         
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
 }
 
 extension LoginViewController: LoginViewDelegate {
     func onLoginPressed() {
-        let mainMenuViewController = MainMenuViewController()
-        present(mainMenuViewController, animated: true, completion: nil)
+        let libraryViewController = LibraryViewController()
+        libraryViewController.modalPresentationStyle = .fullScreen
+        present(libraryViewController, animated: true, completion: nil)
     }
 }

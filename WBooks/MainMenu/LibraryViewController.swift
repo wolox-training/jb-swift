@@ -7,22 +7,26 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let mainMenuView = MainMenuView()
+class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let libraryView = LibraryView()
     
-    var booksArray : Array = [["title": "book 1", "author": "author 1", "image": "img_book1"], ["title": "book 2", "author": "author 2", "image": "img_book2"], ["title": "book 3", "author": "author 3", "image": "img_book3"]]
+    private let booksArray : Array = [
+        ["title": "book 1", "author": "author 1", "image": "img_book1"],
+        ["title": "book 2", "author": "author 2", "image": "img_book2"],
+        ["title": "book 3", "author": "author 3", "image": "img_book3"]
+    ]
     
     override func loadView() {
         super.loadView()
-        self.view = mainMenuView
+        self.view = libraryView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mainMenuView.tblBooks.delegate = self
-        self.mainMenuView.tblBooks.dataSource = self
+        self.libraryView.tblBooks.delegate = self
+        self.libraryView.tblBooks.dataSource = self
         let nib = UINib.init(nibName: "BookCellView", bundle: nil)
-        self.mainMenuView.tblBooks.register(nib, forCellReuseIdentifier: "BookCellView")
+        self.libraryView.tblBooks.register(nib, forCellReuseIdentifier: "BookCellView")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
