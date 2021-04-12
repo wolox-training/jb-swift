@@ -8,8 +8,14 @@
 
 "LIBRARY_LABEL" = "BIBLIOTECA";
 
+/* TABBAR LABEL */
 "LIBRARY_TABBAR" = "Biblioteca";
 "WISHLIST_TABBAR" = "Lista de deseos";
 "ADDNEW_TABBAR" = "Agregar";
 "MYRENTALS_TABBAR" = "Alquilados";
 "SETTINGS_TABBAR" = "Ajustes";
+
+/* LOG IN SCREEN */
+"LOGIN_BUTTON" = "ENTRAR";
+"USER_PLACEHOLDER" = "Usuario";
+"PASSWORD_PLACEHOLDER" = "Contraseña";

@@ -8,12 +8,12 @@
 import UIKit
 
 final class BookCellView: UITableViewCell {
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblAuthor: UILabel!
-    @IBOutlet weak var imgBook: UIImageView!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelAuthor: UILabel!
+    @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var mainContainer: UIView! {
         didSet {
-            mainContainer.layer.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1).cgColor
+            mainContainer.layer.backgroundColor = UIColor.backgroundColor.cgColor
         }
     }
     @IBOutlet weak var whiteContainer: UIView! {
@@ -26,16 +26,20 @@ final class BookCellView: UITableViewCell {
         }
     }
     
+    static var identifier: String {
+        return String(describing: BookCellView.self)
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 8, right: 50))
     }
     
     func configureCell(with viewModel: BookCellViewModel) {
-        lblTitle.text =  viewModel.title
-        lblAuthor.text = viewModel.author
+        labelTitle.text =  viewModel.title
+        labelAuthor.text = viewModel.author
         if let imageName = viewModel.imageName {
-            imgBook.image = UIImage(named: imageName)
+            imageBook.image = UIImage(named: imageName)
         }
     }
 }

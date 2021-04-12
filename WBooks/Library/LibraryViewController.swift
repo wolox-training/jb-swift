@@ -7,30 +7,33 @@
 
 import UIKit
 
-final class MainMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    private let mainMenuView = MainMenuView()
-    private let _viewModel = MainMenuViewModel()
+final class LibraryViewController: UIViewController {
+    private let libraryView = LibraryView()
+    private let _viewModel = LibraryViewModel()
     
     override func loadView() {
         super.loadView()
-        self.view = mainMenuView
+        self.view = libraryView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mainMenuView.tblBooks.delegate = self
-        self.mainMenuView.tblBooks.dataSource = self
-        let nib = UINib.init(nibName: "BookCellView", bundle: nil)
-        self.mainMenuView.tblBooks.register(nib, forCellReuseIdentifier: "BookCellView")
+        self.libraryView.tableBooks.delegate = self
+        self.libraryView.tableBooks.dataSource = self
+        let nib = UINib.init(nibName: BookCellView.identifier, bundle: nil)
+        self.libraryView.tableBooks.register(nib, forCellReuseIdentifier: BookCellView.identifier)
     }
+}
+
+extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _viewModel.numberOfBooks
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCellView", for: indexPath) as! BookCellView
+        let cell = tableView.dequeueReusableCell(withIdentifier: BookCellView.identifier, for: indexPath) as! BookCellView
         let bookCellViewModel = _viewModel.createBookCellViewModel(for:indexPath.row)
         cell.configureCell(with: bookCellViewModel)
         return cell

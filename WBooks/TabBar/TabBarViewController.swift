@@ -18,39 +18,39 @@ final class TabBarViewController: UITabBarController {
         navigationItem.titleView = createNavBarTitle()
         
         // TabBar configuration
-        let home = MainMenuViewController()
+        let home = LibraryViewController()
         home.tabBarItem = UITabBarItem()
         home.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0);
-        home.tabBarItem.title = NSLocalizedString("LIBRARY_TABBAR", comment: "")
-        home.tabBarItem.image = UIImage(named: "ic_library")
+        home.tabBarItem.title = "LIBRARY_TABBAR".localized()
+        home.tabBarItem.image = UIImage.icLibrary
         home.tabBarItem.tag = 0
         
         let wishList = UIViewController()
         wishList.tabBarItem = UITabBarItem()
         wishList.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0);
-        wishList.tabBarItem.title = NSLocalizedString("WISHLIST_TABBAR", comment: "")
-        wishList.tabBarItem.image = UIImage(named: "ic_wishlist")
+        wishList.tabBarItem.title = "WISHLIST_TABBAR".localized()
+        wishList.tabBarItem.image = UIImage.icLibrary
         wishList.tabBarItem.tag = 1
-        
+
         let addNew = UIViewController()
         addNew.tabBarItem = UITabBarItem()
         addNew.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0);
-        addNew.tabBarItem.title = NSLocalizedString("ADDNEW_TABBAR", comment: "")
-        addNew.tabBarItem.image = UIImage(named: "ic_add new")
+        addNew.tabBarItem.title = "ADDNEW_TABBAR".localized()
+        addNew.tabBarItem.image = UIImage.icAddNew
         addNew.tabBarItem.tag = 2
         
         let rentals = UIViewController()
         rentals.tabBarItem = UITabBarItem()
         rentals.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0);
-        rentals.tabBarItem.title = NSLocalizedString("MYRENTALS_TABBAR", comment: "")
-        rentals.tabBarItem.image = UIImage(named: "ic_myrentals")
+        rentals.tabBarItem.title = "MYRENTALS_TABBAR".localized()
+        rentals.tabBarItem.image = UIImage.icMyRentals
         rentals.tabBarItem.tag = 3
         
         let settings = UIViewController()
         settings.tabBarItem = UITabBarItem()
         settings.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0);
-        settings.tabBarItem.title = NSLocalizedString("SETTINGS_TABBAR", comment: "")
-        settings.tabBarItem.image = UIImage(named: "ic_settings")
+        settings.tabBarItem.title = "SETTINGS_TABBAR".localized()
+        settings.tabBarItem.image = UIImage.icSettings
         settings.tabBarItem.tag = 4
         
         viewControllers = [home, wishList, addNew, rentals, settings]
@@ -58,23 +58,23 @@ final class TabBarViewController: UITabBarController {
     }
     
     private func createNotificationButton() -> UIBarButtonItem {
-        let notificationImageView = UIImageView(image: UIImage(named: "ic_notifications"))
+        let notificationImageView = UIImageView(image: UIImage.icNotifications)
         
-        let widthConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
-        let heightConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
-        
-        notificationImageView.addConstraints([widthConstraint, heightConstraint])
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18),
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        ])
         
         return UIBarButtonItem(customView: notificationImageView)
     }
     
     private func createSearchButton() -> UIBarButtonItem {
-        let notificationImageView = UIImageView(image: UIImage(named: "ic_search"))
+        let notificationImageView = UIImageView(image: UIImage.icSearch)
         
-        let widthConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
-        let heightConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
-        
-        notificationImageView.addConstraints([widthConstraint, heightConstraint])
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18),
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        ])
         
         return UIBarButtonItem(customView: notificationImageView)
     }
@@ -88,7 +88,7 @@ final class TabBarViewController: UITabBarController {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 1.1764705882352942
         paragraphStyle.alignment = .center
-        navBarTitle.text = NSLocalizedString("LIBRARY_LABEL", comment: "")
+        navBarTitle.text = "LIBRARY_LABEL".localized()
         navBarTitle.sizeToFit()
         
         return navBarTitle
