@@ -9,5 +9,5 @@ import UIKit
 
 final class LibraryView: NibView {
     @IBOutlet var view: UIView!
-    @IBOutlet var tblBooks: UITableView!
+    @IBOutlet var tableBooks: UITableView!
 }

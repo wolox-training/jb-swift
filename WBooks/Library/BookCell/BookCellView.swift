@@ -9,12 +9,12 @@ import UIKit
 
 final class BookCellView: UITableViewCell {
 
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblAuthor: UILabel!
-    @IBOutlet weak var imgBook: UIImageView!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelAuthor: UILabel!
+    @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var mainContainer: UIView! {
         didSet {
-            mainContainer.layer.backgroundColor = UIColor(red: 0.92, green: 0.96, blue: 0.98, alpha: 1).cgColor
+            mainContainer.layer.backgroundColor = UIColor.backgroundColor.cgColor
         }
     }
     @IBOutlet weak var whiteContainer: UIView! {
@@ -25,6 +25,10 @@ final class BookCellView: UITableViewCell {
             whiteContainer.layer.shadowOffset = .zero
             whiteContainer.layer.shadowRadius = 1
         }
+    }
+    
+    static var identifier: String {
+        return String(describing: BookCellView.self)
     }
     
     override func layoutSubviews() {
