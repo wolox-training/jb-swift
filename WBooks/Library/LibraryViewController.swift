@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class LibraryViewController: UIViewController {
     let libraryView = LibraryView()
     
     private let booksArray : Array = [
@@ -28,6 +28,9 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let nib = UINib.init(nibName: "BookCellView", bundle: nil)
         self.libraryView.tblBooks.register(nib, forCellReuseIdentifier: "BookCellView")
     }
+}
+
+extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return booksArray.count
@@ -44,4 +47,5 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
+    
 }
