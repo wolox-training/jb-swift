@@ -8,7 +8,6 @@
 import UIKit
 
 final class BookCellView: UITableViewCell {
-
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!
     @IBOutlet weak var imgBook: UIImageView!
@@ -30,5 +29,13 @@ final class BookCellView: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 8, right: 50))
+    }
+    
+    func configureCell(with viewModel: BookCellViewModel) {
+        lblTitle.text =  viewModel.title
+        lblAuthor.text = viewModel.author
+        if let imageName = viewModel.imageName {
+            imgBook.image = UIImage(named: imageName)
+        }
     }
 }

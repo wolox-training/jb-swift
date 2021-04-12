@@ -11,7 +11,7 @@ protocol LoginViewDelegate: AnyObject {
     func onLoginPressed()
 }
 
-class LoginView: NibView {
+final class LoginView: NibView {
     weak var delegate: LoginViewDelegate?
     
     @IBAction func onPressed(_ sender: Any) {

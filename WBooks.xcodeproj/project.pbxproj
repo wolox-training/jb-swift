@@ -16,6 +16,9 @@
 		964F579A261DD75B004638D9 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F5799261DD75B004638D9 /* WBooksUITests.swift */; };
 		968F81FD2620937C007D5C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 968F81FF2620937C007D5C78 /* Localizable.strings */; };
 		968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F82172620D278007D5C78 /* TabBarViewController.swift */; };
+		9699E24726247DC500D37ACD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E24626247DC500D37ACD /* Book.swift */; };
+		9699E24C26247E6F00D37ACD /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E24B26247E6F00D37ACD /* MainMenuViewModel.swift */; };
+		9699E251262483A700D37ACD /* BookCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E250262483A700D37ACD /* BookCellViewModel.swift */; };
 		96A837EC261F625800C2D3D1 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837EB261F625800C2D3D1 /* NibView.swift */; };
 		96A837F6261F629E00C2D3D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837F5261F629E00C2D3D1 /* LoginView.swift */; };
 		96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */; };
@@ -70,6 +73,9 @@
 		968F81FE2620937C007D5C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F8203262095DB007D5C78 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F82172620D278007D5C78 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		9699E24626247DC500D37ACD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		9699E24B26247E6F00D37ACD /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
+		9699E250262483A700D37ACD /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
 		96A837EB261F625800C2D3D1 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		96A837F5261F629E00C2D3D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		964F5776261DD75A004638D9 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				9699E24526247DAE00D37ACD /* Models */,
 				968F82162620D24A007D5C78 /* TabBar */,
 				96D6E87D261F845C00C8A00E /* MainMenu */,
 				96A837EA261F624600C2D3D1 /* Login */,
@@ -207,6 +214,14 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		9699E24526247DAE00D37ACD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9699E24626247DC500D37ACD /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		96A837EA261F624600C2D3D1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +239,7 @@
 				96D6E886261F84AE00C8A00E /* MainMenuView.xib */,
 				96D6E893261F84D200C8A00E /* MainMenuView.swift */,
 				96D6E89B261F85C900C8A00E /* MainMenuViewController.swift */,
+				9699E24B26247E6F00D37ACD /* MainMenuViewModel.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -233,6 +249,7 @@
 			children = (
 				96D6E8A1261F87A700C8A00E /* BookCellView.swift */,
 				96D6E8A9261F87BA00C8A00E /* BookCellView.xib */,
+				9699E250262483A700D37ACD /* BookCellViewModel.swift */,
 			);
 			path = BookCell;
 			sourceTree = "<group>";
@@ -483,9 +500,12 @@
 				96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */,
 				96A837EC261F625800C2D3D1 /* NibView.swift in Sources */,
 				96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */,
+				9699E251262483A700D37ACD /* BookCellViewModel.swift in Sources */,
 				964F5778261DD75A004638D9 /* AppDelegate.swift in Sources */,
 				96D6E89C261F85C900C8A00E /* MainMenuViewController.swift in Sources */,
 				96A837F6261F629E00C2D3D1 /* LoginView.swift in Sources */,
+				9699E24C26247E6F00D37ACD /* MainMenuViewModel.swift in Sources */,
+				9699E24726247DC500D37ACD /* Book.swift in Sources */,
 				964F577A261DD75A004638D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
