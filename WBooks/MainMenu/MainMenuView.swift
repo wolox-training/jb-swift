@@ -9,5 +9,9 @@ import UIKit
 
 final class MainMenuView: NibView {
     @IBOutlet var view: UIView!
-    @IBOutlet var tblBooks: UITableView!
+    @IBOutlet var tblBooks: UITableView! {
+        didSet {
+            tblBooks.layer.backgroundColor = UIColor.backgroundColor.cgColor
+        }
+    }
 }

@@ -15,6 +15,9 @@
 		964F578F261DD75B004638D9 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F578E261DD75B004638D9 /* WBooksTests.swift */; };
 		964F579A261DD75B004638D9 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F5799261DD75B004638D9 /* WBooksUITests.swift */; };
 		968F81FD2620937C007D5C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 968F81FF2620937C007D5C78 /* Localizable.strings */; };
+		9699E2912624B2AD00D37ACD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E2902624B2AD00D37ACD /* Colors.swift */; };
+		9699E2992624B47B00D37ACD /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E2982624B47B00D37ACD /* Images.swift */; };
+		9699E29E2624B6BC00D37ACD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E29D2624B6BC00D37ACD /* Strings.swift */; };
 		96A837EC261F625800C2D3D1 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837EB261F625800C2D3D1 /* NibView.swift */; };
 		96A837F6261F629E00C2D3D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837F5261F629E00C2D3D1 /* LoginView.swift */; };
 		96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */; };
@@ -68,6 +71,9 @@
 		964F579B261DD75B004638D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		968F81FE2620937C007D5C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F8203262095DB007D5C78 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9699E2902624B2AD00D37ACD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9699E2982624B47B00D37ACD /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		9699E29D2624B6BC00D37ACD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		96A837EB261F625800C2D3D1 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		96A837F5261F629E00C2D3D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		964F5776261DD75A004638D9 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				9699E28F2624B29C00D37ACD /* Extensions */,
 				96D6E87D261F845C00C8A00E /* MainMenu */,
 				96A837EA261F624600C2D3D1 /* Login */,
 				964F5777261DD75A004638D9 /* AppDelegate.swift */,
@@ -194,6 +201,16 @@
 				964F579B261DD75B004638D9 /* Info.plist */,
 			);
 			path = WBooksUITests;
+			sourceTree = "<group>";
+		};
+		9699E28F2624B29C00D37ACD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9699E2902624B2AD00D37ACD /* Colors.swift */,
+				9699E2982624B47B00D37ACD /* Images.swift */,
+				9699E29D2624B6BC00D37ACD /* Strings.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		96A837EA261F624600C2D3D1 /* Login */ = {
@@ -468,11 +485,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D6E894261F84D200C8A00E /* MainMenuView.swift in Sources */,
+				9699E29E2624B6BC00D37ACD /* Strings.swift in Sources */,
+				9699E2912624B2AD00D37ACD /* Colors.swift in Sources */,
 				96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */,
 				96A837EC261F625800C2D3D1 /* NibView.swift in Sources */,
 				96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */,
 				964F5778261DD75A004638D9 /* AppDelegate.swift in Sources */,
 				96D6E89C261F85C900C8A00E /* MainMenuViewController.swift in Sources */,
+				9699E2992624B47B00D37ACD /* Images.swift in Sources */,
 				96A837F6261F629E00C2D3D1 /* LoginView.swift in Sources */,
 				964F577A261DD75A004638D9 /* SceneDelegate.swift in Sources */,
 			);

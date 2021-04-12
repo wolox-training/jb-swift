@@ -54,23 +54,23 @@ final class MainMenuViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     private func createNotificationButton() -> UIBarButtonItem {
-        let notificationImageView = UIImageView(image: UIImage(named: "ic_notifications"))
-
-        let widthConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
-        let heightConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        let notificationImageView = UIImageView(image: UIImage.icNotifications)
         
-        notificationImageView.addConstraints([widthConstraint, heightConstraint])
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18),
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        ])
         
         return UIBarButtonItem(customView: notificationImageView)
     }
     
     private func createSearchButton() -> UIBarButtonItem {
-        let notificationImageView = UIImageView(image: UIImage(named: "ic_search"))
+        let notificationImageView = UIImageView(image: UIImage.icSearch)
         
-        let widthConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
-        let heightConstraint = NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
-        
-        notificationImageView.addConstraints([widthConstraint, heightConstraint])
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18),
+            NSLayoutConstraint(item: notificationImageView, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18)
+        ])
         
         return UIBarButtonItem(customView: notificationImageView)
     }
@@ -84,7 +84,7 @@ final class MainMenuViewController: UIViewController, UITableViewDelegate, UITab
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 1.1764705882352942
         paragraphStyle.alignment = .center
-        navBarTitle.text = NSLocalizedString("LIBRARY_LABEL", comment: "")
+        navBarTitle.text = "LIBRARY_LABEL".localized()
         navBarTitle.sizeToFit()
         
         return navBarTitle
