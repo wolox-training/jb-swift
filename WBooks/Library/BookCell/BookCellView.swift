@@ -38,8 +38,6 @@ final class BookCellView: UITableViewCell {
     func configureCell(with viewModel: BookCellViewModel) {
         labelTitle.text =  viewModel.title
         labelAuthor.text = viewModel.author
-        if let imageName = viewModel.imageName {
-            imageBook.image = UIImage(named: imageName)
-        }
+        imageBook.loadFromURL(stringURL: viewModel.image)
     }
 }

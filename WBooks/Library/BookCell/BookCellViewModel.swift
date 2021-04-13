@@ -18,7 +18,7 @@ final class BookCellViewModel {
     var author: String {
         return _book.author
     }
-    var imageName: String? {
-        return _book.imageName
+    var image: String {
+        return _book.image
     }
 }
