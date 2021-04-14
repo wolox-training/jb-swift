@@ -17,4 +17,6 @@ extension UIImage {
     static let addNew = UIImage(named: "ic_add new")
     static let myRentals = UIImage(named: "ic_myrentals")
     static let settings = UIImage(named: "ic_settings")
+    
+    static let defaultBook = UIImage(named: "img_book6.png")
 }

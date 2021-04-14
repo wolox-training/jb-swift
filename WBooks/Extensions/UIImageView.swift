@@ -19,9 +19,11 @@ extension UIImageView {
         }
     }
     
-    public func loadFromURL(stringURL: String) {
+    public func loadFromURL(stringURL: String, or defaultImage: UIImage? = nil) {
         if let url = URL(string: stringURL) {
             self.loadFromURL(url: url)
+        } else if let image = defaultImage {
+            self.image = image
         }
     }
 }
