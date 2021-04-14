@@ -11,7 +11,7 @@ final class LibraryView: NibView {
     @IBOutlet var view: UIView!
     @IBOutlet var tableBooks: UITableView! {
         didSet {
-            tableBooks.layer.backgroundColor = UIColor.backgroundColor.cgColor
+            tableBooks.backgroundColor = UIColor.backgroundColor
         }
     }
 }

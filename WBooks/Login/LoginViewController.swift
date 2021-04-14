@@ -21,7 +21,7 @@ final class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewDelegate {
-    func onLoginPressed() {        
+    func onLoginPressed() {
         let libraryViewController = UINavigationController(rootViewController: LibraryViewController())
         libraryViewController.modalPresentationStyle = .fullScreen
         present(libraryViewController, animated: true)

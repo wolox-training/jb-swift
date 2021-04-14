@@ -8,8 +8,6 @@
 import UIKit
 
 extension UIImage {
-    static let icNotifications = UIImage(named: "ic_notifications")
-    static let icSearch = UIImage(named: "ic_search")
-    
-    
+    static let notifications = UIImage(named: "ic_notifications.png")
+    static let search = UIImage(named: "ic_search.png")
 }

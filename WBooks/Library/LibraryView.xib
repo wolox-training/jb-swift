@@ -22,7 +22,7 @@
                     <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="rNm-u9-pOe">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="rNm-u9-pOe">
                     <rect key="frame" x="0.0" y="34" width="414" height="102"/>
                 </imageView>
             </subviews>
@@ -36,10 +36,11 @@
                 <constraint firstAttribute="bottom" secondItem="YrE-ZJ-f7p" secondAttribute="bottom" id="n8X-4u-Qou"/>
                 <constraint firstAttribute="trailing" secondItem="YrE-ZJ-f7p" secondAttribute="trailing" id="xFu-4h-SXx"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-210.1449275362319" y="61.607142857142854"/>
         </view>
     </objects>
     <resources>
-        <image name="bc_nav bar" width="375" height="102"/>
+        <image name="bc_nav bar.png" width="375" height="102"/>
     </resources>
 </document>
