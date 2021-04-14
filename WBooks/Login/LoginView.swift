@@ -7,9 +7,14 @@
 
 import UIKit
 
-final class LoginView: NibView {
+protocol LoginViewDelegate {
+    func onLoginPressed()
+}
 
-    @IBAction func onButtonPressed(_ sender: Any) {
-        print("Hello Wolox!")
+final class LoginView: NibView {
+    var delegate: LoginViewDelegate?
+    
+    @IBAction func onPressed(_ sender: Any) {
+        delegate?.onLoginPressed()
     }
 }
