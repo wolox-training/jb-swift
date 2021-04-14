@@ -11,7 +11,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Navigation bar configuration
+        UINavigationBar.appearance().barTintColor = UIColor.navBarColor
+        UINavigationBar.appearance().shadowImage = UIImage() // Remove 1px bottom borde
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barStyle = .black
+        
         return true
     }
 

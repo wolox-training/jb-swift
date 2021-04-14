@@ -8,9 +8,15 @@
 import UIKit
 
 final class BookCellView: UITableViewCell {
+
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelAuthor: UILabel!
     @IBOutlet weak var imageBook: UIImageView!
+    @IBOutlet weak var mainContainer: UIView! {
+        didSet {
+            mainContainer.backgroundColor = UIColor.backgroundColor
+        }
+    }
     @IBOutlet weak var whiteContainer: UIView! {
         didSet {
             whiteContainer.layer.cornerRadius = 5.0

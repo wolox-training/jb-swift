@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by joaquin bozzalla on 09/04/2021.
+  
+*/
+
+// MARK: - NAVBAR TITLES
+"LIBRARY_LABEL" = "LIBRARY";
+
+// MARK: - LOG IN SCREEN
+"LOGIN_BUTTON" = "LOG IN";
+"USER_PLACEHOLDER" = "User";
+"PASSWORD_PLACEHOLDER" = "Password";

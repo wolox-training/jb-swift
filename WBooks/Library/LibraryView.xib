@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,24 +18,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YrE-ZJ-f7p">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" red="0.89209243273248418" green="1" blue="0.9716891514993371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <rect key="frame" x="0.0" y="137" width="414" height="759"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="rNm-u9-pOe">
+                    <rect key="frame" x="0.0" y="34" width="414" height="102"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="YrE-ZJ-f7p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6gc-i8-TcD"/>
+                <constraint firstItem="rNm-u9-pOe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="34" id="Acz-Y9-oBH"/>
+                <constraint firstItem="YrE-ZJ-f7p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="137" id="H5a-PJ-Xjw"/>
                 <constraint firstItem="YrE-ZJ-f7p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nhn-TN-iYf"/>
+                <constraint firstAttribute="trailing" secondItem="rNm-u9-pOe" secondAttribute="trailing" id="YhE-OR-44h"/>
+                <constraint firstItem="rNm-u9-pOe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jMm-54-dL8"/>
                 <constraint firstAttribute="bottom" secondItem="YrE-ZJ-f7p" secondAttribute="bottom" id="n8X-4u-Qou"/>
                 <constraint firstAttribute="trailing" secondItem="YrE-ZJ-f7p" secondAttribute="trailing" id="xFu-4h-SXx"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-210.1449275362319" y="61.607142857142854"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="bc_nav bar.png" width="375" height="102"/>
     </resources>
 </document>

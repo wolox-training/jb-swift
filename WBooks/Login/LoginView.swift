@@ -14,6 +14,22 @@ protocol LoginViewDelegate {
 final class LoginView: NibView {
     var delegate: LoginViewDelegate?
     
+    @IBOutlet weak var buttonLogin: UIButton! {
+        didSet {
+            buttonLogin.setTitle("LOGIN_BUTTON".localized(), for: .normal)
+        }
+    }
+    @IBOutlet weak var textfieldUser: UITextField! {
+        didSet {
+            textfieldUser.placeholder = "USER_PLACEHOLDER".localized()
+        }
+    }
+    @IBOutlet weak var textfieldPassword: UITextField! {
+        didSet {
+            textfieldPassword.placeholder = "PASSWORD_PLACEHOLDER".localized()
+        }
+    }
+    
     @IBAction func onPressed(_ sender: Any) {
         delegate?.onLoginPressed()
     }
