@@ -13,7 +13,7 @@ final class BookCellView: UITableViewCell {
     @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var mainContainer: UIView! {
         didSet {
-            mainContainer.layer.backgroundColor = UIColor.backgroundColor.cgColor
+            mainContainer.backgroundColor = UIColor.backgroundColor
         }
     }
     @IBOutlet weak var whiteContainer: UIView! {
@@ -38,8 +38,6 @@ final class BookCellView: UITableViewCell {
     func configureCell(with viewModel: BookCellViewModel) {
         labelTitle.text =  viewModel.title
         labelAuthor.text = viewModel.author
-        if let imageName = viewModel.imageName {
-            imageBook.image = UIImage(named: imageName)
-        }
+        imageBook.image = viewModel.image
     }
 }

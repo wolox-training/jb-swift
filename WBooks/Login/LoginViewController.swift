@@ -21,8 +21,8 @@ final class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginViewDelegate {
-    func onLoginPressed() {        
-        let tabbarViewController = UINavigationController(rootViewController: TabBarViewController())
+    func onLoginPressed() {
+        let tabbarViewController = TabBarViewController()
         tabbarViewController.modalPresentationStyle = .fullScreen
         present(tabbarViewController, animated: true)
     }
