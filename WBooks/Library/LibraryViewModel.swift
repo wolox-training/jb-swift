@@ -15,6 +15,10 @@ final class LibraryViewModel {
         return _books.count
     }
     
+    func getBookBy(index: Int) -> Book {
+        return _books[index]
+    }
+    
     func createBookCellViewModel(for bookIndex: Int) -> BookCellViewModel {
         return BookCellViewModel(book: _books[bookIndex])
     }

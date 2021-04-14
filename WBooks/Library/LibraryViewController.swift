@@ -57,4 +57,11 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureCell(with: bookCellViewModel)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = _viewModel.getBookBy(index: indexPath.row)
+        let bookDetailsViewController = UINavigationController(rootViewController: BookDetailsViewController(book: book))
+        bookDetailsViewController.modalPresentationStyle = .fullScreen
+        present(bookDetailsViewController, animated: true)
+    }
 }
