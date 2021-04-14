@@ -39,10 +39,6 @@ final class BookCellView: UITableViewCell {
     func configureCell(title: String, author: String, image: String) {
         labelTitle.text =  title
         labelAuthor.text = author
-        if image != "" {
-            imageBook.image = UIImage(named: image)
-        } else {
-            imageBook.image = UIImage(named: "img_book6")
-        }
+        imageBook.image = image != "" ? UIImage(named: image) : UIImage(named: "img_book6")
     }
 }
