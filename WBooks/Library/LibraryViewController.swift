@@ -12,7 +12,7 @@ final class LibraryViewController: UIViewController {
     
     private let booksArray : Array = [
         ["title": "book 1", "author": "author 1", "image": "img_book1"],
-        ["title": "book 2", "author": "author 2", "image": "img_book2"],
+        ["title": "book 2", "author": "author 2", "image": ""],
         ["title": "book 3", "author": "author 3", "image": "img_book3"]
     ]
     
@@ -39,12 +39,8 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookCellView.identifier, for: indexPath) as! BookCellView
         let dict = booksArray[indexPath.row]
-        cell.labelTitle.text = dict["title"]
-        cell.labelAuthor.text = dict["author"]
-        if let image = dict["image"] {
-            cell.imageBook.image = UIImage(named: image)
-        }
-        
+        cell.configureCell(title: dict["title"]!, author: dict["author"]!, image: dict["image"]!)
+
         return cell
     }
 }
