@@ -42,7 +42,7 @@ final class BookDetailsViewController: UIViewController {
     }
     
     private func createBackButton() -> UIBarButtonItem {
-        let imageView = UIImageView(image: UIImage.icBack)
+        let imageView = UIImageView(image: UIImage.back)
         
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: imageView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 18),
