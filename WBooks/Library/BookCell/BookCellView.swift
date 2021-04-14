@@ -13,7 +13,7 @@ final class BookCellView: UITableViewCell {
     @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var mainContainer: UIView! {
         didSet {
-            mainContainer.layer.backgroundColor = UIColor.backgroundColor.cgColor
+            mainContainer.backgroundColor = UIColor.backgroundColor
         }
     }
     @IBOutlet weak var whiteContainer: UIView! {

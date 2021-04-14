@@ -6,21 +6,22 @@
   
 */
 
+// MARK: - NAVBAR TITLES
 "LIBRARY_LABEL" = "LIBRARY";
 
-/* TABBAR LABEL */
+// MARK: - TABBAR LABEL
 "LIBRARY_TABBAR" = "Library";
 "WISHLIST_TABBAR" = "Wishlist";
 "ADDNEW_TABBAR" = "Add new";
 "MYRENTALS_TABBAR" = "Rentals";
 "SETTINGS_TABBAR" = "Settings";
 
-/* LOG IN SCREEN */
+// MARK: - LOG IN SCREEN
 "LOGIN_BUTTON" = "LOG IN";
 "USER_PLACEHOLDER" = "User";
 "PASSWORD_PLACEHOLDER" = "Password";
 
-/* ERROR MESSAGE */
+// MARK: - ERROR MESSAGE
 "ERROR_ALERT_TITLE" = "Error";
 "ERROR_ALERT_MESSAGE" = "Loading data failed";
 "ERROR_ALERT_CLOSE" = "Close";
