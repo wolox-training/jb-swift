@@ -9,7 +9,7 @@ import UIKit
 
 final class LibraryViewController: UIViewController {
     private let libraryView = LibraryView()
-    private let _viewModel = LibraryViewModel()
+    private let viewModel = LibraryViewModel()
     
     override func loadView() {
         super.loadView()
@@ -32,7 +32,7 @@ final class LibraryViewController: UIViewController {
     }
     
     private func loadBooks() {
-        _viewModel.fetchBooks(onSuccess: self.reloadTable, onError: self.showError)
+        viewModel.fetchBooks(onSuccess: self.reloadTable, onError: self.showError)
     }
     
     private func reloadTable() {
@@ -56,12 +56,12 @@ final class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _viewModel.numberOfBooks
+        return viewModel.numberOfBooks
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookCellView.identifier, for: indexPath) as! BookCellView
-        let bookCellViewModel = _viewModel.createBookCellViewModel(for:indexPath.row)
+        let bookCellViewModel = viewModel.createBookCellViewModel(for:indexPath.row)
         cell.configureCell(with: bookCellViewModel)
         return cell
     }
