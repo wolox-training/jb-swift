@@ -36,6 +36,7 @@ final class BookSectionViewController: UIViewController {
         self._bookSectionView.labelGenre.text = _book.genre
         self._bookSectionView.labelYear.text = _book.year
         self._bookSectionView.labelAvailability.text = _book.isAvailable() ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
+        self._bookSectionView.labelAvailability.textColor = _book.isAvailable() ? .systemGreen : .systemRed
         self._bookSectionView.imageBook.loadFromURL(stringURL: _book.image)
     }
     

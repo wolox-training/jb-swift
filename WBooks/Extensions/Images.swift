@@ -11,7 +11,7 @@ extension UIImage {
     // Navigation Bar icons
     static let notifications = UIImage(named: "ic_notifications.png")
     static let search = UIImage(named: "ic_search.png")
-    static let back = UIImage(named: "ic_back")
+    static let back = UIImage(named: "ic_back.png")
     // TabBar Icons
     static let library = UIImage(named: "ic_library")
     static let wishlist = UIImage(named: "ic_wishlist")

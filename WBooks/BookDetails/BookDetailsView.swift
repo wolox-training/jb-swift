@@ -9,4 +9,9 @@ import UIKit
 
 final class BookDetailsView: NibView {
     @IBOutlet weak var sectionsContainer: UIStackView!
+    @IBOutlet weak var mainContainer: UIView! {
+        didSet {
+            mainContainer.backgroundColor = UIColor.backgroundColor
+        }
+    }
 }
