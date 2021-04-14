@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Navigation bar configuration
         UINavigationBar.appearance().barTintColor = UIColor.navBarColor
-        UINavigationBar.appearance().shadowImage = UIImage() // Remove 1px bottom borde
+        UINavigationBar.appearance().shadowImage = UIImage() // Remove 1px bottom border
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().barStyle = .black
         

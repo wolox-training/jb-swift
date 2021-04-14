@@ -11,9 +11,11 @@ final class LibraryViewController: UIViewController {
     private let libraryView = LibraryView()
 
     private let booksArray : Array = [
-        ["title": "book 1", "author": "author 1", "image": "img_book1"],
-        ["title": "book 2", "author": "author 2", "image": ""],
-        ["title": "book 3", "author": "author 3", "image": "img_book3"]
+        ["title": "A little bird told me", "author": "Timothy Cross", "image": "img_book1"],
+        ["title": "When the Doveeeeeeeeeees Disappeared", "author": "Sofi Oksanen", "image": "img_book2"],
+        ["title": "The Best Book in the World", "author": "Peter Sjernstrom", "image": "img_book3"],
+        ["title": "Be Creative", "author": "Tony Alcazar", "image": "img_book4"],
+        ["title": "Redesign the Web", "author": "Liliana Castilla", "image": ""],
     ]
 
     override func loadView() {
