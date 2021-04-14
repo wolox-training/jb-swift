@@ -35,4 +35,14 @@ final class BookCellView: UITableViewCell {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 8, right: 50))
     }
+    
+    func configureCell(title: String, author: String, image: String) {
+        labelTitle.text =  title
+        labelAuthor.text = author
+        if image != "" {
+            imageBook.image = UIImage(named: image)
+        } else {
+            imageBook.image = UIImage(named: "img_book6")
+        }
+    }
 }
