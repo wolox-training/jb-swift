@@ -5,20 +5,25 @@
 //  Created by joaquin bozzalla on 12/04/2021.
 //
 
+import UIKit
+
 final class BookCellViewModel {
-    private let _book: Book
+    private let book: Book
     
     init(book: Book) {
-        self._book = book
+        self.book = book
     }
     
     var title: String {
-        return _book.title
+        return book.title
     }
     var author: String {
-        return _book.author
+        return book.author
     }
-    var imageName: String? {
-        return _book.imageName
+    var image: UIImage {
+        if let imageName = book.imageName, let image = UIImage(named: imageName) {
+            return image
+        }
+        return UIImage.defaultBook!
     }
 }

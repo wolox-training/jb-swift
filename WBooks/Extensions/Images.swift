@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIImage {
+    static let defaultBook = UIImage(named: "img_book6.png")
     // MARK: - Navigation Bar icons
     static let notifications = UIImage(named: "ic_notifications.png")
     static let search = UIImage(named: "ic_search.png")
