@@ -9,12 +9,12 @@ import UIKit
 
 extension UIImage {
     // Navigation Bar icons
-    static let icNotifications = UIImage(named: "ic_notifications")
-    static let icSearch = UIImage(named: "ic_search")
+    static let notifications = UIImage(named: "ic_notifications.png")
+    static let search = UIImage(named: "ic_search.png")
     // TabBar Icons
-    static let icLibrary = UIImage(named: "ic_library")
-    static let icWishlist = UIImage(named: "ic_wishlist")
-    static let icAddNew = UIImage(named: "ic_add new")
-    static let icMyRentals = UIImage(named: "ic_myrentals")
-    static let icSettings = UIImage(named: "ic_settings")
+    static let library = UIImage(named: "ic_library")
+    static let wishlist = UIImage(named: "ic_wishlist")
+    static let addNew = UIImage(named: "ic_add new")
+    static let myRentals = UIImage(named: "ic_myrentals")
+    static let settings = UIImage(named: "ic_settings")
 }

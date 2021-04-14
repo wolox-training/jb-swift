@@ -13,9 +13,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Navigation bar configuration
-        UINavigationBar.appearance().barTintColor = UIColor(red: CGFloat(18/255.0), green: CGFloat(171/255.0), blue: CGFloat(238/255.0), alpha: CGFloat(1.0))
+        UINavigationBar.appearance().barTintColor = UIColor.navBarColor
         UINavigationBar.appearance().shadowImage = UIImage() // Remove 1px bottom border
-
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barStyle = .black
+        
         return true
     }
 

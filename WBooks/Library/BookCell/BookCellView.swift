@@ -14,7 +14,7 @@ final class BookCellView: UITableViewCell {
     @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var mainContainer: UIView! {
         didSet {
-            mainContainer.layer.backgroundColor = UIColor.backgroundColor.cgColor
+            mainContainer.backgroundColor = UIColor.backgroundColor
         }
     }
     @IBOutlet weak var whiteContainer: UIView! {
@@ -34,5 +34,15 @@ final class BookCellView: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 8, right: 50))
+    }
+    
+    func configureCell(title: String, author: String, image: String) {
+        labelTitle.text =  title
+        labelAuthor.text = author
+        if image != "" {
+            imageBook.image = UIImage(named: image)
+        } else {
+            imageBook.image = UIImage(named: "img_book6")
+        }
     }
 }
