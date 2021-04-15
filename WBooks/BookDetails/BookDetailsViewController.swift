@@ -8,15 +8,13 @@
 import UIKit
 
 final class BookDetailsViewController: UIViewController {
-    private let _bookDetailsView = BookDetailsView()
-    private let _bookSectionViewController: BookSectionViewController
-    private let _commentsSectionViewController: CommentsSectionViewController
-    private var _book: Book;
-    
-    init(book: Book) {
-        _book = book
-        _bookSectionViewController = BookSectionViewController(book: _book)
-        _commentsSectionViewController = CommentsSectionViewController()
+    private let bookDetailsView = BookDetailsView()
+    private let bookSectionViewController: BookSectionViewController
+    private let commentsSectionViewController: CommentsSectionViewController
+
+    init(book: Book, bookImage: UIImage? = nil) {
+        bookSectionViewController = BookSectionViewController(book: book, bookImage: bookImage)
+        commentsSectionViewController = CommentsSectionViewController()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,15 +24,15 @@ final class BookDetailsViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        self.view = _bookDetailsView
+        self.view = bookDetailsView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
         
-        _bookDetailsView.sectionsContainer.addArrangedSubview(_bookSectionViewController.view)
-        _bookDetailsView.sectionsContainer.addArrangedSubview(_commentsSectionViewController.view)
+        configureNavigationBar()
+        bookDetailsView.sectionsContainer.addArrangedSubview(bookSectionViewController.view)
+        bookDetailsView.sectionsContainer.addArrangedSubview(commentsSectionViewController.view)
     }
     
     private func configureNavigationBar() {

@@ -22,7 +22,7 @@
                     <rect key="frame" x="0.0" y="33" width="414" height="102"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IBP-QZ-M1s">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IBP-QZ-M1s">
                     <rect key="frame" x="0.0" y="135" width="414" height="761"/>
                     <edgeInsets key="layoutMargins" top="10" left="15" bottom="0.0" right="15"/>
                 </stackView>

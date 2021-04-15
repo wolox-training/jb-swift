@@ -8,24 +8,24 @@
 import UIKit
 
 final class LibraryViewModel {
-    private var _books: [Book] = [];
+    private var books: [Book] = [];
     private let bookRepository = BookRepository()
     
     var numberOfBooks: Int {
-        return _books.count
+        return books.count
     }
     
     func getBookBy(index: Int) -> Book {
-        return _books[index]
+        return books[index]
     }
     
     func createBookCellViewModel(for bookIndex: Int) -> BookCellViewModel {
-        return BookCellViewModel(book: _books[bookIndex])
+        return BookCellViewModel(book: books[bookIndex])
     }
     
     func fetchBooks(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let onFetchSuccess = { (books: [Book]) in
-            self._books = books
+            self.books = books
             onSuccess()
         }
         bookRepository.fetchBooks(onSuccess: onFetchSuccess, onError: onError)

@@ -7,7 +7,13 @@
 import Foundation
 
 extension URL {
+    static let backendURL = "https://ios-training-backend.herokuapp.com/api/v1"
+    
     static var books: URL {
-        URL(string: "https://ios-training-backend.herokuapp.com/api/v1/books")!
+        URL(string: backendURL + "/books")!
+    }
+    
+    static var rents: URL {
+        URL(string: backendURL + "/rents")!
     }
 }

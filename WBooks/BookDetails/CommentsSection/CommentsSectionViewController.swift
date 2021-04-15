@@ -8,10 +8,10 @@
 import UIKit
 
 final class CommentsSectionViewController: UIViewController {
-    private let _commentsSectionView = CommentsSectionView()
+    private let commentsSectionView = CommentsSectionView()
     
     override func loadView() {
         super.loadView()
-        self.view = _commentsSectionView
+        self.view = commentsSectionView
     }
 }

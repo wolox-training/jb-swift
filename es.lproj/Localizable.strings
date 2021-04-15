@@ -32,3 +32,10 @@
 "BOOK_UNAVAILABLE" = "No disponible";
 "ADD_TO_WISHLIST_BUTTON" = "AGREGAR A LA LISTA DE DESEOS";
 "RENT_BUTTON" = "ALQUILAR";
+"ERROR_ALERT_TITLE" = "Ups!";
+"ALERT_CLOSE" = "Cerrar";
+
+"UNAVAILABLE_BOOK_ALERT_MESSAGE" = "El libro no está disponible.";
+"RENT_ERROR_ALERT_MESSAGE" = "No has podido alquilar el libro.";
+"SUCCESS_RENT_ALERT_TITLE" = "Felicitaciones";
+"SUCCESS_RENT_ALERT_MESSAGE" = "Alquilaste el libro!";
