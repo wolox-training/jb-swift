@@ -9,19 +9,23 @@ import UIKit
 
 extension UIImageView {
     
-    public func loadFromURL(url: URL) {
+    func loadFromURL(url: URL, or defaultImage: UIImage? = UIImage.defaultImage) {
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
                 DispatchQueue.main.async {
                     self.image = UIImage(data: data)
                 }
+            } else {
+                self.image = defaultImage
             }
         }
     }
     
-    public func loadFromURL(stringURL: String) {
+    func loadFromURL(stringURL: String, or defaultImage: UIImage? = UIImage.defaultImage) {
         if let url = URL(string: stringURL) {
-            self.loadFromURL(url: url)
+            self.loadFromURL(url: url, or: defaultImage)
+        } else if let image = defaultImage {
+            self.image = image
         }
     }
 }

@@ -20,14 +20,14 @@ final class LibraryViewController: UIViewController {
         super.viewDidLoad()
         
         configureTable()
-        loadBooks()
         configureNavigationBar()
+        loadBooks()
     }
 
     private func configureTable() {
         self.libraryView.tableBooks.delegate = self
         self.libraryView.tableBooks.dataSource = self
-        let nib = UINib.init(nibName: BookCellView.identifier, bundle: nil)
+        let nib = UINib(nibName: BookCellView.identifier, bundle: nil)
         self.libraryView.tableBooks.register(nib, forCellReuseIdentifier: BookCellView.identifier)
     }
     
