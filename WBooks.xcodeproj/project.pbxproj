@@ -18,6 +18,14 @@
 		968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F82172620D278007D5C78 /* TabBarViewController.swift */; };
 		9694F5D526287A2800205CC4 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5D426287A2800205CC4 /* Rent.swift */; };
 		9694F5DA26287A4A00205CC4 /* RentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5D926287A4A00205CC4 /* RentRepository.swift */; };
+		9694F5DF2628BAFF00205CC4 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5DE2628BAFF00205CC4 /* Comments.swift */; };
+		9694F5E42628BB7200205CC4 /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5E32628BB7200205CC4 /* CommentRepository.swift */; };
+		9694F5EA2628BDEE00205CC4 /* CommentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5E92628BDEE00205CC4 /* CommentCellView.swift */; };
+		9694F5F22628BE1900205CC4 /* CommentCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9694F5F12628BE1900205CC4 /* CommentCellView.xib */; };
+		9694F5F72628C07E00205CC4 /* CommentCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5F62628C07E00205CC4 /* CommentCellViewModel.swift */; };
+		9694F5FC2628C41400205CC4 /* CommentsSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5FB2628C41400205CC4 /* CommentsSectionViewModel.swift */; };
+		9694F6012628D72200205CC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F6002628D72200205CC4 /* User.swift */; };
+		9694F6062628D76F00205CC4 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F6052628D76F00205CC4 /* UserRepository.swift */; };
 		9699E2912624B2AD00D37ACD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E2902624B2AD00D37ACD /* Colors.swift */; };
 		9699E2992624B47B00D37ACD /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E2982624B47B00D37ACD /* Images.swift */; };
 		9699E29E2624B6BC00D37ACD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E29D2624B6BC00D37ACD /* Strings.swift */; };
@@ -93,6 +101,14 @@
 		968F82172620D278007D5C78 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9694F5D426287A2800205CC4 /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
 		9694F5D926287A4A00205CC4 /* RentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentRepository.swift; sourceTree = "<group>"; };
+		9694F5DE2628BAFF00205CC4 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		9694F5E32628BB7200205CC4 /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
+		9694F5E92628BDEE00205CC4 /* CommentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellView.swift; sourceTree = "<group>"; };
+		9694F5F12628BE1900205CC4 /* CommentCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCellView.xib; sourceTree = "<group>"; };
+		9694F5F62628C07E00205CC4 /* CommentCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellViewModel.swift; sourceTree = "<group>"; };
+		9694F5FB2628C41400205CC4 /* CommentsSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSectionViewModel.swift; sourceTree = "<group>"; };
+		9694F6002628D72200205CC4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9694F6052628D76F00205CC4 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		9699E24626247DC500D37ACD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9699E24B26247E6F00D37ACD /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		9699E250262483A700D37ACD /* BookCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellViewModel.swift; sourceTree = "<group>"; };
@@ -253,11 +269,23 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		9694F5E82628BDBD00205CC4 /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				9694F5E92628BDEE00205CC4 /* CommentCellView.swift */,
+				9694F5F12628BE1900205CC4 /* CommentCellView.xib */,
+				9694F5F62628C07E00205CC4 /* CommentCellViewModel.swift */,
+			);
+			path = CommentCell;
+			sourceTree = "<group>";
+		};
 		9699E24526247DAE00D37ACD /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9699E24626247DC500D37ACD /* Book.swift */,
 				9694F5D426287A2800205CC4 /* Rent.swift */,
+				9694F5DE2628BAFF00205CC4 /* Comments.swift */,
+				9694F6002628D72200205CC4 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,6 +307,8 @@
 			children = (
 				9699E30E2624E34D00D37ACD /* BookRepository.swift */,
 				9694F5D926287A4A00205CC4 /* RentRepository.swift */,
+				9694F5E32628BB7200205CC4 /* CommentRepository.swift */,
+				9694F6052628D76F00205CC4 /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -298,9 +328,11 @@
 		969CC60B26271DDA00DB21CF /* CommentsSection */ = {
 			isa = PBXGroup;
 			children = (
+				9694F5E82628BDBD00205CC4 /* CommentCell */,
 				969CC63626271F2700DB21CF /* CommentsSectionView.swift */,
 				969CC63426271F2700DB21CF /* CommentsSectionView.xib */,
 				969CC63526271F2700DB21CF /* CommentsSectionViewController.swift */,
+				9694F5FB2628C41400205CC4 /* CommentsSectionViewModel.swift */,
 			);
 			path = CommentsSection;
 			sourceTree = "<group>";
@@ -465,6 +497,7 @@
 				96D6E8AA261F87BA00C8A00E /* BookCellView.xib in Resources */,
 				969CC63726271F2700DB21CF /* CommentsSectionView.xib in Resources */,
 				968F81FD2620937C007D5C78 /* Localizable.strings in Resources */,
+				9694F5F22628BE1900205CC4 /* CommentCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,9 +625,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9694F5FC2628C41400205CC4 /* CommentsSectionViewModel.swift in Sources */,
 				969CC62F26271F1F00DB21CF /* BookSectionViewController.swift in Sources */,
 				968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */,
 				969CC63926271F2700DB21CF /* CommentsSectionView.swift in Sources */,
+				9694F5DF2628BAFF00205CC4 /* Comments.swift in Sources */,
+				9694F5E42628BB7200205CC4 /* CommentRepository.swift in Sources */,
+				9694F6062628D76F00205CC4 /* UserRepository.swift in Sources */,
 				9694F5DA26287A4A00205CC4 /* RentRepository.swift in Sources */,
 				9699E29E2624B6BC00D37ACD /* Strings.swift in Sources */,
 				969CC62726271F1400DB21CF /* BookDetailsViewController.swift in Sources */,
@@ -615,10 +652,13 @@
 				964F5778261DD75A004638D9 /* AppDelegate.swift in Sources */,
 				9699E2992624B47B00D37ACD /* Images.swift in Sources */,
 				96D6E89C261F85C900C8A00E /* LibraryViewController.swift in Sources */,
+				9694F5F72628C07E00205CC4 /* CommentCellViewModel.swift in Sources */,
 				9694F5D526287A2800205CC4 /* Rent.swift in Sources */,
+				9694F5EA2628BDEE00205CC4 /* CommentCellView.swift in Sources */,
 				96A837F6261F629E00C2D3D1 /* LoginView.swift in Sources */,
 				969D7603262607AA00A9B7D5 /* UIImageView.swift in Sources */,
 				964F577A261DD75A004638D9 /* SceneDelegate.swift in Sources */,
+				9694F6012628D72200205CC4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

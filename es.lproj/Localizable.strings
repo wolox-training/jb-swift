@@ -39,3 +39,4 @@
 "RENT_ERROR_ALERT_MESSAGE" = "No has podido alquilar el libro.";
 "SUCCESS_RENT_ALERT_TITLE" = "Felicitaciones";
 "SUCCESS_RENT_ALERT_MESSAGE" = "Alquilaste el libro!";
+"COMMENTS_ERROR_ALERT_MESSAGE" = "Error al cargar los comentarios.";

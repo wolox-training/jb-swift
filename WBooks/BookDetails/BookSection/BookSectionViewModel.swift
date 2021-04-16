@@ -18,6 +18,6 @@ final class BookSectionViewModel {
             self.book.setUnavailable()
             onSuccess()
         }
-        rentRepository.rentBook(userId: 2, bookId: book.id, onSuccess: onRentSuccess, onError: onError)
+        rentRepository.rentBook(userId: 9, bookId: book.id, onSuccess: onRentSuccess, onError: onError)
     }
 }

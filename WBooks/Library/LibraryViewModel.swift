@@ -8,7 +8,7 @@
 import UIKit
 
 final class LibraryViewModel {
-    private var books: [Book] = [];
+    private var books: [Book] = []
     private let bookRepository = BookRepository()
     
     var numberOfBooks: Int {

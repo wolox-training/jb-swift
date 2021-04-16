@@ -16,4 +16,12 @@ extension URL {
     static var rents: URL {
         URL(string: backendURL + "/rents")!
     }
+    
+    static func comments(bookId: Int) -> URL {
+        URL(string: backendURL + "/books/\(bookId)/comments")!
+    }
+    
+    static func user(userId: Int) -> URL {
+        URL(string: backendURL + "/users/\(userId)")!
+    }
 }

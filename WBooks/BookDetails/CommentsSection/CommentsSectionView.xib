@@ -7,12 +7,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsSectionView" customModule="WBooks" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentsSectionView" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="tableComments" destination="9kr-mH-GQe" id="LqB-WO-CcY"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9kr-mH-GQe">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9kr-mH-GQe" secondAttribute="trailing" id="28d-t8-EsP"/>
+                <constraint firstItem="9kr-mH-GQe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GbD-9g-5uA"/>
+                <constraint firstAttribute="bottom" secondItem="9kr-mH-GQe" secondAttribute="bottom" id="ctE-T5-elP"/>
+                <constraint firstItem="9kr-mH-GQe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zEb-ak-1W3"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -20,8 +35,8 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -14,7 +14,7 @@ final class BookDetailsViewController: UIViewController {
 
     init(book: Book, bookImage: UIImage? = nil) {
         bookSectionViewController = BookSectionViewController(book: book, bookImage: bookImage)
-        commentsSectionViewController = CommentsSectionViewController()
+        commentsSectionViewController = CommentsSectionViewController(book: book)
         super.init(nibName: nil, bundle: nil)
     }
     

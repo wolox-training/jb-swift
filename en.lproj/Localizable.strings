@@ -39,3 +39,4 @@
 "RENT_ERROR_ALERT_MESSAGE" = "Book rental failed.";
 "SUCCESS_RENT_ALERT_TITLE" = "Congratulation";
 "SUCCESS_RENT_ALERT_MESSAGE" = "You rented the book!";
+"COMMENTS_ERROR_ALERT_MESSAGE" = "Comments loading failed.";
