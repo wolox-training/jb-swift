@@ -14,7 +14,7 @@ public class Book: Codable {
     let image: String
     var status : String
 
-    func isAvailable() -> Bool {
+    var isAvailable: Bool {
         return status == bookStatus.available.rawValue
     }
     
