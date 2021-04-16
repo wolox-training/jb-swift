@@ -59,7 +59,7 @@ final class BookSectionView: NibView {
         labelAuthor.text = viewModel.author
         labelGenre.text = viewModel.genre
         labelYear.text = viewModel.year
-        if let image = bookImage {
+        if let image = bookImage, image != UIImage.defaultImage {
             imageBook.image = image
         } else {
             imageBook.loadFromURL(stringURL: viewModel.image)
