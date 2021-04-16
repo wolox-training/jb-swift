@@ -53,4 +53,22 @@ final class BookSectionView: NibView {
     @IBAction func onRentPressed(_ sender: Any) {
         delegate?.onRentPressed()
     }
+    
+    func configure(with viewModel: BookSectionViewModel, bookImage: UIImage? = nil) {
+        labelTitle.text = viewModel.title
+        labelAuthor.text = viewModel.author
+        labelGenre.text = viewModel.genre
+        labelYear.text = viewModel.year
+        if let image = bookImage {
+            imageBook.image = image
+        } else {
+            imageBook.loadFromURL(stringURL: viewModel.image)
+        }
+        configureAvailability(with: viewModel)
+    }
+    
+    func configureAvailability(with viewModel: BookSectionViewModel) {
+        labelAvailability.text = viewModel.isBookAvailable ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
+        labelAvailability.textColor = viewModel.isBookAvailable ? .systemGreen : .systemRed
+    }
 }

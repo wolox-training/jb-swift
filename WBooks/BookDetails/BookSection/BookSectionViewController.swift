@@ -33,46 +33,28 @@ final class BookSectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureBookDetails()
+        bookSectionView.configure(with: viewModel, bookImage: bookImage)
     }
-    
-    private func configureBookDetails() {
-        self.bookSectionView.labelTitle.text = viewModel.book.title
-        self.bookSectionView.labelAuthor.text = viewModel.book.author
-        self.bookSectionView.labelGenre.text = viewModel.book.genre
-        self.bookSectionView.labelYear.text = viewModel.book.year
-        if let image = bookImage {
-            self.bookSectionView.imageBook.image = image
-        } else {
-            self.bookSectionView.imageBook.loadFromURL(stringURL: viewModel.book.image)
-        }
-        configureAvailability()
-    }
-    
-    private func configureAvailability() {
-        self.bookSectionView.labelAvailability.text = viewModel.book.isAvailable() ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
-        self.bookSectionView.labelAvailability.textColor = viewModel.book.isAvailable() ? .systemGreen : .systemRed
-    }
-    
+
     private func showUnavailableBookAlert() {
         showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "UNAVAILABLE_BOOK_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
     private func onSuccessRent() {
         bookSectionView.buttonRent.isEnabled = true
-        self.configureAvailability()
+        bookSectionView.configureAvailability(with: viewModel)
         showAlert(title: "SUCCESS_RENT_ALERT_TITLE".localized(), message: "SUCCESS_RENT_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
     private func onErrorRent(error: Error) {
-        self.bookSectionView.buttonRent.isEnabled = true
-        self.showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "RENT_ERROR_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
+        bookSectionView.buttonRent.isEnabled = true
+        showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "RENT_ERROR_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
     private func showAlert(title: String, message: String, closeButtonLabel: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: closeButtonLabel, style: .default, handler: nil))
-        self.present(alert, animated: true)
+        present(alert, animated: true)
     }
 
 }
@@ -81,7 +63,7 @@ extension BookSectionViewController: BookSectionViewDelegate {
     func onRentPressed() {
         bookSectionView.buttonRent.isEnabled = false
         
-        if viewModel.book.isAvailable() {
+        if viewModel.isBookAvailable {
             viewModel.rentBook(onSuccess: self.onSuccessRent, onError: self.onErrorRent)
         } else {
             showUnavailableBookAlert()
