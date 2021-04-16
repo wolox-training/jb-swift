@@ -9,7 +9,7 @@ import Alamofire
 
 class BookRepository {
     
-    public func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
+    func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         AF
             .request(URL.books, method: .get)
             .responseJSON(completionHandler: { response in

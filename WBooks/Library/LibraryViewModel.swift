@@ -20,8 +20,8 @@ final class LibraryViewModel {
     }
     
     func fetchBooks(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
-        let onFetchSuccess = { (books: [Book]) in
-            self.books = books
+        let onFetchSuccess = { [weak self] (books: [Book]) in
+            self?.books = books
             onSuccess()
         }
         bookRepository.fetchBooks(onSuccess: onFetchSuccess, onError: onError)
