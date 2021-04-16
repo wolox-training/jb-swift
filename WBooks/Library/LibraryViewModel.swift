@@ -9,7 +9,11 @@ import UIKit
 
 final class LibraryViewModel {
     private var books: [Book] = [];
-    private let bookRepository = BookRepository()
+    private let bookRepository: BookRepositoryType
+    
+    init(bookRepository: BookRepositoryType = BookRepository()) {
+        self.bookRepository = bookRepository
+    }
     
     var numberOfBooks: Int {
         return books.count
