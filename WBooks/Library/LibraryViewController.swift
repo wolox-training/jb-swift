@@ -39,7 +39,7 @@ final class LibraryViewController: UIViewController {
         libraryView.tableBooks.reloadData()
     }
 
-    private func showError(error: Error? = nil) {
+    private func showError() {
         let message = UIAlertController(title: "ERROR_ALERT_TITLE".localized(), message: "ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
         message.addAction(UIAlertAction(title: "ERROR_ALERT_CLOSE".localized(), style: .default, handler: nil))
         self.present(message, animated: true)
