@@ -29,19 +29,20 @@ final class BookDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureNavigationBar()
-        bookDetailsView.sectionsContainer.addArrangedSubview(bookSectionViewController.view)
-        bookDetailsView.sectionsContainer.addArrangedSubview(commentsSectionViewController.view)
+        addSection(bookSectionViewController)
+        addSection(commentsSectionViewController)
     }
     
     private func configureNavigationBar() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "BOOK_DETAILS_LABEL".localized()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.back, style: .plain, target: self, action: #selector(self.goBack(_:)))
     }
-
-    @objc private func goBack(_ sender:UIBarButtonItem!) {
-        dismiss(animated: true)
+    
+    private func addSection(_ child: UIViewController) {
+        addChild(child)
+        bookDetailsView.sectionsContainer.addArrangedSubview(child.view)
+        child.view.frame = bookDetailsView.sectionsContainer.frame
+        child.didMove(toParent: self)
     }
 }

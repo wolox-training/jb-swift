@@ -7,7 +7,11 @@
 
 import Alamofire
 
-final class CommentRepository {
+protocol CommentRepositoryType {
+    func fetchComments(bookId: Int, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void)
+}
+
+final class CommentRepository: CommentRepositoryType {
     
     func fetchComments(bookId: Int, onSuccess: @escaping ([Comment]) -> Void, onError: @escaping (Error) -> Void) {
         AF
@@ -15,14 +19,11 @@ final class CommentRepository {
             .responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let value):
-                    guard let JSONComments = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+                    guard let JSONComments = try? JSONSerialization.data(withJSONObject: value, options: []), let comments = try? JSONDecoder().decode([Comment].self, from: JSONComments) else {
                         onError(CommentError.decodeError)
                         return
                     }
-                    guard let comments = try? JSONDecoder().decode([Comment].self, from: JSONComments) else {
-                        onError(CommentError.decodeError)
-                        return
-                    }
+                    
                     onSuccess(comments)
                 case .failure(let error):
                     onError(error)

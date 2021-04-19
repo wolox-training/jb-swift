@@ -11,10 +11,11 @@ import UIKit
 final class CommentCellViewModel {
     private let comment: Comment
     private var user: User?
-    private let userRepository = UserRepository()
+    private let userRepository: UserRepositoryType
     
-    init(comment: Comment) {
+    init(comment: Comment, userRepository: UserRepositoryType = UserRepository()) {
         self.comment = comment
+        self.userRepository = userRepository
     }
     
     var userName: String {

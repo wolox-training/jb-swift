@@ -42,14 +42,14 @@ final class CommentsSectionViewController: UIViewController {
     }
     
     private func loadComments() {
-        viewModel.fetchComments(onSuccess: reloadTable, onError: showError)
+        viewModel.fetchComments(onSuccess: reloadTable, onError: { [weak self] _ in self?.showError() })
     }
     
     private func reloadTable() {
         self.commentsSectionView.tableComments.reloadData()
     }
     
-    private func showError(error: Error) {
+    private func showError() {
         let alert = UIAlertController(title: "ALERT_TITLE".localized(), message: "COMMENTS_ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ALERT_CLOSE".localized(), style: .default, handler: nil))
         self.present(alert, animated: true)
