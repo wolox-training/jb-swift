@@ -12,22 +12,22 @@ final class Book: Codable {
     let genre: String
     let year: String
     let image: String
-    var status : String
+    var status : BookStatus
 
     var isAvailable: Bool {
-        return status == bookStatus.available.rawValue
+        return status == BookStatus.available
     }
     
     func setAvailable() {
-        status = bookStatus.available.rawValue
+        status = BookStatus.available
     }
     
     func setUnavailable() {
-        status = bookStatus.unavailable.rawValue
+        status = BookStatus.unavailable
     }
 }
 
-enum bookStatus: String {
+enum BookStatus: String, Codable {
     case available = "Available"
     case unavailable = "Unvailable"
 }

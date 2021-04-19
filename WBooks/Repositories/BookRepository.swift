@@ -7,7 +7,11 @@
 
 import Alamofire
 
-final class BookRepository {
+protocol BookRepositoryType {
+    func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void)
+}
+
+class BookRepository: BookRepositoryType {
     
     func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         AF
@@ -15,11 +19,7 @@ final class BookRepository {
             .responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let value):
-                    guard let JSONBooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
-                        onError(BookError.decodeError)
-                        return
-                    }
-                    guard let books = try? JSONDecoder().decode([Book].self, from: JSONBooks) else {
+                    guard let JSONBooks = try? JSONSerialization.data(withJSONObject: value, options: []), let books = try? JSONDecoder().decode([Book].self, from: JSONBooks) else {
                         onError(BookError.decodeError)
                         return
                     }

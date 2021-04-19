@@ -5,10 +5,12 @@
 //  Created by joaquin bozzalla on 14/04/2021.
 //
 
+import UIKit
+
 final class BookSectionViewModel {
     private var book: Book
-    private let rentRepository = RentRepository()
-    
+    private let rentRepository: RentRepository
+
     var title: String {
         return book.title
     }
@@ -21,15 +23,18 @@ final class BookSectionViewModel {
     var genre: String {
         return book.genre
     }
-    var image: String {
+    var bookImage: UIImage?
+    var imageURL: String {
         return book.image
     }
     var isBookAvailable: Bool {
         return book.isAvailable
     }
     
-    init(book: Book) {
+    init(book: Book, bookImage: UIImage? = nil, rentRepository: RentRepository = RentRepository()) {
         self.book = book
+        self.bookImage = bookImage
+        self.rentRepository = rentRepository
     }
     
     func rentBook(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
