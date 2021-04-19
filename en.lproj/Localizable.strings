@@ -20,3 +20,8 @@
 "LOGIN_BUTTON" = "LOG IN";
 "USER_PLACEHOLDER" = "User";
 "PASSWORD_PLACEHOLDER" = "Password";
+
+/* ERROR MESSAGE */
+"ERROR_ALERT_TITLE" = "Error";
+"ERROR_ALERT_MESSAGE" = "Loading data failed";
+"ERROR_ALERT_CLOSE" = "Close";

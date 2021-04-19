@@ -8,7 +8,6 @@
 import UIKit
 
 final class BookCellView: UITableViewCell {
-
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelAuthor: UILabel!
     @IBOutlet weak var imageBook: UIImageView!
@@ -36,9 +35,9 @@ final class BookCellView: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 8, right: 50))
     }
     
-    func configureCell(title: String, author: String, image: String) {
-        labelTitle.text =  title
-        labelAuthor.text = author
-        imageBook.image = image != "" ? UIImage(named: image) : UIImage(named: "img_book6")
+    func configureCell(with viewModel: BookCellViewModel) {
+        labelTitle.text =  viewModel.title
+        labelAuthor.text = viewModel.author
+        imageBook.loadFromURL(stringURL: viewModel.image)
     }
 }

@@ -9,15 +9,8 @@ import UIKit
 
 final class LibraryViewController: UIViewController {
     private let libraryView = LibraryView()
-
-    private let booksArray : Array = [
-        ["title": "A little bird told me", "author": "Timothy Cross", "image": "img_book1"],
-        ["title": "When the Doveeeeeeeeeees Disappeared", "author": "Sofi Oksanen", "image": "img_book2"],
-        ["title": "The Best Book in the World", "author": "Peter Sjernstrom", "image": "img_book3"],
-        ["title": "Be Creative", "author": "Tony Alcazar", "image": "img_book4"],
-        ["title": "Redesign the Web", "author": "Liliana Castilla", "image": ""],
-    ]
-
+    private let viewModel = LibraryViewModel()
+    
     override func loadView() {
         super.loadView()
         self.view = libraryView
@@ -25,17 +18,33 @@ final class LibraryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureTable()
         configureNavigationBar()
+        loadBooks()
     }
 
     private func configureTable() {
-        self.libraryView.tableBooks.delegate = self
-        self.libraryView.tableBooks.dataSource = self
-        let nib = UINib.init(nibName: BookCellView.identifier, bundle: nil)
-        self.libraryView.tableBooks.register(nib, forCellReuseIdentifier: BookCellView.identifier)
+        libraryView.tableBooks.delegate = self
+        libraryView.tableBooks.dataSource = self
+        let nib = UINib(nibName: BookCellView.identifier, bundle: nil)
+        libraryView.tableBooks.register(nib, forCellReuseIdentifier: BookCellView.identifier)
+    }
+    
+    private func loadBooks() {
+        viewModel.fetchBooks(onSuccess: { [weak self] in self?.reloadTable() }, onError: { [weak self] _ in self?.showError() })
+    }
+    
+    private func reloadTable() {
+        libraryView.tableBooks.reloadData()
     }
 
+    private func showError() {
+        let message = UIAlertController(title: "ERROR_ALERT_TITLE".localized(), message: "ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
+        message.addAction(UIAlertAction(title: "ERROR_ALERT_CLOSE".localized(), style: .default, handler: nil))
+        self.present(message, animated: true)
+    }
+    
     private func configureNavigationBar() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "LIBRARY_LABEL".localized()
@@ -47,14 +56,13 @@ final class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return booksArray.count
+        return viewModel.numberOfBooks
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookCellView.identifier, for: indexPath) as! BookCellView
-        let dict = booksArray[indexPath.row]
-        cell.configureCell(title: dict["title"]!, author: dict["author"]!, image: dict["image"]!)
-
+        let bookCellViewModel = viewModel.createBookCellViewModel(for:indexPath.row)
+        cell.configureCell(with: bookCellViewModel)
         return cell
     }
 }

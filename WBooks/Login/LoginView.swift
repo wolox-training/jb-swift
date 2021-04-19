@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol LoginViewDelegate {
+protocol LoginViewDelegate: AnyObject {
     func onLoginPressed()
 }
 
 final class LoginView: NibView {
-    var delegate: LoginViewDelegate?
+    weak var delegate: LoginViewDelegate?
     
     @IBOutlet weak var buttonLogin: UIButton! {
         didSet {

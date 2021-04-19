@@ -20,3 +20,8 @@
 "LOGIN_BUTTON" = "ENTRAR";
 "USER_PLACEHOLDER" = "Usuario";
 "PASSWORD_PLACEHOLDER" = "Contraseña";
+
+/* ERROR MESSAGE */
+"ERROR_ALERT_TITLE" = "Error";
+"ERROR_ALERT_MESSAGE" = "Error al cargar los datos";
+"ERROR_ALERT_CLOSE" = "Cerrar";
