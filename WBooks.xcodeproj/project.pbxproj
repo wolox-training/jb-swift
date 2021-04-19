@@ -14,6 +14,7 @@
 		964F5781261DD75B004638D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964F5780261DD75B004638D9 /* Assets.xcassets */; };
 		964F578F261DD75B004638D9 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F578E261DD75B004638D9 /* WBooksTests.swift */; };
 		964F579A261DD75B004638D9 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F5799261DD75B004638D9 /* WBooksUITests.swift */; };
+		968D71AE2629FC3600A14C6C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D71AD2629FC3600A14C6C /* UIButton.swift */; };
 		968F81FD2620937C007D5C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 968F81FF2620937C007D5C78 /* Localizable.strings */; };
 		968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F82172620D278007D5C78 /* TabBarViewController.swift */; };
 		9694F5D526287A2800205CC4 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5D426287A2800205CC4 /* Rent.swift */; };
@@ -88,6 +89,7 @@
 		964F5795261DD75B004638D9 /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F5799261DD75B004638D9 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		964F579B261DD75B004638D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968D71AD2629FC3600A14C6C /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		968F81FE2620937C007D5C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F8203262095DB007D5C78 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F82172620D278007D5C78 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				9699E29D2624B6BC00D37ACD /* Strings.swift */,
 				969D7602262607AA00A9B7D5 /* UIImageView.swift */,
 				969D76072626092A00A9B7D5 /* URL.swift */,
+				968D71AD2629FC3600A14C6C /* UIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				969CC62526271F1400DB21CF /* BookDetailsView.swift in Sources */,
 				9699E2912624B2AD00D37ACD /* Colors.swift in Sources */,
 				96D6E894261F84D200C8A00E /* LibraryView.swift in Sources */,
+				968D71AE2629FC3600A14C6C /* UIButton.swift in Sources */,
 				969CC69526277CE900DB21CF /* BookSectionViewModel.swift in Sources */,
 				9699E30A2624E0A500D37ACD /* BookCellViewModel.swift in Sources */,
 				96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */,
