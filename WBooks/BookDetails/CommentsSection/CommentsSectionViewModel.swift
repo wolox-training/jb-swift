@@ -10,11 +10,13 @@ import Foundation
 final class CommentsSectionViewModel {
     private let bookId: Int
     private var comments: [Comment] = []
-    private let commentsRepository = CommentRepository()
-    private let userRepository = UserRepository()
+    private let commentsRepository: CommentRepositoryType
+    private let userRepository: UserRepositoryType
     
-    init(bookId: Int) {
+    init(bookId: Int, commentsRepository: CommentRepositoryType = CommentRepository(), userRepository: UserRepositoryType = UserRepository()) {
         self.bookId = bookId
+        self.commentsRepository = commentsRepository
+        self.userRepository = userRepository
     }
     
     var numberOfComments: Int {

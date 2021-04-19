@@ -7,7 +7,11 @@
 
 import Alamofire
 
-final class UserRepository {
+protocol UserRepositoryType {
+    func fetchUser(userId: Int, onSuccess: @escaping (User) -> Void, onError: @escaping (Error) -> Void)
+}
+
+final class UserRepository: UserRepositoryType {
     
     func fetchUser(userId: Int, onSuccess: @escaping (User) -> Void, onError: @escaping (Error) -> Void) {
         AF
@@ -15,14 +19,11 @@ final class UserRepository {
             .responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let value):
-                    guard let JSONUser = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+                    guard let JSONUser = try? JSONSerialization.data(withJSONObject: value, options: []), let user = try? JSONDecoder().decode(User.self, from: JSONUser) else {
                         onError(UserError.decodeError)
                         return
                     }
-                    guard let user = try? JSONDecoder().decode(User.self, from: JSONUser) else {
-                        onError(UserError.decodeError)
-                        return
-                    }
+                    
                     onSuccess(user)
                 case .failure(let error):
                     onError(error)
