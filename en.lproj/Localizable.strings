@@ -9,6 +9,7 @@
 // MARK: - NAVBAR TITLES
 "LIBRARY_LABEL" = "LIBRARY";
 "BOOK_DETAILS_LABEL" = "BOOK DETAIL";
+"NEW_BOOK_LABEL" = "ADD NEW BOOK";
 
 // MARK: - TABBAR LABEL
 "LIBRARY_TABBAR" = "Library";
@@ -40,3 +41,8 @@
 "SUCCESS_RENT_ALERT_TITLE" = "Congratulation";
 "SUCCESS_RENT_ALERT_MESSAGE" = "You rented the book!";
 "COMMENTS_ERROR_ALERT_MESSAGE" = "Comments loading failed.";
+
+// MARK: - NEW BOOK SECTION
+"GALLERY" = "Gallery";
+"CAMERA" = "Camera";
+"CANCEL" = "Cancel";

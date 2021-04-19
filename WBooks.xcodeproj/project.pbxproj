@@ -14,6 +14,10 @@
 		964F5781261DD75B004638D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964F5780261DD75B004638D9 /* Assets.xcassets */; };
 		964F578F261DD75B004638D9 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F578E261DD75B004638D9 /* WBooksTests.swift */; };
 		964F579A261DD75B004638D9 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F5799261DD75B004638D9 /* WBooksUITests.swift */; };
+		9670D1FE262DD98000B788AC /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670D1FA262DD98000B788AC /* CustomTextfield.swift */; };
+		9670D1FF262DD98000B788AC /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670D1FB262DD98000B788AC /* NewBookViewController.swift */; };
+		9670D200262DD98000B788AC /* NewBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9670D1FC262DD98000B788AC /* NewBookView.xib */; };
+		9670D201262DD98000B788AC /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670D1FD262DD98000B788AC /* NewBookView.swift */; };
 		968F81FD2620937C007D5C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 968F81FF2620937C007D5C78 /* Localizable.strings */; };
 		968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F82172620D278007D5C78 /* TabBarViewController.swift */; };
 		9694F5D526287A2800205CC4 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9694F5D426287A2800205CC4 /* Rent.swift */; };
@@ -96,6 +100,10 @@
 		964F5795261DD75B004638D9 /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F5799261DD75B004638D9 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		964F579B261DD75B004638D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9670D1FA262DD98000B788AC /* CustomTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
+		9670D1FB262DD98000B788AC /* NewBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBookViewController.swift; sourceTree = "<group>"; };
+		9670D1FC262DD98000B788AC /* NewBookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewBookView.xib; sourceTree = "<group>"; };
+		9670D1FD262DD98000B788AC /* NewBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
 		968F81FE2620937C007D5C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F8203262095DB007D5C78 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F82172620D278007D5C78 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +235,7 @@
 		964F5776261DD75A004638D9 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				9670D1F9262DD94D00B788AC /* NewBook */,
 				9699E3132624EB1900D37ACD /* Repositories */,
 				9699E24526247DAE00D37ACD /* Models */,
 				968F82162620D24A007D5C78 /* TabBar */,
@@ -259,6 +268,17 @@
 				964F579B261DD75B004638D9 /* Info.plist */,
 			);
 			path = WBooksUITests;
+			sourceTree = "<group>";
+		};
+		9670D1F9262DD94D00B788AC /* NewBook */ = {
+			isa = PBXGroup;
+			children = (
+				9670D1FA262DD98000B788AC /* CustomTextfield.swift */,
+				9670D1FD262DD98000B788AC /* NewBookView.swift */,
+				9670D1FC262DD98000B788AC /* NewBookView.xib */,
+				9670D1FB262DD98000B788AC /* NewBookViewController.swift */,
+			);
+			path = NewBook;
 			sourceTree = "<group>";
 		};
 		968F82162620D24A007D5C78 /* TabBar */ = {
@@ -489,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9670D200262DD98000B788AC /* NewBookView.xib in Resources */,
 				969CC62626271F1400DB21CF /* BookDetailsView.xib in Resources */,
 				96D6E887261F84AE00C8A00E /* LibraryView.xib in Resources */,
 				96A8381C261F7C6E00C2D3D1 /* LoginView.xib in Resources */,
@@ -625,7 +646,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9670D1FE262DD98000B788AC /* CustomTextfield.swift in Sources */,
 				9694F5FC2628C41400205CC4 /* CommentsSectionViewModel.swift in Sources */,
+				9670D201262DD98000B788AC /* NewBookView.swift in Sources */,
 				969CC62F26271F1F00DB21CF /* BookSectionViewController.swift in Sources */,
 				968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */,
 				969CC63926271F2700DB21CF /* CommentsSectionView.swift in Sources */,
@@ -646,6 +669,7 @@
 				9699E3022624E08B00D37ACD /* LibraryViewModel.swift in Sources */,
 				96A837EC261F625800C2D3D1 /* NibView.swift in Sources */,
 				969CC63826271F2700DB21CF /* CommentsSectionViewController.swift in Sources */,
+				9670D1FF262DD98000B788AC /* NewBookViewController.swift in Sources */,
 				96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */,
 				9699E30F2624E34D00D37ACD /* BookRepository.swift in Sources */,
 				969D76082626092A00A9B7D5 /* URL.swift in Sources */,
