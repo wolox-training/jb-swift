@@ -80,10 +80,12 @@
                 <constraint firstAttribute="trailing" secondItem="IFv-0K-3sX" secondAttribute="trailing" constant="15" id="PGR-CQ-4nh"/>
                 <constraint firstItem="GVU-r1-8wr" firstAttribute="top" secondItem="IFv-0K-3sX" secondAttribute="bottom" constant="20" id="PPt-eS-KGq"/>
                 <constraint firstAttribute="trailing" secondItem="VI5-k8-IEP" secondAttribute="trailing" constant="10" id="RBE-k8-Y0H"/>
+                <constraint firstAttribute="trailing" secondItem="GVU-r1-8wr" secondAttribute="trailing" constant="15" id="RKq-rs-VM2"/>
                 <constraint firstAttribute="trailing" secondItem="HjK-HR-AQc" secondAttribute="trailing" constant="10" id="ZQa-0T-kP2"/>
                 <constraint firstAttribute="trailing" secondItem="J4Q-J7-z0N" secondAttribute="trailing" constant="10" id="aNO-I0-MbE"/>
                 <constraint firstItem="J4Q-J7-z0N" firstAttribute="top" secondItem="HjK-HR-AQc" secondAttribute="bottom" constant="6" id="dwP-9i-WQL"/>
                 <constraint firstItem="IFv-0K-3sX" firstAttribute="top" secondItem="rDX-rn-Yg4" secondAttribute="bottom" constant="30" id="gG0-Kv-sLp"/>
+                <constraint firstItem="GVU-r1-8wr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="hkJ-OU-qSt"/>
                 <constraint firstAttribute="trailing" secondItem="T46-VO-pW5" secondAttribute="trailing" constant="10" id="jox-GR-xGu"/>
                 <constraint firstItem="rby-0S-UXn" firstAttribute="top" secondItem="VI5-k8-IEP" secondAttribute="bottom" constant="6" id="mr1-xp-ewB"/>
                 <constraint firstItem="HjK-HR-AQc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="o1g-Vh-8FL"/>
@@ -91,8 +93,6 @@
                 <constraint firstItem="rby-0S-UXn" firstAttribute="leading" secondItem="rDX-rn-Yg4" secondAttribute="trailing" constant="10" id="oXH-0p-clm"/>
                 <constraint firstItem="J4Q-J7-z0N" firstAttribute="leading" secondItem="rDX-rn-Yg4" secondAttribute="trailing" constant="10" id="pFm-RG-n9P"/>
                 <constraint firstItem="T46-VO-pW5" firstAttribute="leading" secondItem="rDX-rn-Yg4" secondAttribute="trailing" constant="10" id="xrV-Bz-grs"/>
-                <constraint firstItem="GVU-r1-8wr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="xz1-Ra-Pvt"/>
-                <constraint firstAttribute="trailing" secondItem="GVU-r1-8wr" secondAttribute="trailing" constant="15" id="ysT-eB-iHW"/>
                 <constraint firstItem="T46-VO-pW5" firstAttribute="top" secondItem="rby-0S-UXn" secondAttribute="bottom" constant="6" id="zXS-mR-MUE"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

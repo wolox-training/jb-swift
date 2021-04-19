@@ -18,6 +18,11 @@ final class LoginViewController: UIViewController {
         super.loadView()
         self.view = loginView
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        loginView.buttonLogin.makeCustomOutlined(mainColor: .white)
+    }
 }
 
 extension LoginViewController: LoginViewDelegate {    
