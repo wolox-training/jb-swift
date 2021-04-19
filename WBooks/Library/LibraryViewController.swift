@@ -25,21 +25,21 @@ final class LibraryViewController: UIViewController {
     }
 
     private func configureTable() {
-        self.libraryView.tableBooks.delegate = self
-        self.libraryView.tableBooks.dataSource = self
+        libraryView.tableBooks.delegate = self
+        libraryView.tableBooks.dataSource = self
         let nib = UINib(nibName: BookCellView.identifier, bundle: nil)
-        self.libraryView.tableBooks.register(nib, forCellReuseIdentifier: BookCellView.identifier)
+        libraryView.tableBooks.register(nib, forCellReuseIdentifier: BookCellView.identifier)
     }
     
     private func loadBooks() {
-        viewModel.fetchBooks(onSuccess: self.reloadTable, onError: self.showError)
+        viewModel.fetchBooks(onSuccess: { [weak self] in self?.reloadTable() }, onError: { [weak self] _ in self?.showError() })
     }
     
     private func reloadTable() {
-        self.libraryView.tableBooks.reloadData()
+        libraryView.tableBooks.reloadData()
     }
 
-    private func showError(error: Error) {
+    private func showError() {
         let message = UIAlertController(title: "ERROR_ALERT_TITLE".localized(), message: "ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
         message.addAction(UIAlertAction(title: "ERROR_ALERT_CLOSE".localized(), style: .default, handler: nil))
         self.present(message, animated: true)

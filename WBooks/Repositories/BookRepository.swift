@@ -7,7 +7,11 @@
 
 import Alamofire
 
-final class BookRepository {
+protocol BookRepositoryType {
+    func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void)
+}
+
+class BookRepository: BookRepositoryType {
     
     func fetchBooks(onSuccess: @escaping ([Book]) -> Void, onError: @escaping (Error) -> Void) {
         AF
