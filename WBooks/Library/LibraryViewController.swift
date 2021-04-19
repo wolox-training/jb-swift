@@ -50,6 +50,7 @@ final class LibraryViewController: UIViewController {
         navigationItem.title = "LIBRARY_LABEL".localized()
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.notifications, style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.search, style: .plain, target: nil, action: nil)
+        navigationItem.backButtonDisplayMode = UINavigationItem.BackButtonDisplayMode.minimal
     }
 }
 
@@ -71,8 +72,8 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         let image = cell.imageBook.image
         let book = viewModel.getBookBy(index: indexPath.row)
         
-        let bookDetailsViewController = UINavigationController(rootViewController: BookDetailsViewController(book: book, bookImage: image))
+        let bookDetailsViewController = BookDetailsViewController(book: book, bookImage: image)
         bookDetailsViewController.modalPresentationStyle = .fullScreen
-        present(bookDetailsViewController, animated: true)
+        self.navigationController?.pushViewController(bookDetailsViewController, animated: true)
     }
 }

@@ -19,11 +19,7 @@ class BookRepository: BookRepositoryType {
             .responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let value):
-                    guard let JSONBooks = try? JSONSerialization.data(withJSONObject: value, options: []) else {
-                        onError(BookError.decodeError)
-                        return
-                    }
-                    guard let books = try? JSONDecoder().decode([Book].self, from: JSONBooks) else {
+                    guard let JSONBooks = try? JSONSerialization.data(withJSONObject: value, options: []), let books = try? JSONDecoder().decode([Book].self, from: JSONBooks) else {
                         onError(BookError.decodeError)
                         return
                     }
