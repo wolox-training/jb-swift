@@ -20,4 +20,6 @@ extension UIColor {
         green: 173/255.0,
         blue: 238/255.0,
         alpha: 1)
+    
+    static let newBookTextfield = UIColor.systemGray3
 }

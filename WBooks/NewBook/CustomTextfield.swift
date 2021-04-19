@@ -21,10 +21,19 @@ open class CustomTextfield: UITextField {
     }
     
     func customInit() {
+        
         self.attributedPlaceholder = NSAttributedString(string: self.placeholder ?? "", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.red
+            NSAttributedString.Key.foregroundColor: UIColor.newBookTextfield
         ])
-        self.layer.borderColor = UIColor.red.cgColor
+        
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor.white.cgColor
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.newBookTextfield.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
     }
 
 }

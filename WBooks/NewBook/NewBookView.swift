@@ -14,7 +14,11 @@ protocol NewBookViewDelegate: AnyObject {
 final class NewBookView: NibView {
     weak var delegate: NewBookViewDelegate?
     
-    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton! {
+        didSet {
+            submitButton.setTitle("SUBMIT".localized(), for: .normal)
+        }
+    }
     @IBOutlet weak var mainContainer: UIView! {
         didSet {
             mainContainer.backgroundColor = .backgroundColor

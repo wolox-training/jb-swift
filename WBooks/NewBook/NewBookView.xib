@@ -43,7 +43,7 @@
                                 <constraint firstAttribute="height" constant="34" id="nY7-lR-haR"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9k-Wd-6Vv" customClass="CustomTextfield" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="15" y="184" width="354" height="34"/>
@@ -51,7 +51,7 @@
                                 <constraint firstAttribute="height" constant="34" id="44f-cM-Av1"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-Z4-VdJ" customClass="CustomTextfield" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="15" y="233" width="354" height="34"/>
@@ -59,7 +59,7 @@
                                 <constraint firstAttribute="height" constant="34" id="Y0D-8A-Upr"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DR8-BJ-bxG" customClass="CustomTextfield" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="15" y="282" width="354" height="34"/>
@@ -67,7 +67,7 @@
                                 <constraint firstAttribute="height" constant="34" id="3jJ-bC-lPj"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L3Z-na-QtS" customClass="CustomTextfield" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="15" y="331" width="354" height="34"/>
@@ -75,7 +75,7 @@
                                 <constraint firstAttribute="height" constant="34" id="zEl-iM-qkP"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-wR-aVd">
                             <rect key="frame" x="15" y="380" width="354" height="40"/>
