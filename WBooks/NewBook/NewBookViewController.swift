@@ -77,6 +77,7 @@ final class NewBookViewController: UIViewController {
         newBookView.textfieldTopic.text = ""
         newBookView.textfieldAuthor.text = ""
         newBookView.textfieldDescription.text = ""
+        newBookView.buttonBookImage.setBackgroundImage(UIImage.addBookImage, for: .normal)
     }
     
     private func getBookFromForm() -> UnidentifiableBook {
@@ -155,11 +156,5 @@ extension NewBookViewController: UITextFieldDelegate {
 
     func validateTextField(_ textField: UITextField) -> Bool {
         return textField.text != nil && !textField.text!.isEmpty
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == newBookView.textfieldDescription {
-            onSubmitPressed()
-        }
     }
 }
