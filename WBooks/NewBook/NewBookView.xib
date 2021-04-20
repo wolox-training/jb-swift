@@ -12,6 +12,11 @@
                 <outlet property="buttonBookImage" destination="cy6-88-MP0" id="DJI-YX-4R1"/>
                 <outlet property="mainContainer" destination="iN0-l3-epB" id="T0D-BV-npw"/>
                 <outlet property="submitButton" destination="bLy-wR-aVd" id="Nzf-Vo-PNB"/>
+                <outlet property="textfieldAuthor" destination="S9k-Wd-6Vv" id="Uoj-Qx-Smb"/>
+                <outlet property="textfieldDescription" destination="L3Z-na-QtS" id="meh-PV-8el"/>
+                <outlet property="textfieldName" destination="obS-gK-sCw" id="2et-FR-qUN"/>
+                <outlet property="textfieldTopic" destination="DR8-BJ-bxG" id="pSb-5X-hfP"/>
+                <outlet property="textfieldYear" destination="pIb-Z4-VdJ" id="iOd-jO-oUt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -79,17 +84,18 @@
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLy-wR-aVd">
                             <rect key="frame" x="15" y="380" width="354" height="40"/>
-                            <color key="backgroundColor" red="0.070588235289999995" green="0.6705882353" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="q6a-GN-Bou"/>
                             </constraints>
                             <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="onSubmitPressed:" destination="-1" eventType="touchUpInside" id="nht-nA-WTn"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="bLy-wR-aVd" firstAttribute="top" secondItem="L3Z-na-QtS" secondAttribute="bottom" constant="15" id="B3H-pQ-ZD0"/>
-                        <constraint firstAttribute="bottom" secondItem="bLy-wR-aVd" secondAttribute="bottom" constant="15" id="EKn-ZB-kQk"/>
                         <constraint firstItem="obS-gK-sCw" firstAttribute="leading" secondItem="cyH-PY-9rY" secondAttribute="leading" constant="15" id="ESa-wR-s5Y"/>
                         <constraint firstItem="pIb-Z4-VdJ" firstAttribute="leading" secondItem="cyH-PY-9rY" secondAttribute="leading" constant="15" id="Idj-JR-cE7"/>
                         <constraint firstItem="cy6-88-MP0" firstAttribute="leading" secondItem="cyH-PY-9rY" secondAttribute="leading" constant="15" id="KVJ-fw-K2o"/>
@@ -102,6 +108,7 @@
                         <constraint firstItem="S9k-Wd-6Vv" firstAttribute="leading" secondItem="cyH-PY-9rY" secondAttribute="leading" constant="15" id="g4M-Qg-xVd"/>
                         <constraint firstItem="S9k-Wd-6Vv" firstAttribute="top" secondItem="obS-gK-sCw" secondAttribute="bottom" constant="15" id="jFS-Cc-oca"/>
                         <constraint firstAttribute="trailing" secondItem="obS-gK-sCw" secondAttribute="trailing" constant="15" id="l3t-v0-JPk"/>
+                        <constraint firstAttribute="bottom" secondItem="bLy-wR-aVd" secondAttribute="bottom" constant="15" id="mJn-iX-OQf"/>
                         <constraint firstItem="DR8-BJ-bxG" firstAttribute="top" secondItem="pIb-Z4-VdJ" secondAttribute="bottom" constant="15" id="niV-v7-4B1"/>
                         <constraint firstAttribute="trailing" secondItem="bLy-wR-aVd" secondAttribute="trailing" constant="15" id="rIz-99-GSe"/>
                         <constraint firstAttribute="trailing" secondItem="DR8-BJ-bxG" secondAttribute="trailing" constant="15" id="vCj-10-pbU"/>

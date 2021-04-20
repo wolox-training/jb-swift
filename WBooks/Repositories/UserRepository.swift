@@ -23,7 +23,7 @@ final class UserRepository: UserRepositoryType {
                         onError(UserError.decodeError)
                         return
                     }
-                    
+
                     onSuccess(user)
                 case .failure(let error):
                     onError(error)

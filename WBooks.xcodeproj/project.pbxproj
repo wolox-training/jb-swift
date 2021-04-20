@@ -59,6 +59,8 @@
 		96D6E89C261F85C900C8A00E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E89B261F85C900C8A00E /* LibraryViewController.swift */; };
 		96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E8A1261F87A700C8A00E /* BookCellView.swift */; };
 		96D6E8AA261F87BA00C8A00E /* BookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D6E8A9261F87BA00C8A00E /* BookCellView.xib */; };
+		96DB8BEE262E0F89006579B2 /* NewBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DB8BED262E0F89006579B2 /* NewBookViewModel.swift */; };
+		96DB8BF6262E16A1006579B2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DB8BF5262E16A1006579B2 /* UIViewController.swift */; };
 		CE7E2D32B5D4E2A692F0F3AC /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A527EFEA5F3E9706231F4BC /* Pods_WBooks_WBooksUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,8 @@
 		96D6E89B261F85C900C8A00E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		96D6E8A1261F87A700C8A00E /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
 		96D6E8A9261F87BA00C8A00E /* BookCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCellView.xib; sourceTree = "<group>"; };
+		96DB8BED262E0F89006579B2 /* NewBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookViewModel.swift; sourceTree = "<group>"; };
+		96DB8BF5262E16A1006579B2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		E129BE927B2EF733A1F300A2 /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,11 +241,11 @@
 		964F5776261DD75A004638D9 /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
-				9670D1F9262DD94D00B788AC /* NewBook */,
 				9699E3132624EB1900D37ACD /* Repositories */,
 				9699E24526247DAE00D37ACD /* Models */,
 				968F82162620D24A007D5C78 /* TabBar */,
 				9699E28F2624B29C00D37ACD /* Extensions */,
+				9670D1F9262DD94D00B788AC /* NewBook */,
 				96D6E87D261F845C00C8A00E /* Library */,
 				969CC60026271DA800DB21CF /* BookDetails */,
 				96A837EA261F624600C2D3D1 /* Login */,
@@ -279,6 +283,7 @@
 				9670D1FD262DD98000B788AC /* NewBookView.swift */,
 				9670D1FC262DD98000B788AC /* NewBookView.xib */,
 				9670D1FB262DD98000B788AC /* NewBookViewController.swift */,
+				96DB8BED262E0F89006579B2 /* NewBookViewModel.swift */,
 			);
 			path = NewBook;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				969D7602262607AA00A9B7D5 /* UIImageView.swift */,
 				969D76072626092A00A9B7D5 /* URL.swift */,
 				968D71AD2629FC3600A14C6C /* UIButton.swift */,
+				96DB8BF5262E16A1006579B2 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -663,8 +669,10 @@
 				969CC62726271F1400DB21CF /* BookDetailsViewController.swift in Sources */,
 				9699E3062624E09B00D37ACD /* Book.swift in Sources */,
 				969CC63026271F1F00DB21CF /* BookSectionView.swift in Sources */,
+				96DB8BF6262E16A1006579B2 /* UIViewController.swift in Sources */,
 				969CC62526271F1400DB21CF /* BookDetailsView.swift in Sources */,
 				9699E2912624B2AD00D37ACD /* Colors.swift in Sources */,
+				96DB8BEE262E0F89006579B2 /* NewBookViewModel.swift in Sources */,
 				96D6E894261F84D200C8A00E /* LibraryView.swift in Sources */,
 				968D71AE2629FC3600A14C6C /* UIButton.swift in Sources */,
 				969CC69526277CE900DB21CF /* BookSectionViewModel.swift in Sources */,

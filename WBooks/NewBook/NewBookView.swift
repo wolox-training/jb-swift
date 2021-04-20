@@ -9,6 +9,7 @@ import UIKit
 
 protocol NewBookViewDelegate: AnyObject {
     func onBookImagePressed()
+    func onSubmitPressed()
 }
 
 final class NewBookView: NibView {
@@ -34,12 +35,42 @@ final class NewBookView: NibView {
             formContainer.layer.shadowRadius = 1
         }
     }
-    @IBAction func onBookImagePressed(_ sender: Any) {
-        delegate?.onBookImagePressed()
-    }
     @IBOutlet weak var buttonBookImage: UIButton! {
         didSet {
             buttonBookImage.setBackgroundImage(UIImage.addBookImage, for: .normal)
         }
+    }
+    @IBOutlet weak var textfieldName: CustomTextfield! {
+        didSet {
+            textfieldName.placeholder = "NAME_TEXTFIELD".localized()
+        }
+    }
+    @IBOutlet weak var textfieldAuthor: CustomTextfield! {
+        didSet {
+            textfieldAuthor.placeholder = "AUTHOR_TEXTFIELD".localized()
+        }
+    }
+    @IBOutlet weak var textfieldYear: CustomTextfield! {
+        didSet {
+            textfieldYear.placeholder = "YEAR_TEXTFIELD".localized()
+        }
+    }
+    @IBOutlet weak var textfieldTopic: CustomTextfield! {
+        didSet {
+            textfieldTopic.placeholder = "TOPIC_TEXTFIELD".localized()
+        }
+    }
+    @IBOutlet weak var textfieldDescription: CustomTextfield! {
+        didSet {
+            textfieldDescription.placeholder = "DESCRIPTION_TEXTFIELD".localized()
+        }
+    }
+    
+    // MARK: - Actions
+    @IBAction func onSubmitPressed(_ sender: Any) {
+        delegate?.onSubmitPressed()
+    }
+    @IBAction func onBookImagePressed(_ sender: Any) {
+        delegate?.onBookImagePressed()
     }
 }
