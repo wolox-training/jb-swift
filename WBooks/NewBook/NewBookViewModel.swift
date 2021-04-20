@@ -5,8 +5,6 @@
 //  Created by joaquin bozzalla on 19/04/2021.
 //
 
-import Foundation
-
 final class NewBookViewModel {
     private let bookRepository: BookRepositoryType
     

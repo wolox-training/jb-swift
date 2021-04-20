@@ -31,6 +31,7 @@ final class NewBookViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         newBookView.submitButton.makeCustomSolid()
     }
     
