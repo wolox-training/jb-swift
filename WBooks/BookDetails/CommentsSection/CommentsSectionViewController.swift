@@ -11,8 +11,8 @@ final class CommentsSectionViewController: UIViewController {
     private let commentsSectionView = CommentsSectionView()
     private let viewModel: CommentsSectionViewModel
     
-    init(book: Book) {
-        viewModel = CommentsSectionViewModel(bookId: book.id)
+    init(viewModel: CommentsSectionViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     

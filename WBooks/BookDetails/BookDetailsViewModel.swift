@@ -15,4 +15,8 @@ final class BookDetailsViewModel {
     func createBookSectionViewModel() -> BookSectionViewModel {
         return BookSectionViewModel(book: book)
     }
+    
+    func createCommentsSectionViewModel() -> CommentsSectionViewModel {
+        return CommentsSectionViewModel(bookId: book.id)
+    }
 }
