@@ -38,7 +38,9 @@ final class RentRepository: RentRepositoryType {
                 completionHandler: { response in
                     switch response.result {
                     case .success(let value):
-                        guard let JSONResponse = try? JSONSerialization.data(withJSONObject: value, options: []), let response = try? JSONDecoder().decode(Rent.self, from: JSONResponse) else {
+                        guard let JSONResponse = try? JSONSerialization.data(withJSONObject: value, options: []),
+                              let response = try? JSONDecoder().decode(Rent.self, from: JSONResponse)
+                        else {
                             onError(RentError.decodeError)
                             return
                         }

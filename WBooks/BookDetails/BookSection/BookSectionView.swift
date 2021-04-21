@@ -67,10 +67,10 @@ final class BookSectionView: NibView {
         configureAvailability(viewModel.isBookAvailable)
     }
     
-    func configureAvailability(_ value: Bool) {
-        labelAvailability.text = value ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
-        labelAvailability.textColor = value ? .systemGreen : .systemRed
-        buttonRent.isEnabled = value
-        buttonRent.backgroundColor = value ? .buttonColor : .systemGray3
+    func configureAvailability(_ isAvailable: Bool) {
+        labelAvailability.text = isAvailable ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
+        labelAvailability.textColor = isAvailable ? .systemGreen : .systemRed
+        buttonRent.isEnabled = isAvailable
+        buttonRent.backgroundColor = isAvailable ? .buttonColor : .systemGray3
     }
 }

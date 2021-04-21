@@ -12,9 +12,11 @@ final class BookDetailsViewController: UIViewController {
     private let bookSectionViewController: BookSectionViewController
     private let commentsSectionViewController: CommentsSectionViewController
 
-    init(book: Book, bookImage: UIImage? = nil) {
-        bookSectionViewController = BookSectionViewController(book: book, bookImage: bookImage)
-        commentsSectionViewController = CommentsSectionViewController(book: book)
+    init(viewModel: BookDetailsViewModel) {
+        let bookSectionViewModel = viewModel.createBookSectionViewModel()
+        bookSectionViewController = BookSectionViewController(viewModel: bookSectionViewModel)
+        let commentsSectionViewModel = viewModel.createCommentsSectionViewModel()
+        commentsSectionViewController = CommentsSectionViewController(viewModel: commentsSectionViewModel)
         super.init(nibName: nil, bundle: nil)
     }
     
