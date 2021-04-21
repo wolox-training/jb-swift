@@ -19,12 +19,11 @@ final class CommentCellView: UITableViewCell {
     func configureCell(with viewModel: CommentCellViewModel) {
         imageUser.image = UIImage.defaultProfile
         imageUser.tintColor = .black
-        self.labelUser.text =  "-----------"
         labelComment.text = viewModel.content
 
-        let onSuccess = {
-            self.labelUser.text =  viewModel.userName
-            self.imageUser.loadFromURL(stringURL: viewModel.userAvatar)
+        let onSuccess = { [weak self] in
+            self?.labelUser.text =  viewModel.userName
+            self?.imageUser.loadFromURL(stringURL: viewModel.userAvatar)
         }
         let onError = { (error: Error) in } // If the user is not loaded nothing has to change. Default content will remain.
         viewModel.loadUser(onSuccess: onSuccess, onError: onError)

@@ -325,8 +325,8 @@
 				969CC62326271F1400DB21CF /* BookDetailsView.xib */,
 				969CC62426271F1400DB21CF /* BookDetailsViewController.swift */,
 				96CE1DA02630A9710038A618 /* BookDetailsViewModel.swift */,
-				969CC62126271ED100DB21CF /* BookSection */,
 				969CC60B26271DDA00DB21CF /* CommentsSection */,
+				969CC62126271ED100DB21CF /* BookSection */,
 			);
 			path = BookDetails;
 			sourceTree = "<group>";

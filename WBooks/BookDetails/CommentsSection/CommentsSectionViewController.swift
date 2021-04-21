@@ -22,7 +22,7 @@ final class CommentsSectionViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        self.view = commentsSectionView
+        view = commentsSectionView
     }
     
     override func viewDidLoad() {
@@ -33,26 +33,26 @@ final class CommentsSectionViewController: UIViewController {
     }
     
     private func configureTable() {
-        self.commentsSectionView.tableComments.delegate = self
-        self.commentsSectionView.tableComments.dataSource = self
+        commentsSectionView.tableComments.delegate = self
+        commentsSectionView.tableComments.dataSource = self
         let nib = UINib.init(nibName: CommentCellView.identifier, bundle: nil)
-        self.commentsSectionView.tableComments.register(nib, forCellReuseIdentifier: CommentCellView.identifier)
+        commentsSectionView.tableComments.register(nib, forCellReuseIdentifier: CommentCellView.identifier)
         
-        self.commentsSectionView.tableComments.rowHeight = UITableView.automaticDimension
+        commentsSectionView.tableComments.rowHeight = UITableView.automaticDimension
     }
     
     private func loadComments() {
-        viewModel.fetchComments(onSuccess: reloadTable, onError: { [weak self] _ in self?.showError() })
+        viewModel.fetchComments(onSuccess: { [weak self] in self?.reloadTable() }, onError: { [weak self] _ in self?.showError() })
     }
     
     private func reloadTable() {
-        self.commentsSectionView.tableComments.reloadData()
+        commentsSectionView.tableComments.reloadData()
     }
     
     private func showError() {
         let alert = UIAlertController(title: "ALERT_TITLE".localized(), message: "COMMENTS_ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ALERT_CLOSE".localized(), style: .default, handler: nil))
-        self.present(alert, animated: true)
+        present(alert, animated: true)
     }
 }
 

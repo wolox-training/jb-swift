@@ -17,6 +17,7 @@ final class BookDetailsViewController: UIViewController {
         bookSectionViewController = BookSectionViewController(viewModel: bookSectionViewModel)
         let commentsSectionViewModel = viewModel.createCommentsSectionViewModel()
         commentsSectionViewController = CommentsSectionViewController(viewModel: commentsSectionViewModel)
+        
         super.init(nibName: nil, bundle: nil)
     }
     
