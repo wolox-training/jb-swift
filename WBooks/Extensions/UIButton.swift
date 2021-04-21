@@ -24,10 +24,7 @@ extension UIButton {
 
         layoutIfNeeded()
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [
-            UIColor(red: 0, green: 0.68, blue: 0.93, alpha: 1).cgColor,
-            UIColor(red: 0.22, green: 0.8, blue: 0.8, alpha: 1).cgColor
-        ]
+        gradientLayer.colors = UIColor.blueGradientColors
         gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
         gradientLayer.cornerRadius = frame.height / 2
