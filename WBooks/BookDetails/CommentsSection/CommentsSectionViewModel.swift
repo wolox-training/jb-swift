@@ -21,6 +21,10 @@ final class CommentsSectionViewModel {
         return comments.count
     }
     
+    var noComments: Bool {
+        return numberOfComments == 0
+    }
+    
     func createCommentCellViewModel(for commentIndex: Int) -> CommentCellViewModel {
         return CommentCellViewModel(comment: comments[commentIndex])
     }

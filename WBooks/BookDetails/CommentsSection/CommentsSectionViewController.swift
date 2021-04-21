@@ -47,12 +47,31 @@ final class CommentsSectionViewController: UIViewController {
     
     private func reloadTable() {
         commentsSectionView.tableComments.reloadData()
+        if viewModel.noComments {
+            showMessageIntoCommentsSection(message: "NO_COMMENTS_MESSAGE".localized())
+        }
     }
     
     private func showError() {
-        let alert = UIAlertController(title: "ALERT_TITLE".localized(), message: "COMMENTS_ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ALERT_CLOSE".localized(), style: .default, handler: nil))
-        present(alert, animated: true)
+        showMessageIntoCommentsSection(message: "COMMENTS_ERROR_MESSAGE".localized())
+    }
+    
+    private func showMessageIntoCommentsSection(message: String) {
+        let labelMessage = UILabel()
+        labelMessage.text = message
+        labelMessage.textColor = .systemGray4
+        labelMessage.textAlignment = .center
+        
+        commentsSectionView.viewContainer.addSubview(labelMessage)
+        commentsSectionView.viewContainer.translatesAutoresizingMaskIntoConstraints = false
+        labelMessage.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            labelMessage.topAnchor.constraint(equalTo: commentsSectionView.viewContainer.topAnchor),
+            labelMessage.bottomAnchor.constraint(equalTo: commentsSectionView.viewContainer.bottomAnchor),
+            labelMessage.leadingAnchor.constraint(equalTo: commentsSectionView.viewContainer.leadingAnchor),
+            labelMessage.trailingAnchor.constraint(equalTo: commentsSectionView.viewContainer.trailingAnchor)
+        ])
     }
 }
 
