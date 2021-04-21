@@ -5,7 +5,7 @@
 //  Created by joaquin bozzalla on 12/04/2021.
 //
 
-public class Book: Codable {
+class Book: Codable {
     let id: Int
     let title: String
     let author: String
