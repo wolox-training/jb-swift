@@ -13,7 +13,7 @@ final class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // TabBar configuration
-        let home = UINavigationController(rootViewController:LibraryViewController())
+        let home = UINavigationController(rootViewController: LibraryViewController())
         home.tabBarItem = UITabBarItem()
         home.tabBarItem.title = "LIBRARY_TABBAR".localized()
         home.tabBarItem.image = UIImage.library

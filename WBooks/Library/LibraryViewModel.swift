@@ -19,8 +19,16 @@ final class LibraryViewModel {
         return books.count
     }
     
+    func getBookBy(index: Int) -> Book {
+        return books[index]
+    }
+    
     func createBookCellViewModel(for bookIndex: Int) -> BookCellViewModel {
         return BookCellViewModel(book: books[bookIndex])
+    }
+    
+    func createBookDetailsViewModel(for bookIndex: Int) -> BookDetailsViewModel {
+        return BookDetailsViewModel(book: books[bookIndex])
     }
     
     func fetchBooks(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {

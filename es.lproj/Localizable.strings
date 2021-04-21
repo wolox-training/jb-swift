@@ -8,6 +8,7 @@
 
 // MARK: - NAVBAR TITLES
 "LIBRARY_LABEL" = "BIBLIOTECA";
+"BOOK_DETAILS_LABEL" = "DETALLES DEL LIBRO";
 
 // MARK: - TABBAR LABEL
 "LIBRARY_TABBAR" = "Biblioteca";
@@ -21,7 +22,20 @@
 "USER_PLACEHOLDER" = "Usuario";
 "PASSWORD_PLACEHOLDER" = "Contraseña";
 
-/* ERROR MESSAGE */
+// MARK: - ERROR MESSAGE
 "ERROR_ALERT_TITLE" = "Error";
 "ERROR_ALERT_MESSAGE" = "Error al cargar los datos";
 "ERROR_ALERT_CLOSE" = "Cerrar";
+
+// MARK: - BOOK DETAILS SECTION
+"BOOK_AVAILABLE" = "Disponible";
+"BOOK_UNAVAILABLE" = "No disponible";
+"ADD_TO_WISHLIST_BUTTON" = "AGREGAR A LA LISTA DE DESEOS";
+"RENT_BUTTON" = "ALQUILAR";
+"ERROR_ALERT_TITLE" = "Ups!";
+"ALERT_CLOSE" = "Cerrar";
+
+"UNAVAILABLE_BOOK_ALERT_MESSAGE" = "El libro no está disponible.";
+"RENT_ERROR_ALERT_MESSAGE" = "No has podido alquilar el libro.";
+"SUCCESS_RENT_ALERT_TITLE" = "Felicitaciones";
+"SUCCESS_RENT_ALERT_MESSAGE" = "Alquilaste el libro!";

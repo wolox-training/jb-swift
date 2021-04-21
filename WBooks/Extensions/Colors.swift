@@ -14,4 +14,10 @@ extension UIColor {
         green: 173/255.0,
         blue: 238/255.0,
         alpha: 1)
+    
+    static let buttonColor = UIColor(
+        red: 0/255.0,
+        green: 173/255.0,
+        blue: 238/255.0,
+        alpha: 1)
 }
