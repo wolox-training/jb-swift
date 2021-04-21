@@ -5,8 +5,6 @@
 //  Created by joaquin bozzalla on 15/04/2021.
 //
 
-import Foundation
-
 struct Comment: Codable {
     let id: Int
     let user_id: Int

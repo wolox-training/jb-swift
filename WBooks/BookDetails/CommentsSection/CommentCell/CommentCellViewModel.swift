@@ -5,7 +5,6 @@
 //  Created by joaquin bozzalla on 15/04/2021.
 //
 
-import Foundation
 import UIKit
 
 final class CommentCellViewModel {

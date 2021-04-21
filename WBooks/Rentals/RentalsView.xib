@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RentalsView" customModule="WBooks" customModuleProvider="target">
+            <connections>
+                <outlet property="mainContainer" destination="be8-sH-bvS" id="G6W-ws-SMd"/>
+                <outlet property="view" destination="iN0-l3-epB" id="q7I-8p-gGF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="be8-sH-bvS">
+                    <rect key="frame" x="0.0" y="136" width="414" height="760"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-rP-dcF">
+                    <rect key="frame" x="0.0" y="34" width="414" height="102"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="be8-sH-bvS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LyV-Mq-ldL"/>
+                <constraint firstItem="HNj-rP-dcF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="34" id="Zgi-Ld-Qx7"/>
+                <constraint firstAttribute="trailing" secondItem="HNj-rP-dcF" secondAttribute="trailing" id="eWk-nh-mXe"/>
+                <constraint firstAttribute="bottom" secondItem="be8-sH-bvS" secondAttribute="bottom" id="tXD-iE-qz9"/>
+                <constraint firstAttribute="trailing" secondItem="be8-sH-bvS" secondAttribute="trailing" id="uEd-vg-6uq"/>
+                <constraint firstItem="HNj-rP-dcF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vdv-zL-Cff"/>
+                <constraint firstItem="be8-sH-bvS" firstAttribute="top" secondItem="HNj-rP-dcF" secondAttribute="bottom" id="yiR-S7-PZZ"/>
+            </constraints>
+            <point key="canvasLocation" x="17" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bc_nav bar.png" width="375" height="102"/>
+    </resources>
+</document>

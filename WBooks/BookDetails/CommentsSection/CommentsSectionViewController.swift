@@ -50,9 +50,7 @@ final class CommentsSectionViewController: UIViewController {
     }
     
     private func showError() {
-        let alert = UIAlertController(title: "ALERT_TITLE".localized(), message: "COMMENTS_ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ALERT_CLOSE".localized(), style: .default, handler: nil))
-        self.present(alert, animated: true)
+        showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "COMMENTS_ERROR_ALERT_MESSAGE".localized(), closeButtonLabel: "ERROR_ALERT_CLOSE".localized())
     }
 }
 

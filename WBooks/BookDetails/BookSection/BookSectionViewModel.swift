@@ -23,7 +23,6 @@ final class BookSectionViewModel {
     var genre: String {
         return book.genre
     }
-    var bookImage: UIImage?
     var imageURL: String {
         return book.image
     }
@@ -31,9 +30,12 @@ final class BookSectionViewModel {
         return book.isAvailable
     }
     
-    init(book: Book, bookImage: UIImage? = nil, rentRepository: RentRepository = RentRepository()) {
+    var status: BookStatus {
+        book.status
+    }
+    
+    init(book: Book, rentRepository: RentRepository = RentRepository()) {
         self.book = book
-        self.bookImage = bookImage
         self.rentRepository = rentRepository
     }
     

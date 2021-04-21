@@ -80,6 +80,10 @@ final class NewBookViewController: UIViewController {
         newBookView.buttonBookImage.setBackgroundImage(UIImage.addBookImage, for: .normal)
     }
     
+    private func formIsValid() -> Bool {
+        return newBookView.textfieldName.isValid() && newBookView.textfieldAuthor.isValid() && newBookView.textfieldYear.isValid() && newBookView.textfieldTopic.isValid()
+    }
+    
     private func getBookFromForm() -> UnidentifiableBook {
         return UnidentifiableBook(
             title: newBookView.textfieldName.text ?? "",
@@ -94,10 +98,7 @@ final class NewBookViewController: UIViewController {
 
 extension NewBookViewController: NewBookViewDelegate {
     func onSubmitPressed() {
-        if (newBookView.textfieldName.isValid() &&
-                newBookView.textfieldAuthor.isValid() &&
-                newBookView.textfieldYear.isValid() &&
-                newBookView.textfieldTopic.isValid()) {
+        if formIsValid() {
             viewModel.loadBook(book: getBookFromForm(), onSuccess: { [weak self] _ in self?.onSubmitSuccess() }, onError: { [weak self] _ in self?.onSubmitError() })
         }
     }
@@ -142,7 +143,6 @@ extension NewBookViewController: UIImagePickerControllerDelegate & UINavigationC
 }
 
 extension NewBookViewController: UITextFieldDelegate {
-
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let nextTextFieldTag = textField.tag + 1
         

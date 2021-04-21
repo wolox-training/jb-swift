@@ -15,8 +15,8 @@ final class BookSectionViewController: UIViewController {
         return bookSectionView
     }()
     
-    init(book: Book, bookImage: UIImage? = nil) {
-        self.viewModel = BookSectionViewModel(book: book, bookImage: bookImage)
+    init(book: Book) {
+        self.viewModel = BookSectionViewModel(book: book)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,7 +45,7 @@ final class BookSectionViewController: UIViewController {
     }
     
     private func onSuccessRent() {
-        bookSectionView.configureAvailability(viewModel.isBookAvailable)
+        bookSectionView.configureAvailability(viewModel.status)
         showAlert(title: "SUCCESS_ALERT_TITLE".localized(), message: "SUCCESS_RENT_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
