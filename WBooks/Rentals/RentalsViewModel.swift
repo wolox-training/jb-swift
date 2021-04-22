@@ -5,7 +5,7 @@
 //  Created by joaquin bozzalla on 20/04/2021.
 //
 
-class RentalsViewModel: BooksTableViewModel {
+final class RentalsViewModel: BooksTableViewModel {
     private let rentsRepository: RentRepositoryType
     private let booksRepository: BookRepositoryType
     private var rents: [Rent] = []

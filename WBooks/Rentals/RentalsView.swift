@@ -8,10 +8,19 @@
 import UIKit
 
 class RentalsView: NibView {
-    @IBOutlet var view: UIView! {
+    @IBOutlet var view: UIStackView! {
         didSet {
             view.backgroundColor = UIColor.backgroundColor
         }
     }
-    @IBOutlet var mainContainer: UIView!
+    @IBOutlet var tableContainer: UIView! {
+        didSet {
+            tableContainer.backgroundColor = UIColor.backgroundColor
+        }
+    }
+    @IBOutlet var suggestionsContainer: UIView! {
+        didSet {
+            suggestionsContainer.backgroundColor = UIColor.backgroundColor
+        }
+    }
 }

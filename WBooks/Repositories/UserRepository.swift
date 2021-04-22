@@ -19,11 +19,13 @@ final class UserRepository: UserRepositoryType {
             .responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let value):
-                    guard let JSONUser = try? JSONSerialization.data(withJSONObject: value, options: []), let user = try? JSONDecoder().decode(User.self, from: JSONUser) else {
+                    guard let JSONUser = try? JSONSerialization.data(withJSONObject: value, options: []),
+                          let user = try? JSONDecoder().decode(User.self, from: JSONUser)
+                    else {
                         onError(UserError.decodeError)
                         return
                     }
-
+                    
                     onSuccess(user)
                 case .failure(let error):
                     onError(error)

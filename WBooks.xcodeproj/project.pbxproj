@@ -19,6 +19,9 @@
 		9670D200262DD98000B788AC /* NewBookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9670D1FC262DD98000B788AC /* NewBookView.xib */; };
 		9670D201262DD98000B788AC /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670D1FD262DD98000B788AC /* NewBookView.swift */; };
 		968D71AE2629FC3600A14C6C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D71AD2629FC3600A14C6C /* UIButton.swift */; };
+		968D72192631AF08002D9AC9 /* SuggestionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D72182631AF08002D9AC9 /* SuggestionCellView.swift */; };
+		968D721E2631AF36002D9AC9 /* SuggestionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968D721D2631AF36002D9AC9 /* SuggestionCellView.xib */; };
+		968D72232631AFDD002D9AC9 /* SuggestionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D72222631AFDC002D9AC9 /* SuggestionCellViewModel.swift */; };
 		968F81FD2620937C007D5C78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 968F81FF2620937C007D5C78 /* Localizable.strings */; };
 		968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F82172620D278007D5C78 /* TabBarViewController.swift */; };
 		969046BC262F42090077012F /* BooksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969046BB262F42090077012F /* BooksTableViewController.swift */; };
@@ -63,6 +66,12 @@
 		96A837FB261F62CD00C2D3D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */; };
 		96A8381C261F7C6E00C2D3D1 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A8381B261F7C6E00C2D3D1 /* LoginView.xib */; };
 		96CE1D7326307AFD0038A618 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE1D7226307AFD0038A618 /* UIView.swift */; };
+		96CE1D79263091800038A618 /* SuggestionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96CE1D78263091800038A618 /* SuggestionsView.xib */; };
+		96CE1D7E263091910038A618 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE1D7D263091910038A618 /* SuggestionsViewController.swift */; };
+		96CE1D832630919C0038A618 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE1D822630919C0038A618 /* SuggestionsView.swift */; };
+		96CE1D88263091A50038A618 /* SuggestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE1D87263091A50038A618 /* SuggestionsViewModel.swift */; };
+		96CE1DC12630C35C0038A618 /* SuggestionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE1DC02630C35C0038A618 /* SuggestionsRepository.swift */; };
+		96CE1DC62630C40E0038A618 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE1DC52630C40E0038A618 /* Suggestion.swift */; };
 		96D6E887261F84AE00C8A00E /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D6E886261F84AE00C8A00E /* LibraryView.xib */; };
 		96D6E894261F84D200C8A00E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E893261F84D200C8A00E /* LibraryView.swift */; };
 		96D6E89C261F85C900C8A00E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E89B261F85C900C8A00E /* LibraryViewController.swift */; };
@@ -117,6 +126,9 @@
 		9670D1FC262DD98000B788AC /* NewBookView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewBookView.xib; sourceTree = "<group>"; };
 		9670D1FD262DD98000B788AC /* NewBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
 		968D71AD2629FC3600A14C6C /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		968D72182631AF08002D9AC9 /* SuggestionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCellView.swift; sourceTree = "<group>"; };
+		968D721D2631AF36002D9AC9 /* SuggestionCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCellView.xib; sourceTree = "<group>"; };
+		968D72222631AFDC002D9AC9 /* SuggestionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCellViewModel.swift; sourceTree = "<group>"; };
 		968F81FE2620937C007D5C78 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F8203262095DB007D5C78 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		968F82172620D278007D5C78 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +174,12 @@
 		96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		96A8381B261F7C6E00C2D3D1 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		96CE1D7226307AFD0038A618 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		96CE1D78263091800038A618 /* SuggestionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionsView.xib; sourceTree = "<group>"; };
+		96CE1D7D263091910038A618 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
+		96CE1D822630919C0038A618 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
+		96CE1D87263091A50038A618 /* SuggestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewModel.swift; sourceTree = "<group>"; };
+		96CE1DC02630C35C0038A618 /* SuggestionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsRepository.swift; sourceTree = "<group>"; };
+		96CE1DC52630C40E0038A618 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 		96D6E886261F84AE00C8A00E /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		96D6E893261F84D200C8A00E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		96D6E89B261F85C900C8A00E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +326,16 @@
 			path = NewBook;
 			sourceTree = "<group>";
 		};
+		968D72172631AEF5002D9AC9 /* SuggestionCell */ = {
+			isa = PBXGroup;
+			children = (
+				968D721D2631AF36002D9AC9 /* SuggestionCellView.xib */,
+				968D72182631AF08002D9AC9 /* SuggestionCellView.swift */,
+				968D72222631AFDC002D9AC9 /* SuggestionCellViewModel.swift */,
+			);
+			path = SuggestionCell;
+			sourceTree = "<group>";
+		};
 		968F82162620D24A007D5C78 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,9 +359,10 @@
 		969046D2262F4A600077012F /* Rentals */ = {
 			isa = PBXGroup;
 			children = (
-				969046D3262F4A710077012F /* RentalsViewController.swift */,
-				969046DB262F4A7D0077012F /* RentalsView.swift */,
+				96CE1D772630916B0038A618 /* Suggestions */,
 				969046E0262F4AAE0077012F /* RentalsView.xib */,
+				969046DB262F4A7D0077012F /* RentalsView.swift */,
+				969046D3262F4A710077012F /* RentalsViewController.swift */,
 				969046E5262F4CB40077012F /* RentalsViewModel.swift */,
 			);
 			path = Rentals;
@@ -356,6 +385,7 @@
 				9694F5D426287A2800205CC4 /* Rent.swift */,
 				9694F5DE2628BAFF00205CC4 /* Comments.swift */,
 				9694F6002628D72200205CC4 /* User.swift */,
+				96CE1DC52630C40E0038A618 /* Suggestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,6 +412,7 @@
 				9694F5D926287A4A00205CC4 /* RentRepository.swift */,
 				9694F5E32628BB7200205CC4 /* CommentRepository.swift */,
 				9694F6052628D76F00205CC4 /* UserRepository.swift */,
+				96CE1DC02630C35C0038A618 /* SuggestionsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -429,6 +460,18 @@
 				96A837FA261F62CD00C2D3D1 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		96CE1D772630916B0038A618 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				968D72172631AEF5002D9AC9 /* SuggestionCell */,
+				96CE1D78263091800038A618 /* SuggestionsView.xib */,
+				96CE1D822630919C0038A618 /* SuggestionsView.swift */,
+				96CE1D7D263091910038A618 /* SuggestionsViewController.swift */,
+				96CE1D87263091A50038A618 /* SuggestionsViewModel.swift */,
+			);
+			path = Suggestions;
 			sourceTree = "<group>";
 		};
 		96D6E87D261F845C00C8A00E /* Library */ = {
@@ -567,7 +610,9 @@
 				969CC62626271F1400DB21CF /* BookDetailsView.xib in Resources */,
 				96D6E887261F84AE00C8A00E /* LibraryView.xib in Resources */,
 				96A8381C261F7C6E00C2D3D1 /* LoginView.xib in Resources */,
+				968D721E2631AF36002D9AC9 /* SuggestionCellView.xib in Resources */,
 				964F5781261DD75B004638D9 /* Assets.xcassets in Resources */,
+				96CE1D79263091800038A618 /* SuggestionsView.xib in Resources */,
 				969CC62E26271F1F00DB21CF /* BookSectionView.xib in Resources */,
 				96D6E8AA261F87BA00C8A00E /* BookCellView.xib in Resources */,
 				969CC63726271F2700DB21CF /* CommentsSectionView.xib in Resources */,
@@ -704,7 +749,9 @@
 				9694F5FC2628C41400205CC4 /* CommentsSectionViewModel.swift in Sources */,
 				9670D201262DD98000B788AC /* NewBookView.swift in Sources */,
 				969CC62F26271F1F00DB21CF /* BookSectionViewController.swift in Sources */,
+				96CE1D88263091A50038A618 /* SuggestionsViewModel.swift in Sources */,
 				968F82182620D278007D5C78 /* TabBarViewController.swift in Sources */,
+				968D72232631AFDD002D9AC9 /* SuggestionCellViewModel.swift in Sources */,
 				969CC63926271F2700DB21CF /* CommentsSectionView.swift in Sources */,
 				9694F5DF2628BAFF00205CC4 /* Comments.swift in Sources */,
 				9694F5E42628BB7200205CC4 /* CommentRepository.swift in Sources */,
@@ -720,6 +767,7 @@
 				969CC62526271F1400DB21CF /* BookDetailsView.swift in Sources */,
 				9699E2912624B2AD00D37ACD /* Colors.swift in Sources */,
 				96DB8BEE262E0F89006579B2 /* NewBookViewModel.swift in Sources */,
+				96CE1D7E263091910038A618 /* SuggestionsViewController.swift in Sources */,
 				96D6E894261F84D200C8A00E /* LibraryView.swift in Sources */,
 				969046CE262F44DD0077012F /* BooksTableViewModel.swift in Sources */,
 				968D71AE2629FC3600A14C6C /* UIButton.swift in Sources */,
@@ -729,6 +777,8 @@
 				969046BC262F42090077012F /* BooksTableViewController.swift in Sources */,
 				96CE1D7326307AFD0038A618 /* UIView.swift in Sources */,
 				9699E3022624E08B00D37ACD /* LibraryViewModel.swift in Sources */,
+				96CE1D832630919C0038A618 /* SuggestionsView.swift in Sources */,
+				96CE1DC12630C35C0038A618 /* SuggestionsRepository.swift in Sources */,
 				96A837EC261F625800C2D3D1 /* NibView.swift in Sources */,
 				969CC63826271F2700DB21CF /* CommentsSectionViewController.swift in Sources */,
 				9670D1FF262DD98000B788AC /* NewBookViewController.swift in Sources */,
@@ -737,8 +787,10 @@
 				96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */,
 				9699E30F2624E34D00D37ACD /* BookRepository.swift in Sources */,
 				969D76082626092A00A9B7D5 /* URL.swift in Sources */,
+				968D72192631AF08002D9AC9 /* SuggestionCellView.swift in Sources */,
 				964F5778261DD75A004638D9 /* AppDelegate.swift in Sources */,
 				9699E2992624B47B00D37ACD /* Images.swift in Sources */,
+				96CE1DC62630C40E0038A618 /* Suggestion.swift in Sources */,
 				96D6E89C261F85C900C8A00E /* LibraryViewController.swift in Sources */,
 				9694F5F72628C07E00205CC4 /* CommentCellViewModel.swift in Sources */,
 				9694F5D526287A2800205CC4 /* Rent.swift in Sources */,

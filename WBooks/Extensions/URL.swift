@@ -33,4 +33,8 @@ extension URL {
     static func rentsBy(userId: Int) -> URL {
         URL(string: backendURL + "/users/\(userId)/rents")!
     }
+    
+    static func suggestions(userId: Int) -> URL {
+        URL(string: backendURL + "/users/\(userId)/suggestions")!
+    }
 }

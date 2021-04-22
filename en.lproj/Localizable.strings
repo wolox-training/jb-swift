@@ -56,3 +56,8 @@
 "DESCRIPTION_TEXTFIELD" = "Description";
 "NEWBOOK_ERROR_ALERT_MESSAGE" = "Book uploading failed.";
 "NEWBOOK_SUCCESS_ALERT_MESSAGE" = "Your book was uploaded!";
+
+// MARK: - RENTALS SECTION
+"SUGGESTIONS_TITLE" = "Suggestions";
+"NO_SUGGESTIONS_MESSAGE" = "No suggestions";
+"SUGGESTIONS_ERROR_MESSAGE" = "We couldn't load the suggestions :(";
