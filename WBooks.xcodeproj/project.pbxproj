@@ -56,6 +56,7 @@
 		96D6E89C261F85C900C8A00E /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E89B261F85C900C8A00E /* LibraryViewController.swift */; };
 		96D6E8A2261F87A700C8A00E /* BookCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D6E8A1261F87A700C8A00E /* BookCellView.swift */; };
 		96D6E8AA261F87BA00C8A00E /* BookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D6E8A9261F87BA00C8A00E /* BookCellView.xib */; };
+		96DF74C8263311570094DD6F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DF74C7263311570094DD6F /* UIViewController.swift */; };
 		CE7E2D32B5D4E2A692F0F3AC /* Pods_WBooks_WBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A527EFEA5F3E9706231F4BC /* Pods_WBooks_WBooksUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +142,7 @@
 		96D6E89B261F85C900C8A00E /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		96D6E8A1261F87A700C8A00E /* BookCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellView.swift; sourceTree = "<group>"; };
 		96D6E8A9261F87BA00C8A00E /* BookCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCellView.xib; sourceTree = "<group>"; };
+		96DF74C7263311570094DD6F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		E129BE927B2EF733A1F300A2 /* Pods-WBooks-WBooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBooks-WBooksUITests.debug.xcconfig"; path = "Target Support Files/Pods-WBooks-WBooksUITests/Pods-WBooks-WBooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -303,6 +305,7 @@
 				969D7602262607AA00A9B7D5 /* UIImageView.swift */,
 				969D76072626092A00A9B7D5 /* URL.swift */,
 				96CE1D9B2630A3840038A618 /* UIButton.swift */,
+				96DF74C7263311570094DD6F /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				9699E3062624E09B00D37ACD /* Book.swift in Sources */,
 				969CC63026271F1F00DB21CF /* BookSectionView.swift in Sources */,
 				969CC62526271F1400DB21CF /* BookDetailsView.swift in Sources */,
+				96DF74C8263311570094DD6F /* UIViewController.swift in Sources */,
 				96CE1DA12630A9710038A618 /* BookDetailsViewModel.swift in Sources */,
 				9699E2912624B2AD00D37ACD /* Colors.swift in Sources */,
 				96D6E894261F84D200C8A00E /* LibraryView.swift in Sources */,

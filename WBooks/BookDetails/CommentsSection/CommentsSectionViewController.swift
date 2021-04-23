@@ -46,9 +46,10 @@ final class CommentsSectionViewController: UIViewController {
     }
     
     private func reloadTable() {
-        commentsSectionView.tableComments.reloadData()
         if viewModel.noComments {
             showMessageIntoCommentsSection(message: "NO_COMMENTS_MESSAGE".localized())
+        } else {
+            commentsSectionView.tableComments.reloadData()
         }
     }
     
@@ -61,17 +62,7 @@ final class CommentsSectionViewController: UIViewController {
         labelMessage.text = message
         labelMessage.textColor = .systemGray4
         labelMessage.textAlignment = .center
-        
-        commentsSectionView.viewContainer.addSubview(labelMessage)
-        commentsSectionView.viewContainer.translatesAutoresizingMaskIntoConstraints = false
-        labelMessage.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            labelMessage.topAnchor.constraint(equalTo: commentsSectionView.viewContainer.topAnchor),
-            labelMessage.bottomAnchor.constraint(equalTo: commentsSectionView.viewContainer.bottomAnchor),
-            labelMessage.leadingAnchor.constraint(equalTo: commentsSectionView.viewContainer.leadingAnchor),
-            labelMessage.trailingAnchor.constraint(equalTo: commentsSectionView.viewContainer.trailingAnchor)
-        ])
+        addChild(labelMessage, into: commentsSectionView.viewContainer)
     }
 }
 
