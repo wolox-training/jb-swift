@@ -5,29 +5,29 @@
 //  Created by joaquin bozzalla on 12/04/2021.
 //
 
-public class Book: Codable {
+class Book: Codable {
     let id: Int
     let title: String
     let author: String
     let genre: String
     let year: String
     let image: String
-    var status : String
+    var status : BookStatus
 
     var isAvailable: Bool {
-        return status == bookStatus.available.rawValue
+        return status == BookStatus.available
     }
     
     func setAvailable() {
-        status = bookStatus.available.rawValue
+        status = BookStatus.available
     }
     
     func setUnavailable() {
-        status = bookStatus.unavailable.rawValue
+        status = BookStatus.unavailable
     }
 }
 
-enum bookStatus: String {
+enum BookStatus: String, Codable {
     case available = "Available"
     case unavailable = "Unvailable"
 }

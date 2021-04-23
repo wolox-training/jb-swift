@@ -7,7 +7,11 @@
 
 import Alamofire
 
-final class RentRepository {
+protocol RentRepositoryType {
+    func rentBook(userId: Int, bookId: Int, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void)
+}
+
+final class RentRepository: RentRepositoryType {
 
     func rentBook(userId: Int, bookId: Int, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void) {
         // Parameters
@@ -34,15 +38,13 @@ final class RentRepository {
                 completionHandler: { response in
                     switch response.result {
                     case .success(let value):
-                        guard let JSONResponse = try? JSONSerialization.data(withJSONObject: value, options: []) else {
+                        guard let JSONResponse = try? JSONSerialization.data(withJSONObject: value, options: []),
+                              let response = try? JSONDecoder().decode(Rent.self, from: JSONResponse)
+                        else {
                             onError(RentError.decodeError)
                             return
                         }
                         
-                        guard let response = try? JSONDecoder().decode(Rent.self, from: JSONResponse) else {
-                            onError(RentError.decodeError)
-                            return
-                        }
                         onSuccess(response)
                     case .failure(let error):
                         onError(error)

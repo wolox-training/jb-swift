@@ -14,11 +14,9 @@ final class BookSectionViewController: UIViewController {
         bookSectionView.delegate = self
         return bookSectionView
     }()
-    private let bookImage: UIImage?
     
-    init(book: Book, bookImage: UIImage? = nil) {
-        self.bookImage = bookImage
-        self.viewModel = BookSectionViewModel(book: book)
+    init(viewModel: BookSectionViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,7 +31,7 @@ final class BookSectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bookSectionView.configure(with: viewModel, bookImage: bookImage)
+        bookSectionView.configure(with: viewModel)
     }
     
     override func viewDidLayoutSubviews() {
@@ -47,14 +45,19 @@ final class BookSectionViewController: UIViewController {
     }
     
     private func onSuccessRent() {
-        bookSectionView.buttonRent.isEnabled = true
-        bookSectionView.configureAvailability(with: viewModel)
+        stopLoading()
+        bookSectionView.configureAvailability(viewModel.isBookAvailable)
         showAlert(title: "SUCCESS_RENT_ALERT_TITLE".localized(), message: "SUCCESS_RENT_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
     private func onErrorRent(error: Error) {
-        bookSectionView.buttonRent.isEnabled = true
+        stopLoading()
         showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "RENT_ERROR_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
+    }
+    
+    private func stopLoading() {
+        bookSectionView.buttonRent.loadingIndicator(false)
+        bookSectionView.buttonRent.isEnabled = viewModel.isBookAvailable
     }
     
     private func showAlert(title: String, message: String, closeButtonLabel: String) {
@@ -62,13 +65,11 @@ final class BookSectionViewController: UIViewController {
         alert.addAction(UIAlertAction(title: closeButtonLabel, style: .default, handler: nil))
         present(alert, animated: true)
     }
-
 }
 
 extension BookSectionViewController: BookSectionViewDelegate {
     func onRentPressed() {
-        bookSectionView.buttonRent.isEnabled = false
-        
+        bookSectionView.buttonRent.loadingIndicator(true)
         if viewModel.isBookAvailable {
             viewModel.rentBook(onSuccess: self.onSuccessRent, onError: self.onErrorRent)
         } else {

@@ -10,13 +10,12 @@ import UIKit
 extension UIImageView {
     
     func loadFromURL(url: URL, or defaultImage: UIImage? = UIImage.defaultImage) {
+        self.image = defaultImage
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
                 DispatchQueue.main.async {
                     self.image = UIImage(data: data)
                 }
-            } else {
-                self.image = defaultImage
             }
         }
     }

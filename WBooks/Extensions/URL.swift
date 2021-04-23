@@ -7,7 +7,10 @@
 import Foundation
 
 extension URL {
-    static let backendURL = "https://ios-training-backend.herokuapp.com/api/v1"
+    static var backendURL: String {
+        guard let url = Bundle.main.infoDictionary?["API_URL"] as? String else { return "" }
+        return "https://" + url
+    }
     
     static var books: URL {
         URL(string: backendURL + "/books")!
