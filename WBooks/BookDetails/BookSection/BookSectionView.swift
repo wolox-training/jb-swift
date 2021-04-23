@@ -62,6 +62,5 @@ final class BookSectionView: NibView {
         labelAvailability.text = isAvailable ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
         labelAvailability.textColor = isAvailable ? .systemGreen : .systemRed
         buttonRent.isEnabled = isAvailable
-        buttonRent.backgroundColor = isAvailable ? .buttonColor : .systemGray3
     }
 }
