@@ -42,7 +42,7 @@ final class LibraryViewController: UIViewController {
     private func showError() {
         let message = UIAlertController(title: "ERROR_ALERT_TITLE".localized(), message: "ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
         message.addAction(UIAlertAction(title: "ERROR_ALERT_CLOSE".localized(), style: .default, handler: nil))
-        self.present(message, animated: true)
+        present(message, animated: true)
     }
     
     private func configureNavigationBar() {
@@ -71,6 +71,6 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         let bookDetailsViewModel = viewModel.createBookDetailsViewModel(for: indexPath.row)
         let bookDetailsViewController = BookDetailsViewController(viewModel: bookDetailsViewModel)
         bookDetailsViewController.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(bookDetailsViewController, animated: true)
+        navigationController?.pushViewController(bookDetailsViewController, animated: true)
     }
 }

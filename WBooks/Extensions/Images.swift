@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIImage {
+    static let defaultProfile = UIImage(systemName: "person")
     static let defaultImage = UIImage(systemName: "photo")
     // MARK: - Navigation Bar icons
     static let notifications = UIImage(named: "ic_notifications.png")
