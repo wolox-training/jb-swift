@@ -19,7 +19,9 @@ final class CommentRepository: CommentRepositoryType {
             .responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let value):
-                    guard let JSONComments = try? JSONSerialization.data(withJSONObject: value, options: []), let comments = try? JSONDecoder().decode([Comment].self, from: JSONComments) else {
+                    guard let JSONComments = try? JSONSerialization.data(withJSONObject: value, options: []),
+                          let comments = try? JSONDecoder().decode([Comment].self, from: JSONComments)
+                    else {
                         onError(CommentError.decodeError)
                         return
                     }

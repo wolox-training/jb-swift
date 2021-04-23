@@ -9,7 +9,7 @@ import UIKit
 
 final class BookSectionViewModel {
     private var book: Book
-    private let rentRepository: RentRepository
+    private let rentRepository: RentRepositoryType
 
     var title: String {
         return book.title
@@ -26,15 +26,14 @@ final class BookSectionViewModel {
     var imageURL: String {
         return book.image
     }
+    var status: BookStatus {
+        return book.status
+    }
     var isBookAvailable: Bool {
         return book.isAvailable
     }
     
-    var status: BookStatus {
-        book.status
-    }
-    
-    init(book: Book, rentRepository: RentRepository = RentRepository()) {
+    init(book: Book, rentRepository: RentRepositoryType = RentRepository()) {
         self.book = book
         self.rentRepository = rentRepository
     }
