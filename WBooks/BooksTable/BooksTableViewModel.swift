@@ -8,24 +8,24 @@
 protocol BooksTableViewModelType {
     var books: [Book] { get set }
     var numberOfBooks: Int { get }
-    func getBookBy(index: Int) -> Book
     func createBookCellViewModel(for bookIndex: Int) -> BookCellViewModel
+    func createBookDetailsViewModel(bookId: Int) -> BookDetailsViewModel
     func fetchData(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void)
 }
 
 class BooksTableViewModel: BooksTableViewModelType {
     internal var books: [Book] = [];
-
+    
     var numberOfBooks: Int {
         books.count
     }
-    
-    func getBookBy(index: Int) -> Book {
-        books[index]
-    }
-    
+
     func createBookCellViewModel(for bookIndex: Int) -> BookCellViewModel {
         return BookCellViewModel(book: books[bookIndex])
+    }
+    
+    func createBookDetailsViewModel(bookId: Int) -> BookDetailsViewModel {
+        return BookDetailsViewModel(book: books[bookId])
     }
     
     func fetchData(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {

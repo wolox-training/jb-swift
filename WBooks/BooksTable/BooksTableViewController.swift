@@ -64,8 +64,8 @@ extension BooksTableViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book = viewModel.getBookBy(index: indexPath.row)
-        let bookDetailsViewController = BookDetailsViewController(book: book)
+        let bookDetailsViewModel = viewModel.createBookDetailsViewModel(bookId: indexPath.row)
+        let bookDetailsViewController = BookDetailsViewController(viewModel: bookDetailsViewModel)
         bookDetailsViewController.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(bookDetailsViewController, animated: true)
     }
