@@ -13,18 +13,25 @@ final class CommentCellView: UITableViewCell {
             imageUser.setRounded()
         }
     }
-    @IBOutlet weak var labelUser: UILabel!
-    @IBOutlet weak var labelComment: UILabel!
+    @IBOutlet weak var labelUser: UILabel! {
+        didSet {
+            labelUser.text = ""
+        }
+    }
+    @IBOutlet weak var labelComment: UILabel! {
+        didSet {
+            labelComment.text = ""
+        }
+    }
     
     func configureCell(with viewModel: CommentCellViewModel) {
         imageUser.image = UIImage.defaultProfile
         imageUser.tintColor = .black
-        self.labelUser.text =  "-----------"
         labelComment.text = viewModel.content
 
-        let onSuccess = {
-            self.labelUser.text =  viewModel.userName
-            self.imageUser.loadFromURL(stringURL: viewModel.userAvatar)
+        let onSuccess = { [weak self] in
+            self?.labelUser.text =  viewModel.userName
+            self?.imageUser.loadFromURL(stringURL: viewModel.userAvatar, or: UIImage.defaultProfile)
         }
         let onError = { (error: Error) in } // If the user is not loaded nothing has to change. Default content will remain.
         viewModel.loadUser(onSuccess: onSuccess, onError: onError)

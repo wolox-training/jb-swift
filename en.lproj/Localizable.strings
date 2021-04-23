@@ -36,6 +36,8 @@
 "ERROR_ALERT_TITLE" = "Oops!";
 "ALERT_CLOSE" = "Ok";
 "SUCCESS_ALERT_TITLE" = "Congratulation";
+"NO_COMMENTS_MESSAGE" = "No comments";
+"COMMENTS_ERROR_MESSAGE" = "We couldn't load the comments :(";
 
 "UNAVAILABLE_BOOK_ALERT_MESSAGE" = "The book is unavailable.";
 "RENT_ERROR_ALERT_MESSAGE" = "Book rental failed.";

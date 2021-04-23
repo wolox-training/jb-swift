@@ -11,8 +11,8 @@ final class CommentsSectionViewController: UIViewController {
     private let commentsSectionView = CommentsSectionView()
     private let viewModel: CommentsSectionViewModel
     
-    init(book: Book) {
-        viewModel = CommentsSectionViewModel(bookId: book.id)
+    init(viewModel: CommentsSectionViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,7 +22,7 @@ final class CommentsSectionViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        self.view = commentsSectionView
+        view = commentsSectionView
     }
     
     override func viewDidLoad() {
@@ -33,26 +33,36 @@ final class CommentsSectionViewController: UIViewController {
     }
     
     private func configureTable() {
-        self.commentsSectionView.tableComments.delegate = self
-        self.commentsSectionView.tableComments.dataSource = self
+        commentsSectionView.tableComments.delegate = self
+        commentsSectionView.tableComments.dataSource = self
         let nib = UINib.init(nibName: CommentCellView.identifier, bundle: nil)
-        self.commentsSectionView.tableComments.register(nib, forCellReuseIdentifier: CommentCellView.identifier)
+        commentsSectionView.tableComments.register(nib, forCellReuseIdentifier: CommentCellView.identifier)
         
-        self.commentsSectionView.tableComments.rowHeight = UITableView.automaticDimension
+        commentsSectionView.tableComments.rowHeight = UITableView.automaticDimension
     }
     
     private func loadComments() {
-        viewModel.fetchComments(onSuccess: reloadTable, onError: { [weak self] _ in self?.showError() })
+        viewModel.fetchComments(onSuccess: { [weak self] in self?.reloadTable() }, onError: { [weak self] _ in self?.showError() })
     }
     
     private func reloadTable() {
-        self.commentsSectionView.tableComments.reloadData()
+        if viewModel.noComments {
+            showMessageIntoCommentsSection(message: "NO_COMMENTS_MESSAGE".localized())
+        } else {
+            commentsSectionView.tableComments.reloadData()
+        }
     }
     
     private func showError() {
-        let alert = UIAlertController(title: "ALERT_TITLE".localized(), message: "COMMENTS_ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ALERT_CLOSE".localized(), style: .default, handler: nil))
-        self.present(alert, animated: true)
+        showMessageIntoCommentsSection(message: "COMMENTS_ERROR_MESSAGE".localized())
+    }
+    
+    private func showMessageIntoCommentsSection(message: String) {
+        let labelMessage = UILabel()
+        labelMessage.text = message
+        labelMessage.textColor = .systemGray4
+        labelMessage.textAlignment = .center
+        addChild(labelMessage, into: commentsSectionView.viewContainer)
     }
 }
 

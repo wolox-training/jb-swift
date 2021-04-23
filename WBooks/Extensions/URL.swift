@@ -8,10 +8,8 @@ import Foundation
 
 extension URL {
     static var backendURL: String {
-        if let url = Bundle.main.infoDictionary?["API_URL"] as? String {
-            return "https://" + url
-        }
-        return ""
+        guard let url = Bundle.main.infoDictionary?["API_URL"] as? String else { return "" }
+        return "https://" + url
     }
     
     static var books: URL {

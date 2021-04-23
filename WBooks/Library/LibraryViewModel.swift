@@ -27,6 +27,10 @@ final class LibraryViewModel {
         return BookCellViewModel(book: books[bookIndex])
     }
     
+    func createBookDetailsViewModel(for bookIndex: Int) -> BookDetailsViewModel {
+        return BookDetailsViewModel(book: books[bookIndex])
+    }
+    
     func fetchBooks(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let onFetchSuccess = { [weak self] (books: [Book]) in
             self?.books = books

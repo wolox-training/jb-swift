@@ -42,7 +42,7 @@ final class LibraryViewController: UIViewController {
     private func showError() {
         let message = UIAlertController(title: "ERROR_ALERT_TITLE".localized(), message: "ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
         message.addAction(UIAlertAction(title: "ERROR_ALERT_CLOSE".localized(), style: .default, handler: nil))
-        self.present(message, animated: true)
+        present(message, animated: true)
     }
     
     private func configureNavigationBar() {
@@ -62,18 +62,15 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookCellView.identifier, for: indexPath) as! BookCellView
-        let bookCellViewModel = viewModel.createBookCellViewModel(for:indexPath.row)
+        let bookCellViewModel = viewModel.createBookCellViewModel(for: indexPath.row)
         cell.configureCell(with: bookCellViewModel)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BookCellView.identifier, for: indexPath) as! BookCellView
-        let image = cell.imageBook.image
-        let book = viewModel.getBookBy(index: indexPath.row)
-        
-        let bookDetailsViewController = BookDetailsViewController(book: book, bookImage: image)
+        let bookDetailsViewModel = viewModel.createBookDetailsViewModel(for: indexPath.row)
+        let bookDetailsViewController = BookDetailsViewController(viewModel: bookDetailsViewModel)
         bookDetailsViewController.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(bookDetailsViewController, animated: true)
+        navigationController?.pushViewController(bookDetailsViewController, animated: true)
     }
 }

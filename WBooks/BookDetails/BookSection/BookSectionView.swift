@@ -50,11 +50,7 @@ final class BookSectionView: NibView {
         labelAuthor.text = viewModel.author
         labelGenre.text = viewModel.genre
         labelYear.text = viewModel.year
-        if let image = viewModel.bookImage, image != UIImage.defaultImage {
-            imageBook.image = image
-        } else {
-            imageBook.loadFromURL(stringURL: viewModel.imageURL)
-        }
+        imageBook.loadFromURL(stringURL: viewModel.imageURL)
         configureAvailability(viewModel.isBookAvailable)
     }
     
