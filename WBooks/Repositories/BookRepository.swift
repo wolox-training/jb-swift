@@ -40,7 +40,9 @@ final class BookRepository: BookRepositoryType {
                 completionHandler: { response in
                     switch response.result {
                     case .success(let value):
-                        guard let JSONResponse = try? JSONSerialization.data(withJSONObject: value, options: []), let response = try? JSONDecoder().decode(Book.self, from: JSONResponse) else {
+                        guard let JSONResponse = try? JSONSerialization.data(withJSONObject: value, options: []),
+                              let response = try? JSONDecoder().decode(Book.self, from: JSONResponse)
+                        else {
                             onError(BookError.decodeError)
                             return
                         }
