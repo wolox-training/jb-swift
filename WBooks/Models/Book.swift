@@ -23,11 +23,7 @@ class UnidentifiableBook: Codable {
     }
     
     func isValid() -> Bool {
-        if title.isEmpty { return false }
-        if author.isEmpty { return false }
-        if genre.isEmpty { return false }
-        if year.isEmpty { return false }
-        return true
+        return !(title.isEmpty || author.isEmpty || genre.isEmpty || year.isEmpty)
     }
 }
 

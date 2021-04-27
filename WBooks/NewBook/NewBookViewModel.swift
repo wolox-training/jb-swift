@@ -17,4 +17,9 @@ final class NewBookViewModel {
             bookRepository.uploadBook(book: book, onSuccess: onSuccess, onError: onError)
         }
     }
+    
+    func setValidator(textfield: CustomTextfield) {
+        let emptyValidator = { (value: String) in return !value.isEmpty }
+        textfield.setValidator(emptyValidator)
+    }
 }

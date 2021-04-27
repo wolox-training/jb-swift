@@ -70,7 +70,21 @@ final class NewBookView: NibView {
     @IBAction func onSubmitPressed(_ sender: Any) {
         delegate?.onSubmitPressed()
     }
+    
     @IBAction func onBookImagePressed(_ sender: Any) {
         delegate?.onBookImagePressed()
+    }
+    
+    var formIsValid: Bool {
+        return textfieldName.isValid() && textfieldAuthor.isValid() && textfieldYear.isValid() && textfieldTopic.isValid()
+    }
+    
+    func cleanForm() {
+        textfieldName.text = ""
+        textfieldYear.text = ""
+        textfieldTopic.text = ""
+        textfieldAuthor.text = ""
+        textfieldDescription.text = ""
+        buttonBookImage.setBackgroundImage(UIImage.addBookImage, for: .normal)
     }
 }

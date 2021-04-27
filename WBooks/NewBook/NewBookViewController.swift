@@ -22,11 +22,10 @@ final class NewBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
+        configureNotificationAndSearchNavBar(title: "NEW_BOOK_LABEL".localized())
         configureTextfields()
         // Hide the keyboard when the view is touched
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
@@ -48,36 +47,19 @@ final class NewBookViewController: UIViewController {
         newBookView.textfieldTopic.delegate = self
         newBookView.textfieldDescription.delegate = self
         
-        let emptyValidator = { (value: String) in return !value.isEmpty }
-        newBookView.textfieldName.validator = emptyValidator
-        newBookView.textfieldAuthor.validator = emptyValidator
-        newBookView.textfieldYear.validator = emptyValidator
-        newBookView.textfieldTopic.validator = emptyValidator
+        viewModel.setValidator(textfield: newBookView.textfieldName)
+        viewModel.setValidator(textfield: newBookView.textfieldAuthor)
+        viewModel.setValidator(textfield: newBookView.textfieldYear)
+        viewModel.setValidator(textfield: newBookView.textfieldTopic)
     }
-    
-    private func configureNavigationBar() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationItem.title = "NEW_BOOK_LABEL".localized()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.notifications, style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.search, style: .plain, target: nil, action: nil)
-    }
-    
+
     private func onSubmitSuccess() {
-        cleanForm()
+        newBookView.cleanForm()
         showAlert(title: "SUCCESS_ALERT_TITLE".localized(), message: "NEWBOOK_SUCCESS_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
     private func onSubmitError() {
         showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "NEWBOOK_ERROR_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
-    }
-    
-    private func cleanForm() {
-        newBookView.textfieldName.text = ""
-        newBookView.textfieldYear.text = ""
-        newBookView.textfieldTopic.text = ""
-        newBookView.textfieldAuthor.text = ""
-        newBookView.textfieldDescription.text = ""
-        newBookView.buttonBookImage.setBackgroundImage(UIImage.addBookImage, for: .normal)
     }
     
     private func getBookFromForm() -> UnidentifiableBook {
@@ -93,14 +75,13 @@ final class NewBookViewController: UIViewController {
 }
 
 extension NewBookViewController: NewBookViewDelegate {
+    
     func onSubmitPressed() {
-        if (newBookView.textfieldName.isValid() &&
-                newBookView.textfieldAuthor.isValid() &&
-                newBookView.textfieldYear.isValid() &&
-                newBookView.textfieldTopic.isValid()) {
+        if newBookView.formIsValid {
             viewModel.loadBook(book: getBookFromForm(), onSuccess: { [weak self] _ in self?.onSubmitSuccess() }, onError: { [weak self] _ in self?.onSubmitError() })
         }
     }
+    
     func onBookImagePressed() {
         let alertController = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
         
@@ -134,11 +115,13 @@ extension NewBookViewController: NewBookViewDelegate {
 }
 
 extension NewBookViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         newBookView.buttonBookImage.setBackgroundImage(image, for: .normal)
         picker.dismiss(animated: true, completion: nil)
     }
+    
 }
 
 extension NewBookViewController: UITextFieldDelegate {

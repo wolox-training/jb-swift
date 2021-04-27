@@ -27,4 +27,12 @@ extension UIViewController {
             child.trailingAnchor.constraint(equalTo: container.trailingAnchor)
         ])
     }
+    
+    func configureNotificationAndSearchNavBar(title: String = "") {
+        navigationItem.backButtonDisplayMode = UINavigationItem.BackButtonDisplayMode.minimal
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationItem.title = title
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.notifications, style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.search, style: .plain, target: nil, action: nil)
+    }
 }

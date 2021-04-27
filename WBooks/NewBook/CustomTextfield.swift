@@ -10,13 +10,13 @@ import UIKit
 @IBDesignable
 open class CustomTextfield: UITextField {
     private let textfieldColor = UIColor.systemGray3
-    var validator: ((String) -> Bool)?
+    private var validator: ((String) -> Bool)?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         customInit()
-        
     }
+    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         customInit()
@@ -37,12 +37,19 @@ open class CustomTextfield: UITextField {
         self.layer.shadowRadius = 0.0
     }
     
+    func setValidator(_ validator: @escaping (String) -> Bool) {
+        self.validator = validator
+    }
+    
     @objc func isValid() -> Bool {
-        if let validatorFunction = validator, let text = self.text {
-            let result = validatorFunction(text)
-            self.layer.shadowColor = result ? textfieldColor.cgColor : UIColor.red.cgColor
-            return result
+        guard let validatorFunction = validator,
+              let text = self.text
+        else {
+            return true
         }
-        return true
+        
+        let result = validatorFunction(text)
+        self.layer.shadowColor = result ? textfieldColor.cgColor : UIColor.red.cgColor
+        return result
     }
 }
