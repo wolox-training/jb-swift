@@ -11,7 +11,7 @@ class UnidentifiableBook: Codable {
     let genre: String
     let year: String
     let image: String
-    var status : BookStatus
+    var status : BookStatus = .unavailable
     
     init(title: String, author: String, genre: String, year: String, image: String, status: BookStatus) {
         self.title = title
@@ -57,6 +57,6 @@ final class Book: UnidentifiableBook {
 
 enum BookStatus: String, Codable {
     case available = "Available"
-    case unavailable = "Unvailable"
+    case unavailable = "Unavailable"
     case inYourHands = "InYourHands"
 }

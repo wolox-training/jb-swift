@@ -48,6 +48,26 @@
                ReferencedContainer = "container:WBooks.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "96A5558E263719BD0011EF94"
+               BuildableName = "BooksTests.xctest"
+               BlueprintName = "BooksTests"
+               ReferencedContainer = "container:WBooks.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "96A555A026373F9C0011EF94"
+               BuildableName = "LibraryViewModelSlowTest.xctest"
+               BlueprintName = "LibraryViewModelSlowTest"
+               ReferencedContainer = "container:WBooks.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
