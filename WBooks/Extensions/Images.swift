@@ -20,4 +20,6 @@ extension UIImage {
     static let addNew = UIImage(named: "ic_add new.png")
     static let myRentals = UIImage(named: "ic_myrentals.png")
     static let settings = UIImage(named: "ic_settings.png")
+    // MARK: - New Book Section
+    static let addBookImage = UIImage(named: "ic_add photo.png")
 }

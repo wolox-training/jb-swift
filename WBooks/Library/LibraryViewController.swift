@@ -19,8 +19,8 @@ final class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureNavigationBar(title: "LIBRARY_LABEL".localized())
         configureTable()
-        configureNavigationBar()
         loadBooks()
     }
 
@@ -43,14 +43,6 @@ final class LibraryViewController: UIViewController {
         let message = UIAlertController(title: "ERROR_ALERT_TITLE".localized(), message: "ERROR_ALERT_MESSAGE".localized(), preferredStyle: .alert)
         message.addAction(UIAlertAction(title: "ERROR_ALERT_CLOSE".localized(), style: .default, handler: nil))
         present(message, animated: true)
-    }
-    
-    private func configureNavigationBar() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationItem.title = "LIBRARY_LABEL".localized()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.notifications, style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.search, style: .plain, target: nil, action: nil)
-        navigationItem.backButtonDisplayMode = UINavigationItem.BackButtonDisplayMode.minimal
     }
 }
 

@@ -25,7 +25,7 @@ final class TabBarViewController: UITabBarController {
         wishList.tabBarItem.image = UIImage.wishlist
         wishList.tabBarItem.tag = 1
 
-        let addNew = UIViewController()
+        let addNew = UINavigationController(rootViewController: NewBookViewController())
         addNew.tabBarItem = UITabBarItem()
         addNew.tabBarItem.title = "ADDNEW_TABBAR".localized()
         addNew.tabBarItem.image = UIImage.addNew

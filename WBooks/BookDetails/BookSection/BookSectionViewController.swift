@@ -33,6 +33,12 @@ final class BookSectionViewController: UIViewController {
         super.viewDidLoad()
         bookSectionView.configure(with: viewModel)
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        bookSectionView.buttonRent.makeCustomSolid()
+        bookSectionView.buttonAddToWishlist.makeCustomOutlined()
+    }
 
     private func showUnavailableBookAlert() {
         showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "UNAVAILABLE_BOOK_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
@@ -41,7 +47,7 @@ final class BookSectionViewController: UIViewController {
     private func onSuccessRent() {
         stopLoading()
         bookSectionView.configureAvailability(viewModel.isBookAvailable)
-        showAlert(title: "SUCCESS_RENT_ALERT_TITLE".localized(), message: "SUCCESS_RENT_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
+        showAlert(title: "SUCCESS_ALERT_TITLE".localized(), message: "SUCCESS_RENT_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
     private func onErrorRent(error: Error) {
@@ -52,12 +58,6 @@ final class BookSectionViewController: UIViewController {
     private func stopLoading() {
         bookSectionView.buttonRent.loadingIndicator(false)
         bookSectionView.buttonRent.isEnabled = viewModel.isBookAvailable
-    }
-    
-    private func showAlert(title: String, message: String, closeButtonLabel: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: closeButtonLabel, style: .default, handler: nil))
-        present(alert, animated: true)
     }
 }
 

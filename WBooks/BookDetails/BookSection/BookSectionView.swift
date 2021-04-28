@@ -33,20 +33,11 @@ final class BookSectionView: NibView {
     @IBOutlet weak var buttonAddToWishlist: UIButton! {
         didSet {
             buttonAddToWishlist.setTitle("ADD_TO_WISHLIST_BUTTON".localized(), for: .normal)
-            buttonAddToWishlist.setTitleColor(UIColor.buttonColor, for: .normal)
-            buttonAddToWishlist.contentEdgeInsets = UIEdgeInsets(top: 15.0, left: 0.0, bottom: 15.0, right: 0.0)
-            buttonAddToWishlist.layer.borderWidth = 2.0
-            buttonAddToWishlist.layer.borderColor = UIColor.buttonColor.cgColor
-            buttonAddToWishlist.layer.cornerRadius = (buttonAddToWishlist.frame.size.height + 15) / 2.0
         }
     }
     @IBOutlet weak var buttonRent: UIButton! {
         didSet {
             buttonRent.setTitle("RENT_BUTTON".localized(), for: .normal)
-            buttonRent.setTitleColor(.white, for: .normal)
-            buttonRent.contentEdgeInsets = UIEdgeInsets(top: 15.0, left: 0.0, bottom: 15.0, right: 0.0)
-            buttonRent.layer.backgroundColor = UIColor.buttonColor.cgColor
-            buttonRent.layer.cornerRadius = (buttonAddToWishlist.frame.size.height + 15) / 2.0
         }
     }
     
@@ -63,10 +54,9 @@ final class BookSectionView: NibView {
         configureAvailability(viewModel.isBookAvailable)
     }
     
-    func configureAvailability(_ isAvailable: Bool) {
-        labelAvailability.text = isAvailable ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
-        labelAvailability.textColor = isAvailable ? .systemGreen : .systemRed
-        buttonRent.isEnabled = isAvailable
-        buttonRent.backgroundColor = isAvailable ? .buttonColor : .systemGray3
+    func configureAvailability(_ value: Bool) {
+        labelAvailability.text = value ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
+        labelAvailability.textColor = value ? .systemGreen : .systemRed
+        buttonRent.isEnabled = value
     }
 }
