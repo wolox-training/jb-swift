@@ -19,7 +19,7 @@ final class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureNotificationAndSearchNavBar(title: "LIBRARY_LABEL".localized())
+        configureNavigationBar(title: "LIBRARY_LABEL".localized())
         configureTable()
         loadBooks()
     }

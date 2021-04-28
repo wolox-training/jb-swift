@@ -28,7 +28,7 @@ extension UIViewController {
         ])
     }
     
-    func configureNotificationAndSearchNavBar(title: String = "") {
+    func configureNavigationBar(title: String = "") {
         navigationItem.backButtonDisplayMode = UINavigationItem.BackButtonDisplayMode.minimal
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = title

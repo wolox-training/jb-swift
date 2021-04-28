@@ -12,9 +12,10 @@ final class NewBookViewModel {
         self.bookRepository = bookRepository
     }
     
-    func loadBook(book: UnidentifiableBook, onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void) throws {
+    func loadBook(book: UnidentifiableBook, onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void) {
         guard book.isValid() else {
-            throw NewBookViewModelError.invalidBook
+            onError(NewBookViewModelError.invalidBook)
+            return
         }
         
         bookRepository.uploadBook(book: book, onSuccess: onSuccess, onError: onError)

@@ -22,7 +22,7 @@ final class NewBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNotificationAndSearchNavBar(title: "NEW_BOOK_LABEL".localized())
+        configureNavigationBar(title: "NEW_BOOK_LABEL".localized())
         configureTextfields()
         // Hide the keyboard when the view is touched
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
@@ -80,15 +80,11 @@ extension NewBookViewController: NewBookViewDelegate {
         guard newBookView.formIsValid else {
             return
         }
-        do {
-            try viewModel.loadBook(
-                book: getBookFromForm(),
-                onSuccess: { [weak self] _ in self?.onSubmitSuccess() },
-                onError: { [weak self] _ in self?.onSubmitError() }
-            )
-        } catch {
-            onSubmitError()
-        }
+        viewModel.loadBook(
+            book: getBookFromForm(),
+            onSuccess: { [weak self] _ in self?.onSubmitSuccess() },
+            onError: { [weak self] _ in self?.onSubmitError() }
+        )
     }
     
     func onBookImagePressed() {
