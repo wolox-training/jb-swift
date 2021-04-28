@@ -62,7 +62,7 @@ final class CommentsSectionViewController: UIViewController {
         labelMessage.text = message
         labelMessage.textColor = .systemGray4
         labelMessage.textAlignment = .center
-        addChild(labelMessage, into: commentsSectionView.viewContainer)
+        fixIn(labelMessage, into: commentsSectionView.viewContainer)
     }
 }
 

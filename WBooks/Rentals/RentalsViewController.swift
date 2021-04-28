@@ -19,23 +19,7 @@ final class RentalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        addTableToView()
-    }
-    
-    private func addTableToView() {
-        tableViewController.willMove(toParent: self)
-        addChild(tableViewController)
-        tableViewController.didMove(toParent: self)
-        rentalsView.mainContainer.addSubview(tableViewController.view)
-        
-        rentalsView.mainContainer.translatesAutoresizingMaskIntoConstraints = false
-        tableViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            rentalsView.mainContainer.topAnchor.constraint(equalTo: tableViewController.view.topAnchor),
-            rentalsView.mainContainer.bottomAnchor.constraint(equalTo: tableViewController.view.bottomAnchor),
-            rentalsView.mainContainer.leadingAnchor.constraint(equalTo: tableViewController.view.leadingAnchor),
-            rentalsView.mainContainer.trailingAnchor.constraint(equalTo: tableViewController.view.trailingAnchor)
-        ])
+        fixIn(tableViewController, into: rentalsView.mainContainer)
     }
     
     private func configureNavigationBar() {

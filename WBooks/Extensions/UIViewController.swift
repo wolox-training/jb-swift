@@ -15,7 +15,7 @@ extension UIViewController {
         present(alert, animated: true)
     }
     
-    func addChild(_ child: UIView, into container: UIView) {
+    func fixIn(_ child: UIView, into container: UIView) {
         container.addSubview(child)
         container.translatesAutoresizingMaskIntoConstraints = false
         child.translatesAutoresizingMaskIntoConstraints = false
@@ -25,6 +25,23 @@ extension UIViewController {
             child.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             child.leadingAnchor.constraint(equalTo: container.leadingAnchor),
             child.trailingAnchor.constraint(equalTo: container.trailingAnchor)
+        ])
+    }
+    
+    func fixIn(_ childController: UIViewController, into container: UIView) {
+        childController.willMove(toParent: self)
+        addChild(childController)
+        childController.didMove(toParent: self)
+        container.addSubview(childController.view)
+        
+        container.translatesAutoresizingMaskIntoConstraints = false
+        childController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            container.topAnchor.constraint(equalTo: childController.view.topAnchor),
+            container.bottomAnchor.constraint(equalTo: childController.view.bottomAnchor),
+            container.leadingAnchor.constraint(equalTo: childController.view.leadingAnchor),
+            container.trailingAnchor.constraint(equalTo: childController.view.trailingAnchor)
         ])
     }
 }
