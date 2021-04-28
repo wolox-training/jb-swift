@@ -12,14 +12,20 @@ final class NewBookViewModel {
         self.bookRepository = bookRepository
     }
     
-    func loadBook(book: UnidentifiableBook, onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void) {
-        if book.isValid() {
-            bookRepository.uploadBook(book: book, onSuccess: onSuccess, onError: onError)
+    func loadBook(book: UnidentifiableBook, onSuccess: @escaping (Book) -> Void, onError: @escaping (Error) -> Void) throws {
+        guard book.isValid() else {
+            throw NewBookViewModelError.invalidBook
         }
+        
+        bookRepository.uploadBook(book: book, onSuccess: onSuccess, onError: onError)
     }
     
     func setValidator(textfield: CustomTextfield) {
         let emptyValidator = { (value: String) in return !value.isEmpty }
         textfield.setValidator(emptyValidator)
     }
+}
+
+enum NewBookViewModelError: Error {
+    case invalidBook
 }

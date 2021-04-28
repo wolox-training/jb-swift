@@ -52,7 +52,7 @@ final class NewBookViewController: UIViewController {
         viewModel.setValidator(textfield: newBookView.textfieldYear)
         viewModel.setValidator(textfield: newBookView.textfieldTopic)
     }
-
+    
     private func onSubmitSuccess() {
         newBookView.cleanForm()
         showAlert(title: "SUCCESS_ALERT_TITLE".localized(), message: "NEWBOOK_SUCCESS_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
@@ -77,8 +77,17 @@ final class NewBookViewController: UIViewController {
 extension NewBookViewController: NewBookViewDelegate {
     
     func onSubmitPressed() {
-        if newBookView.formIsValid {
-            viewModel.loadBook(book: getBookFromForm(), onSuccess: { [weak self] _ in self?.onSubmitSuccess() }, onError: { [weak self] _ in self?.onSubmitError() })
+        guard newBookView.formIsValid else {
+            return
+        }
+        do {
+            try viewModel.loadBook(
+                book: getBookFromForm(),
+                onSuccess: { [weak self] _ in self?.onSubmitSuccess() },
+                onError: { [weak self] _ in self?.onSubmitError() }
+            )
+        } catch {
+            onSubmitError()
         }
     }
     
@@ -125,7 +134,7 @@ extension NewBookViewController: UIImagePickerControllerDelegate & UINavigationC
 }
 
 extension NewBookViewController: UITextFieldDelegate {
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let nextTextFieldTag = textField.tag + 1
         
@@ -135,9 +144,5 @@ extension NewBookViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
-    }
-
-    func validateTextField(_ textField: UITextField) -> Bool {
-        return textField.text != nil && !textField.text!.isEmpty
     }
 }
