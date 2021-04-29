@@ -19,7 +19,7 @@ extension UIViewController {
         container.addSubview(child)
         container.translatesAutoresizingMaskIntoConstraints = false
         child.translatesAutoresizingMaskIntoConstraints = false
-        
+    
         NSLayoutConstraint.activate([
             child.topAnchor.constraint(equalTo: container.topAnchor),
             child.bottomAnchor.constraint(equalTo: container.bottomAnchor),
