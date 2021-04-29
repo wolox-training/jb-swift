@@ -723,7 +723,6 @@
 				969CC63026271F1F00DB21CF /* BookSectionView.swift in Sources */,
 				96DB8BF6262E16A1006579B2 /* UIViewController.swift in Sources */,
 				969CC62526271F1400DB21CF /* BookDetailsView.swift in Sources */,
-				96DF74C8263311570094DD6F /* UIViewController.swift in Sources */,
 				96CE1DA12630A9710038A618 /* BookDetailsViewModel.swift in Sources */,
 				9699E2912624B2AD00D37ACD /* Colors.swift in Sources */,
 				96DB8BEE262E0F89006579B2 /* NewBookViewModel.swift in Sources */,
