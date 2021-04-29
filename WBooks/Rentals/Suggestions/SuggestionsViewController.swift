@@ -49,16 +49,7 @@ final class SuggestionsViewController: UIViewController {
         labelMessage.textColor = .systemGray4
         labelMessage.textAlignment = .center
         
-        suggestionsView.view.addSubview(labelMessage)
-        suggestionsView.view.translatesAutoresizingMaskIntoConstraints = false
-        labelMessage.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            labelMessage.topAnchor.constraint(equalTo: suggestionsView.suggestionsCollection.topAnchor),
-            labelMessage.bottomAnchor.constraint(equalTo: suggestionsView.suggestionsCollection.bottomAnchor),
-            labelMessage.leadingAnchor.constraint(equalTo: suggestionsView.suggestionsCollection.leadingAnchor),
-            labelMessage.trailingAnchor.constraint(equalTo: suggestionsView.suggestionsCollection.trailingAnchor)
-        ])
+        fixIn(labelMessage, into: suggestionsView.view)
     }
 }
 
