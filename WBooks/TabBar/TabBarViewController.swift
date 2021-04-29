@@ -31,7 +31,7 @@ final class TabBarViewController: UITabBarController {
         addNew.tabBarItem.image = UIImage.addNew
         addNew.tabBarItem.tag = 2
         
-        let rentals = UIViewController()
+        let rentals = UINavigationController(rootViewController: RentalsViewController())
         rentals.tabBarItem = UITabBarItem()
         rentals.tabBarItem.title = "MYRENTALS_TABBAR".localized()
         rentals.tabBarItem.image = UIImage.myRentals

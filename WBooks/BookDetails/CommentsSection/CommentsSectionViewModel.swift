@@ -18,7 +18,7 @@ final class CommentsSectionViewModel {
     }
     
     var numberOfComments: Int {
-        return comments.count
+        comments.count
     }
     
     var noComments: Bool {
@@ -26,7 +26,7 @@ final class CommentsSectionViewModel {
     }
     
     func createCommentCellViewModel(for commentIndex: Int) -> CommentCellViewModel {
-        return CommentCellViewModel(comment: comments[commentIndex])
+        CommentCellViewModel(comment: comments[commentIndex])
     }
     
     func fetchComments(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {

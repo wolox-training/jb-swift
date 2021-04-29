@@ -16,6 +16,6 @@ struct Rent : Codable {
     let book_id: Int
     let user_id: Int
     let id: Int
-    let from: String
-    let to: String
+    let from: String?
+    let to: String?
 }

@@ -23,11 +23,7 @@ final class BookSectionView: NibView {
     @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var viewContainer: UIView! {
         didSet {
-            viewContainer.layer.cornerRadius = 5.0
-            viewContainer.layer.shadowColor = UIColor.systemGray.cgColor
-            viewContainer.layer.shadowOpacity = 0.4
-            viewContainer.layer.shadowOffset = .zero
-            viewContainer.layer.shadowRadius = 1
+            viewContainer.makeCustomWhite()
         }
     }
     @IBOutlet weak var buttonAddToWishlist: UIButton! {
@@ -51,12 +47,23 @@ final class BookSectionView: NibView {
         labelGenre.text = viewModel.genre
         labelYear.text = viewModel.year
         imageBook.loadFromURL(stringURL: viewModel.imageURL)
-        configureAvailability(viewModel.isBookAvailable)
+        configureAvailability(viewModel.status)
     }
     
-    func configureAvailability(_ value: Bool) {
-        labelAvailability.text = value ? "BOOK_AVAILABLE".localized() : "BOOK_UNAVAILABLE".localized()
-        labelAvailability.textColor = value ? .systemGreen : .systemRed
-        buttonRent.isEnabled = value
+    func configureAvailability(_ status: BookStatus) {
+        switch status {
+        case .available:
+            labelAvailability.text = "BOOK_AVAILABLE".localized()
+            labelAvailability.textColor = .systemGreen
+            buttonRent.isEnabled = true
+        case .inYourHands:
+            labelAvailability.text = "BOOK_IN_YOUR_HANDS".localized()
+            labelAvailability.textColor = .red
+            buttonRent.isEnabled = false
+        default: // By default the book is unavailable
+            labelAvailability.text = "BOOK_UNAVAILABLE".localized()
+            labelAvailability.textColor = .red
+            buttonRent.isEnabled = false
+        }
     }
 }

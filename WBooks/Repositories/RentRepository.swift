@@ -9,10 +9,33 @@ import Alamofire
 
 protocol RentRepositoryType {
     func rentBook(userId: Int, bookId: Int, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void)
+    func rentsBy(userId: Int, onSuccess: @escaping ([Rent]) -> Void, onError: @escaping (Error) -> Void)
 }
 
 final class RentRepository: RentRepositoryType {
-
+    
+    func rentsBy(userId: Int, onSuccess: @escaping ([Rent]) -> Void, onError: @escaping (Error) -> Void) {
+        // Request
+        AF.request(URL.rentsBy(userId: userId), method: .get)
+            .responseJSON(
+                completionHandler: { response in
+                    switch response.result {
+                    case .success(let value):
+                        guard let JSONResponse = try? JSONSerialization.data(withJSONObject: value, options: []),
+                              let response = try? JSONDecoder().decode([Rent].self, from: JSONResponse)
+                        else {
+                            onError(RentError.decodeError)
+                            return
+                        }
+                        
+                        onSuccess(response)
+                    case .failure(let error):
+                        onError(error)
+                    }
+                }
+            )
+    }
+    
     func rentBook(userId: Int, bookId: Int, onSuccess: @escaping (Rent) -> Void, onError: @escaping (Error) -> Void) {
         // Parameters
         let today = Date()

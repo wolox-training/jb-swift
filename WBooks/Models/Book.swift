@@ -49,9 +49,14 @@ final class Book: UnidentifiableBook {
     func setUnavailable() {
         status = BookStatus.unavailable
     }
+    
+    func setInYourHands() {
+        status = BookStatus.inYourHands
+    }
 }
 
 enum BookStatus: String, Codable {
     case available = "Available"
     case unavailable = "Unvailable"
+    case inYourHands = "InYourHands"
 }

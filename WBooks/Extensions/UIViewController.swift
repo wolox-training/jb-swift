@@ -15,7 +15,7 @@ extension UIViewController {
         present(alert, animated: true)
     }
     
-    func addChild(_ child: UIView, into container: UIView) {
+    func fixIn(_ child: UIView, into container: UIView) {
         container.addSubview(child)
         container.translatesAutoresizingMaskIntoConstraints = false
         child.translatesAutoresizingMaskIntoConstraints = false
@@ -28,6 +28,13 @@ extension UIViewController {
         ])
     }
     
+    func fixIn(_ childController: UIViewController, into container: UIView) {
+        childController.willMove(toParent: self)
+        addChild(childController)
+        childController.didMove(toParent: self)
+        fixIn(childController.view, into: container)
+    }
+    
     func configureNavigationBar(title: String = "") {
         navigationItem.backButtonDisplayMode = UINavigationItem.BackButtonDisplayMode.minimal
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -36,3 +43,4 @@ extension UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.search, style: .plain, target: nil, action: nil)
     }
 }
+

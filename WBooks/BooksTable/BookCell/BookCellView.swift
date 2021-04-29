@@ -18,11 +18,7 @@ final class BookCellView: UITableViewCell {
     }
     @IBOutlet weak var whiteContainer: UIView! {
         didSet {
-            whiteContainer.layer.cornerRadius = 5.0
-            whiteContainer.layer.shadowColor = UIColor.systemGray.cgColor
-            whiteContainer.layer.shadowOpacity = 0.4
-            whiteContainer.layer.shadowOffset = .zero
-            whiteContainer.layer.shadowRadius = 1
+            whiteContainer.makeCustomWhite()
         }
     }
     

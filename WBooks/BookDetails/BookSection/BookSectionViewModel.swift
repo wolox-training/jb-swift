@@ -26,6 +26,9 @@ final class BookSectionViewModel {
     var imageURL: String {
         return book.image
     }
+    var status: BookStatus {
+        return book.status
+    }
     var isBookAvailable: Bool {
         return book.isAvailable
     }

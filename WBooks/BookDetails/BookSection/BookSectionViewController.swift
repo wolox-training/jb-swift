@@ -46,7 +46,7 @@ final class BookSectionViewController: UIViewController {
     
     private func onSuccessRent() {
         stopLoading()
-        bookSectionView.configureAvailability(viewModel.isBookAvailable)
+        bookSectionView.configureAvailability(viewModel.status)
         showAlert(title: "SUCCESS_ALERT_TITLE".localized(), message: "SUCCESS_RENT_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
     
