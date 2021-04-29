@@ -32,17 +32,7 @@ extension UIViewController {
         childController.willMove(toParent: self)
         addChild(childController)
         childController.didMove(toParent: self)
-        container.addSubview(childController.view)
-        
-        container.translatesAutoresizingMaskIntoConstraints = false
-        childController.view.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            container.topAnchor.constraint(equalTo: childController.view.topAnchor),
-            container.bottomAnchor.constraint(equalTo: childController.view.bottomAnchor),
-            container.leadingAnchor.constraint(equalTo: childController.view.leadingAnchor),
-            container.trailingAnchor.constraint(equalTo: childController.view.trailingAnchor)
-        ])
+        fixIn(childController.view, into: container)
     }
     
     func configureNavigationBar(title: String = "") {
