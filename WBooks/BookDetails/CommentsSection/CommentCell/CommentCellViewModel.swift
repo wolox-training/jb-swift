@@ -5,8 +5,6 @@
 //  Created by joaquin bozzalla on 15/04/2021.
 //
 
-import UIKit
-
 final class CommentCellViewModel {
     private let comment: Comment
     private var user: User?

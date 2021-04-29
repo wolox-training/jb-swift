@@ -21,8 +21,8 @@ final class CommentsSectionViewModel {
         comments.count
     }
     
-    func geCommentBy(index: Int) -> Comment {
-        comments[index]
+    var noComments: Bool {
+        return numberOfComments == 0
     }
     
     func createCommentCellViewModel(for commentIndex: Int) -> CommentCellViewModel {
@@ -30,8 +30,8 @@ final class CommentsSectionViewModel {
     }
     
     func fetchComments(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
-        let onFetchSuccess = { (comments: [Comment]) in
-            self.comments = comments
+        let onFetchSuccess = { [weak self] (comments: [Comment]) in
+            self?.comments = comments
             onSuccess()
         }
         commentsRepository.fetchComments(bookId: bookId, onSuccess: onFetchSuccess, onError: onError)

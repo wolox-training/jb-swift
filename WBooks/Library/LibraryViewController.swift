@@ -19,25 +19,9 @@ final class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        addTableToView()
+        fixIn(tableViewController, into: libraryView.mainContainer)
     }
-    
-    private func addTableToView() {
-        tableViewController.willMove(toParent: self)
-        addChild(tableViewController)
-        tableViewController.didMove(toParent: self)
-        libraryView.mainContainer.addSubview(tableViewController.view)
-        
-        libraryView.mainContainer.translatesAutoresizingMaskIntoConstraints = false
-        tableViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            libraryView.mainContainer.topAnchor.constraint(equalTo: tableViewController.view.topAnchor),
-            libraryView.mainContainer.bottomAnchor.constraint(equalTo: tableViewController.view.bottomAnchor),
-            libraryView.mainContainer.leadingAnchor.constraint(equalTo: tableViewController.view.leadingAnchor),
-            libraryView.mainContainer.trailingAnchor.constraint(equalTo: tableViewController.view.trailingAnchor)
-        ])
-    }
-    
+
     private func configureNavigationBar() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "LIBRARY_LABEL".localized()

@@ -15,11 +15,6 @@ final class RentalsViewModel: BooksTableViewModel {
         self.booksRepository = booksRepository
     }
     
-    override func getBookBy(index: Int) -> Book {
-        books[index].setInYourHands()
-        return books[index]
-    }
-
     override func fetchData(onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         let onFetchSuccess = { [weak self] (rents: [Rent]) in
             self?.rents = rents
@@ -33,6 +28,7 @@ final class RentalsViewModel: BooksTableViewModel {
             // Filter only rented books
             for rent in self?.rents ?? [] {
                 if let book = books.first(where: { book in book.id == rent.book_id }) {
+                    book.setInYourHands()
                     self?.books.append(book)
                 }
             }

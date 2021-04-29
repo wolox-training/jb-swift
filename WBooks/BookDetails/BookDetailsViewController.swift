@@ -12,9 +12,12 @@ final class BookDetailsViewController: UIViewController {
     private let bookSectionViewController: BookSectionViewController
     private let commentsSectionViewController: CommentsSectionViewController
 
-    init(book: Book) {
-        bookSectionViewController = BookSectionViewController(book: book)
-        commentsSectionViewController = CommentsSectionViewController(book: book)
+    init(viewModel: BookDetailsViewModel) {
+        let bookSectionViewModel = viewModel.createBookSectionViewModel()
+        bookSectionViewController = BookSectionViewController(viewModel: bookSectionViewModel)
+        let commentsSectionViewModel = viewModel.createCommentsSectionViewModel()
+        commentsSectionViewController = CommentsSectionViewController(viewModel: commentsSectionViewModel)
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,7 +38,6 @@ final class BookDetailsViewController: UIViewController {
     }
     
     private func configureNavigationBar() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "BOOK_DETAILS_LABEL".localized()
     }
     
