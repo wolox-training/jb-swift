@@ -18,15 +18,7 @@ final class LibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
+        configureNavigationBar(title: "LIBRARY_LABEL".localized())
         fixIn(tableViewController, into: libraryView.mainContainer)
-    }
-
-    private func configureNavigationBar() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationItem.title = "LIBRARY_LABEL".localized()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.notifications, style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.search, style: .plain, target: nil, action: nil)
-        navigationItem.backButtonDisplayMode = UINavigationItem.BackButtonDisplayMode.minimal
     }
 }

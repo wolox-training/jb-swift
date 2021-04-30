@@ -58,3 +58,8 @@
 "DESCRIPTION_TEXTFIELD" = "Descripción";
 "NEWBOOK_ERROR_ALERT_MESSAGE" = "Falló la carga del libro.";
 "NEWBOOK_SUCCESS_ALERT_MESSAGE" = "Tu libro fue cargado!";
+
+// MARK: - RENTALS SECTION
+"SUGGESTIONS_TITLE" = "Sugerencias";
+"NO_SUGGESTIONS_MESSAGE" = "Sin sugerencias";
+"SUGGESTIONS_ERROR_MESSAGE" = "Error al cargar las sugerencias";
