@@ -17,6 +17,7 @@ final class LoginView: NibView {
     @IBOutlet weak var buttonLogin: UIButton! {
         didSet {
             buttonLogin.setTitle("LOGIN_BUTTON".localized(), for: .normal)
+            buttonLogin.makeCustomOutlined(mainColor: .white)
         }
     }
     @IBOutlet weak var textfieldUser: UITextField! {

@@ -33,11 +33,13 @@ final class BookSectionView: NibView {
     @IBOutlet weak var buttonAddToWishlist: UIButton! {
         didSet {
             buttonAddToWishlist.setTitle("ADD_TO_WISHLIST_BUTTON".localized(), for: .normal)
+            buttonAddToWishlist.makeCustomOutlined()
         }
     }
     @IBOutlet weak var buttonRent: UIButton! {
         didSet {
             buttonRent.setTitle("RENT_BUTTON".localized(), for: .normal)
+            buttonRent.makeCustomSolid()
         }
     }
     

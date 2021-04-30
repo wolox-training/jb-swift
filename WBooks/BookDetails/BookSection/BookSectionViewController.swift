@@ -34,12 +34,6 @@ final class BookSectionViewController: UIViewController {
         bookSectionView.configure(with: viewModel)
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        bookSectionView.buttonRent.makeCustomSolid()
-        bookSectionView.buttonAddToWishlist.makeCustomOutlined()
-    }
-
     private func showUnavailableBookAlert() {
         showAlert(title: "ERROR_ALERT_TITLE".localized(), message: "UNAVAILABLE_BOOK_ALERT_MESSAGE".localized(), closeButtonLabel: "ALERT_CLOSE".localized())
     }
