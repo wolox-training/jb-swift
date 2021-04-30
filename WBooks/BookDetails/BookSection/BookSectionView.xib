@@ -50,7 +50,7 @@
                     <rect key="frame" x="15" y="183" width="384" height="30"/>
                     <state key="normal" title="ADD TO WISHLIST"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVU-r1-8wr">
+                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVU-r1-8wr">
                     <rect key="frame" x="15" y="233" width="384" height="30"/>
                     <state key="normal" title="RENT"/>
                     <connections>

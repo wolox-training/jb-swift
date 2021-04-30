@@ -21,5 +21,7 @@ extension UIColor {
         blue: 238/255.0,
         alpha: 1)
     
-    static let newBookTextfield = UIColor.systemGray3
+    static let blueGradientFirstColor = UIColor(red: 0, green: 0.68, blue: 0.93, alpha: 1)
+    static let blueGradientSecondColor = UIColor(red: 0.22, green: 0.8, blue: 0.8, alpha: 1)
+    static let blueGradientColors = [ blueGradientFirstColor.cgColor, blueGradientSecondColor.cgColor ]
 }
