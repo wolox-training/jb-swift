@@ -11,7 +11,7 @@ class UnidentifiableBook: Codable {
     let genre: String
     let year: String
     let image: String
-    var status : BookStatus = .unavailable
+    var status: BookStatus
     
     init(title: String, author: String, genre: String, year: String, image: String, status: BookStatus) {
         self.title = title
