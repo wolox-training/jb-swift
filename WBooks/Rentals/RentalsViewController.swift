@@ -9,7 +9,7 @@ import UIKit
 
 final class RentalsViewController: UIViewController {
     private let rentalsView = RentalsView()
-    private var tableViewController = BooksTableViewController(viewModel: RentalsViewModel())
+    private let tableViewController = BooksTableViewController(viewModel: RentalsViewModel())
     private let suggestionsController = SuggestionsViewController()
     
     override func loadView() {

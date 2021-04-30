@@ -37,9 +37,10 @@ final class SuggestionsViewController: UIViewController {
     }
     
     private func reloadCollection() {
-        suggestionsView.suggestionsCollection.reloadData()
-        if(viewModel.noSuggestions) {
+        if viewModel.noSuggestions {
             showMessageIntoSuggestionsSection(message: "NO_SUGGESTIONS_MESSAGE".localized())
+        } else {
+            suggestionsView.suggestionsCollection.reloadData()
         }
     }
     

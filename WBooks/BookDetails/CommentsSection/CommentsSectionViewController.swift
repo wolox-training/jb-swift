@@ -46,9 +46,10 @@ final class CommentsSectionViewController: UIViewController {
     }
     
     private func reloadTable() {
-        commentsSectionView.tableComments.reloadData()
         if viewModel.noComments {
             showMessageIntoCommentsSection(message: "NO_COMMENTS_MESSAGE".localized())
+        } else {
+            commentsSectionView.tableComments.reloadData()
         }
     }
     
