@@ -29,7 +29,7 @@ extension UIButton {
         layer.cornerRadius = frame.height / 2
         layer.insertSublayer(gradientLayer, at: 0)
     }
-    
+
     func loadingIndicator(_ show: Bool) {
         let tag = 808404
         if show {

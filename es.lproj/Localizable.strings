@@ -9,6 +9,8 @@
 // MARK: - NAVBAR TITLES
 "LIBRARY_LABEL" = "BIBLIOTECA";
 "BOOK_DETAILS_LABEL" = "DETALLES DEL LIBRO";
+"NEW_BOOK_LABEL" = "AGREGAR LIBRO";
+"RENTALS_LABEL" = "ALQUILADOS";
 
 // MARK: - TABBAR LABEL
 "LIBRARY_TABBAR" = "Biblioteca";
@@ -30,15 +32,34 @@
 // MARK: - BOOK DETAILS SECTION
 "BOOK_AVAILABLE" = "Disponible";
 "BOOK_UNAVAILABLE" = "No disponible";
+"BOOK_IN_YOUR_HANDS" = "En tus manos";
 "ADD_TO_WISHLIST_BUTTON" = "AGREGAR A LA LISTA DE DESEOS";
 "RENT_BUTTON" = "ALQUILAR";
 "ERROR_ALERT_TITLE" = "Ups!";
 "ALERT_CLOSE" = "Cerrar";
+"SUCCESS_ALERT_TITLE" = "Felicitaciones";
 "NO_COMMENTS_MESSAGE" = "Sin comentarios";
 "COMMENTS_ERROR_MESSAGE" = "No pudimos cargar los comentarios :(";
 
 "UNAVAILABLE_BOOK_ALERT_MESSAGE" = "El libro no está disponible.";
 "RENT_ERROR_ALERT_MESSAGE" = "No has podido alquilar el libro.";
-"SUCCESS_RENT_ALERT_TITLE" = "Felicitaciones";
 "SUCCESS_RENT_ALERT_MESSAGE" = "Alquilaste el libro!";
 "COMMENTS_ERROR_ALERT_MESSAGE" = "Error al cargar los comentarios.";
+
+// MARK: - NEW BOOK SECTION
+"GALLERY" = "Galería";
+"CAMERA" = "Cámara";
+"CANCEL" = "Cancelar";
+"SUBMIT" = "AÑADIR";
+"NAME_TEXTFIELD" = "Nombre del libro";
+"AUTHOR_TEXTFIELD" = "Autor";
+"YEAR_TEXTFIELD" = "Año";
+"TOPIC_TEXTFIELD" = "Género";
+"DESCRIPTION_TEXTFIELD" = "Descripción";
+"NEWBOOK_ERROR_ALERT_MESSAGE" = "Falló la carga del libro.";
+"NEWBOOK_SUCCESS_ALERT_MESSAGE" = "Tu libro fue cargado!";
+
+// MARK: - RENTALS SECTION
+"SUGGESTIONS_TITLE" = "Sugerencias";
+"NO_SUGGESTIONS_MESSAGE" = "Sin sugerencias";
+"SUGGESTIONS_ERROR_MESSAGE" = "Error al cargar las sugerencias";

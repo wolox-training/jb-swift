@@ -38,7 +38,6 @@ final class BookDetailsViewController: UIViewController {
     }
     
     private func configureNavigationBar() {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.title = "BOOK_DETAILS_LABEL".localized()
     }
     

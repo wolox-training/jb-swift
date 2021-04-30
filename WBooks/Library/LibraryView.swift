@@ -8,10 +8,10 @@
 import UIKit
 
 final class LibraryView: NibView {
-    @IBOutlet var view: UIView!
-    @IBOutlet var tableBooks: UITableView! {
+    @IBOutlet var view: UIView! {
         didSet {
-            tableBooks.backgroundColor = UIColor.backgroundColor
+            view.backgroundColor = UIColor.backgroundColor
         }
     }
+    @IBOutlet var mainContainer: UIView!
 }
